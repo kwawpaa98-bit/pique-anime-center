@@ -1,29 +1,27 @@
-PIQUE ANIME CENTER — WEBSITE SOURCE CODE
+PIQUE ENTERTAINMENT — MASTERPIECE MULTI-PAGE WEBSITE
 
-Files:
-- index.html: page structure and content
-- style.css: mobile-friendly dark purple design
-- script.js: anime catalogue, Wano episode guide, search and episode detail pop-up
+Included files:
+- index.html (Home)
+- anime.html (Anime collection + searchable titles + One Piece Wano episode-number guide)
+- games.html (15 Android game listings + 15 online game listings)
+- movies.html (movie discovery and official platform links)
+- contact.html (YouTube Subscribe and WhatsApp contact buttons)
+- style.css (shared responsive styling)
 
-Included:
-- Anime list: One Piece, Naruto, Bleach, Dragon Ball, Solo Leveling, Jujutsu Kaisen, Demon Slayer, One Punch Man, Kaiju No. 8, Wistoria, Black Clover and The Apothecary Diaries
-- One Piece Wano episode-number guide (890–1085)
-- Search for anime and episode numbers
-- Prominent Subscribe to Pique Anime buttons linked to your channel
-- No password or login
-- No copyrighted episode video files included
+HOW TO UPDATE YOUR LIVE CLOUDFLARE PAGES WEBSITE:
+1. Extract this ZIP on your phone.
+2. Open your GitHub repository: kwawpaa98-bit/pique-anime-center.
+3. Upload all five HTML files and style.css to the repository's main/root folder.
+4. If GitHub asks whether to replace files, confirm replacement.
+5. Scroll down and tap Commit changes.
+6. Cloudflare Pages should automatically deploy the new version. Open the Deployments tab and wait for the latest deployment to show success.
+7. Visit https://pique-anime-center.pages.dev and refresh.
 
-IMPORTANT:
-The Wano guide is an episode-number directory, not a source of video streams. To add a watch link, edit script.js and add an authorized link to authorizedEpisodeLinks, for example:
-const authorizedEpisodeLinks = { 890: "https://your-authorized-video-link" };
-Only add links you have permission to publish and embed.
+IMAGE NOTES:
+This design uses remote image URLs from Unsplash, so the phone/browser needs an internet connection for the pictures to load. You can replace any image URL in the HTML with an image you own or are licensed to use.
 
-HOW TO USE:
-1. Download and extract the ZIP.
-2. Keep index.html, style.css and script.js in the same folder.
-3. Open index.html in a browser to preview.
-4. Upload the files to a GitHub repository, then connect that repository to Cloudflare Pages to publish.
-5. Use the repository root as the build output directory; no build command is needed.
-
-This package is source code only. It does not publish the site automatically.
-\nWHATSAPP CONTACT BUTTON:\nA public WhatsApp contact button is included, linking to +233 59 741 7776.\n
+SAFETY / COPYRIGHT:
+- Android game links search Google Play; they are not direct APK downloads. Prefer official publisher listings.
+- Online game links search CrazyGames.
+- Anime and movie pages are guides/directories, not copyrighted video hosting.
+- Only publish video streams when you have permission that explicitly allows public streaming.
