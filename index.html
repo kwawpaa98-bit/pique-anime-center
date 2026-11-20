@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10091c">
+  <meta name="description" content="Pique Anime Center — anime collections, episode guides and official viewing links.">
+  <title>Pique Anime Center</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#"><span class="logo">P</span><span>PIQUE <b>ANIME CENTER</b></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+    <nav id="nav">
+      <a href="#home">Home</a><a href="#anime">Anime</a><a href="#onepiece">One Piece</a><a href="#youtube">YouTube</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">WELCOME TO PIQUE ANIME CENTER</p>
+        <h1>YOUR WORLD.<br><span>YOUR ANIME.</span></h1>
+        <p class="lead">Discover anime collections, follow episode guides and find authorized places to watch.</p>
+        <a class="button primary" href="#anime">Explore anime</a>
+        <a class="button subscribe" href="https://www.youtube.com/@Pique-anime?sub_confirmation=1" target="_blank" rel="noopener">▶ Subscribe to Pique Anime</a>
+      </div>
+      <div class="hero-symbol" aria-hidden="true"><div class="ring"></div><span>P</span><small>ANIME • COMMUNITY • ENTERTAINMENT</small></div>
+    </section>
+
+    <section class="section" id="anime">
+      <div class="section-heading"><div><p class="eyebrow">EXPLORE THE LIBRARY</p><h2>Anime Collection</h2></div><input id="search" type="search" placeholder="Search anime..." aria-label="Search anime"></div>
+      <div class="anime-grid" id="animeGrid"></div>
+    </section>
+
+    <section class="section onepiece-section" id="onepiece">
+      <div class="section-heading"><div><p class="eyebrow">FEATURED COLLECTION</p><h2>One Piece: Wano Country</h2></div><span class="pill">EPISODE GUIDE</span></div>
+      <div class="wano-card">
+        <div class="wano-art"><span>ワノ国</span><small>WANO COUNTRY ARC</small></div>
+        <div class="wano-copy">
+          <h3>Follow the journey to Wano</h3>
+          <p>Browse the Wano episode guide in numerical order. Select an episode to see its details and add an authorized viewing link when you have one.</p>
+          <p class="notice">This guide does not host or provide unauthorized copies of copyrighted episodes.</p>
+        </div>
+      </div>
+      <div class="episode-heading"><h3>Wano Episode Guide</h3><input id="episodeSearch" type="search" placeholder="Find episode number..." aria-label="Search Wano episodes"></div>
+      <div class="episode-grid" id="episodeGrid"></div>
+      <p class="small-note">Episode numbering shown here is a guide. Add episode titles and official or otherwise authorized viewing links before publishing.</p>
+    </section>
+
+    <section class="section youtube-section" id="youtube">
+      <div>
+        <p class="eyebrow">WATCH WITH PIQUE</p>
+        <h2>Visit our YouTube channel</h2>
+        <p class="lead">Follow Pique Anime for videos and updates from the channel.</p>
+        <a class="button subscribe" href="https://www.youtube.com/@Pique-anime?sub_confirmation=1" target="_blank" rel="noopener">▶ Subscribe to Pique Anime</a>
+      </div>
+      <div class="youtube-mark">▶</div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div>
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>Contact Pique Anime Center</h2>
+        <p class="lead">Questions, suggestions or feedback? Send us a WhatsApp message.</p>
+        <a class="button whatsapp" href="https://wa.me/233597417776" target="_blank" rel="noopener">✆ Chat with us on WhatsApp</a>
+      </div>
+      <div class="contact-number">+233 59 741 7776</div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="logo">P</span><span>PIQUE <b>ANIME CENTER</b></span></a><p>© <span id="year"></span> Pique Anime Center</p><p class="small-note">Use only artwork, videos and links you own or are authorized to publish.</p></footer>
+
+  <dialog id="episodeDialog">
+    <button class="close-dialog" id="closeDialog" aria-label="Close">×</button>
+    <p class="eyebrow">ONE PIECE • WANO COUNTRY</p>
+    <h2 id="dialogTitle">Episode</h2>
+    <p id="dialogText">Add an authorized viewing link for this episode in script.js.</p>
+    <a id="watchLink" class="button primary hidden" href="#" target="_blank" rel="noopener">Watch episode ↗</a>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
