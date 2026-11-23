@@ -11,10 +11,10 @@
 
   // Anonymous session ID only; no name, email, or IP is stored by this tracker.
   try {
-    let visitorId = sessionStorage.getItem("pgc-visitor-session");
+    let visitorId = localStorage.getItem("pgc-visitor-id");
     if (!visitorId) {
       visitorId = crypto.randomUUID();
-      sessionStorage.setItem("pgc-visitor-session", visitorId);
+      localStorage.setItem("pgc-visitor-id", visitorId);
     }
     client.from("site_visits").insert({
       visitor_id: visitorId,
