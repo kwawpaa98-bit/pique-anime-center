@@ -201,3 +201,34 @@ html{scroll-behavior:auto!important}
 .leader-table tr:first-child td:first-child{color:#ffcf7a;font-weight:950}
 .player-box{display:grid;grid-template-columns:1fr auto;gap:9px;margin:12px 0 18px}
 @media(max-width:700px){.community-layout{grid-template-columns:1fr}.leader-podium{gap:6px}.podium-place{padding:12px 4px}.podium-place strong{font-size:12px}.leader-table th,.leader-table td{padding:10px 5px;font-size:11px}}
+
+/* REALISTIC STATIC PHOTOGRAPHY — no animated/decorative motion */
+.hero-art{
+ background:linear-gradient(90deg,rgba(5,12,30,.18),rgba(5,12,30,.05)),
+ url("https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1400&q=90") center/cover no-repeat!important;
+ box-shadow:0 18px 45px #0005!important;
+}
+.hero-art:before,.hero-art:after,.hero-art .orbit,.hero-art .hero-core,.hero-art .float-tag{display:none!important}
+.category-card{
+ position:relative;isolation:isolate;overflow:hidden;color:#fff!important;
+ border:0!important;border-radius:18px!important;min-height:245px;
+ background-size:cover!important;background-position:center!important;
+ box-shadow:0 12px 28px #07152d35!important;
+}
+.category-card:before{
+ content:"";position:absolute;inset:0;z-index:-1;
+ background:linear-gradient(0deg,rgba(3,10,25,.9),rgba(3,10,25,.12) 85%);
+}
+.category-card:after{display:none!important}
+.category-card.racing{background-image:url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=88")!important}
+.category-card.shooting{background-image:url("https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1000&q=88")!important}
+.category-card.adventure{background-image:url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1000&q=88")!important}
+.category-card .category-icon{display:none!important}
+.category-card .category-number,.category-card h3,.category-card p,.category-card b,
+.category-card.racing .category-number,.category-card.racing b,
+.category-card.shooting .category-number,.category-card.shooting b,
+.category-card.adventure .category-number,.category-card.adventure b{color:#fff!important}
+.category-card h3{font-size:27px!important;text-shadow:0 2px 8px #0008}
+.category-card p{color:#f1f5f9!important;text-shadow:0 1px 5px #0008}
+.category-card b{margin-top:auto}
+@media(max-width:560px){.category-card{min-height:210px!important}}
