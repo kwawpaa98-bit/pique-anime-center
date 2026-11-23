@@ -63,3 +63,70 @@ footer p,.footer-links a{color:#b8c3e0}
 .footer-links a:hover{color:#fff}
 @media(max-width:800px){.hero-home{min-height:auto;padding:42px 0}.hero-art{border-radius:24px}.game-grid{gap:15px}}
 @media(max-width:560px){.hero-home h1,.library-hero h1,.contact-hero h1{font-size:clamp(39px,11vw,48px);letter-spacing:-2px}.hero-stats{justify-content:space-between}.category-card{min-height:205px}.game-info{padding:15px}.game-info h3{font-size:18px}footer{padding:28px 5vw}}
+
+
+/* BOLD ARCADE THEME — unmistakably new colour direction */
+:root{
+ --blue:#a78bfa;--cyan:#22d3ee;--ink:#f5f3ff;--muted:#b5b2ca;
+ --paper:#090b18;--line:#292943;--shadow:0 18px 48px #0008;
+}
+html{background:#090b18}
+body{background:radial-gradient(ellipse at 12% 0%,#29134a 0,transparent 32%),radial-gradient(ellipse at 90% 20%,#092e48 0,transparent 30%),#090b18;color:#f5f3ff}
+.topbar{background:#0c1022ed;border-bottom:1px solid #282644;box-shadow:0 8px 30px #0008}
+.brand{color:#fff}.brand b{color:#22d3ee}.brand small{color:#a9a5c5}
+.brand-mark{background:linear-gradient(135deg,#ff3d9a,#8b5cf6 55%,#22d3ee);box-shadow:0 0 24px #9b5cff70}
+nav a{color:#c6c3dd}
+nav a:hover,nav a.active{background:#292044;color:#fff}
+.menu-toggle{background:#282044;color:#fff}
+main{color:#f5f3ff}
+.eyebrow{border:1px solid #563a7b;background:#1c1530;color:#f0abfc}
+.hero-home h1 em,.library-hero h1 em,.contact-hero h1 em,h2 em{background:linear-gradient(100deg,#ff5ca8,#b18cff 48%,#31d9f2);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-copy>p,.library-hero>p,.contact-hero>p{color:#c1bfd4}
+.btn-primary{color:#100d20;background:linear-gradient(100deg,#ff5ca8,#b36aff 52%,#27d7ed);box-shadow:0 9px 28px #bd55e955}
+.btn-outline{color:#f5f3ff;background:#17182c;border:1px solid #51456e}
+.hero-art{background:radial-gradient(circle at 22% 18%,#ff9aca 0,transparent 23%),radial-gradient(circle at 78% 82%,#24d9ed 0,transparent 29%),linear-gradient(135deg,#40115d,#4e36a8 48%,#075c78);box-shadow:0 28px 70px #6d38b855}
+.hero-core{background:#f9f2ff;border-color:#fff;box-shadow:0 18px 60px #0009}
+.hero-core span{background:linear-gradient(135deg,#ff3d9a,#7354ff,#00aeca);-webkit-background-clip:text;background-clip:text;color:transparent}
+.float-tag{background:#fff;color:#5426a1;box-shadow:0 8px 24px #0006}
+.section-heading h2,.cta-band h2{color:#fff}
+.text-link,.play-link{color:#65e5f2}
+.category-card{color:#fff;background:#17182d;border:1px solid #34304e;border-top:5px solid #a78bfa;box-shadow:0 16px 36px #0006}
+.category-card:after{background:#34214c;opacity:.65}
+.category-card.racing{border-top-color:#ff9b45;background:linear-gradient(145deg,#211a2d,#301d2a)}
+.category-card.shooting{border-top-color:#8d83ff;background:linear-gradient(145deg,#1d1b35,#20234a)}
+.category-card.adventure{border-top-color:#35e0b2;background:linear-gradient(145deg,#142a2a,#183b39)}
+.category-card.racing .category-number,.category-card.racing b{color:#ffb66f}
+.category-card.shooting .category-number,.category-card.shooting b{color:#b5aaff}
+.category-card.adventure .category-number,.category-card.adventure b{color:#55efc5}
+.category-icon{background:#ffffff12;box-shadow:inset 0 0 0 1px #ffffff18}
+.category-card p{color:#c3bfd4}
+.game-card{background:#15172a;border:1px solid #302d49;box-shadow:0 16px 38px #0007}
+.game-card:hover{box-shadow:0 22px 48px #8b5cf633}
+.game-image{background:linear-gradient(135deg,#40245f,#123d54)}
+.game-image img{filter:saturate(1.3) contrast(1.08)}
+.game-chip{background:#fff;color:#6b35b4}
+.game-info small{color:#6fe4f2}
+.game-info h3{color:#fff}
+.game-info p{color:#b8b5cb}
+.play-link{border-top:1px solid #35314c}
+.library-main,.contact-main{color:#fff}
+.search-box{background:#17182c;border:1px solid #484064;color:#70e7f4;box-shadow:0 12px 30px #0005}
+.search-box input{background:transparent;color:#fff}
+.search-box input::placeholder{color:#9692ad}
+.search-box:focus-within{border-color:#b17bff;box-shadow:0 0 0 4px #a855f733}
+.filter{background:#17182c;border:1px solid #403a5a;color:#d2cee5}
+.filter.active,.filter:hover{background:linear-gradient(100deg,#ff4d9d,#935bff 55%,#13bfd9);color:#fff;border-color:transparent;box-shadow:0 7px 20px #9d4cff55}
+.library-count{color:#8deaf5}
+.empty-state{color:#c0bdd2}
+.cta-band{border:1px solid #51406d;background:radial-gradient(circle at 90% 10%,#164b60,transparent 35%),linear-gradient(110deg,#321b4c,#202344 58%,#123c48);box-shadow:0 18px 44px #0007}
+.cta-band p{color:#d0cbe0}
+.about-panel,.contact-card{background:#17182c;border:1px solid #34304e;color:#fff;box-shadow:0 14px 32px #0006}
+.contact-card a{color:#63e4f2}
+footer{background:#060711;border-top:1px solid #29243e}
+footer p,.footer-links a{color:#aaa6c3}
+.footer-links a:hover{color:#5ce4f2}
+.admin-main{color:#fff}.admin-form{background:#17182c;border-color:#34304e}.admin-form input,.admin-form textarea,.admin-form select{background:#0d1020;color:#fff;border-color:#45405f}
+.admin-game{border-color:#34304e}
+.admin-buttons button{background:#30224a;color:#e5c5ff}
+@media(max-width:800px){nav.open{background:#0c1022;padding:8px;border:1px solid #30294a;border-radius:12px}.hero-home{padding:42px 0}}
+@media(max-width:560px){.category-card{min-height:205px}.cta-band{border-radius:18px}}
