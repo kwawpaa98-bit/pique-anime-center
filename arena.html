@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta name="theme-color" content="#061719"><title>PIQUE HYPER — 3D Game Universe</title>
+<meta name="theme-color" content="#061719"><title>PIQUE GAMES CENTER — Game Arena</title>
 <style>
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#061719;color:#eaffff;font-family:system-ui,Arial;touch-action:none}#stage{position:fixed;inset:0}canvas{display:block}
 #top{position:fixed;top:10px;left:10px;right:10px;display:flex;justify-content:space-between;gap:8px;pointer-events:none}.chip{background:#06191de8;border:1px solid #43cfc7;border-radius:13px;padding:8px 11px;font-size:12px;font-weight:900;box-shadow:0 5px 20px #0007}#top b{color:#52e5dc}
@@ -17,7 +17,7 @@
 <button id="pause" style="display:none">MENU</button>
 <div id="controls" style="display:none"><div class="cluster"><button class="ctrl" data-k="left">◀</button><button class="ctrl" data-k="right">▶</button></div><div class="cluster"><button class="ctrl alt" data-k="jump">JUMP</button><button class="ctrl fire" data-k="fire">FIRE</button></div></div>
 <div class="hint" id="hint" style="display:none">MOVE • AIM WITH LEFT/RIGHT • FIRE</div>
-<section id="menu"><div class="head"><div><div class="logo">PIQUE <b>HYPER</b></div><div class="tag">NEXT-GENERATION BROWSER GAME UNIVERSE</div></div><div class="tag">10 WORLDS · 3D GAMEPLAY</div></div><div class="hero"><div class="tag">ENTER THE ARENA</div><h1>CHOOSE YOUR<br>MISSION.</h1><p>Ten action-packed 3D arcade experiences in one gaming hub. Pick a world, master the controls and beat your best score. Built for mobile touch and desktop keyboard.</p><button class="start" data-play="shooter">▶ PLAY HYPER STRIKE</button></div><div class="grid" id="grid"></div></section>
+<section id="menu"><div class="head"><div><div class="logo">PIQUE <b>HYPER</b></div><div class="tag">BROWSER GAME ARENA</div></div><div class="tag">10 GAME MODES</div></div><div class="hero"><div class="tag">ENTER THE ARENA</div><h1>CHOOSE YOUR<br>MISSION.</h1><p>Ten action-packed 3D arcade experiences in one gaming hub. Pick a world, master the controls and beat your best score. Built for mobile touch and desktop keyboard.</p><button class="start" data-play="shooter">▶ PLAY HYPER STRIKE</button></div><div class="grid" id="grid"></div></section>
 <script type="module">
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
 const games=[
