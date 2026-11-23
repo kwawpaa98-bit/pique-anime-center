@@ -145,3 +145,22 @@ html{scroll-behavior:auto!important}
 .game-card:hover,.category-card:hover,.contact-card:hover,.btn:hover,.youtube-button:hover{transform:none!important}
 .game-image img,.game-card:hover .game-image img{transform:none!important;filter:saturate(1.18) contrast(1.06)}
 .image-play,.game-card:hover .image-play{opacity:1!important;background:linear-gradient(0deg,#050711bb,transparent 75%);display:flex;align-items:flex-end;justify-content:flex-end;padding:14px;font-size:11px}
+
+/* Keep all main pages visible in a pinned navigation bar */
+.topbar{position:sticky!important;top:0!important;z-index:1000!important;display:flex!important;flex-wrap:wrap!important;row-gap:8px!important}
+.topbar nav{display:flex!important;align-items:center;gap:5px;flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.topbar nav::-webkit-scrollbar{display:none}
+.topbar nav a{flex:0 0 auto}
+.menu-toggle{display:none!important}
+.youtube-promo{margin:24px 0 32px!important;scroll-margin-top:110px}
+@media(max-width:800px){
+ .topbar{padding:9px 12px!important;gap:6px!important}
+ .topbar .brand{flex:1 0 100%;width:100%}
+ .topbar nav{display:flex!important;width:100%;justify-content:flex-start;gap:4px;padding:2px 0 5px}
+ .topbar nav a{padding:8px 11px;font-size:12px}
+ .menu-toggle{display:none!important}
+}
+@media(max-width:420px){
+ .topbar nav a{padding:7px 9px;font-size:11px}
+ .youtube-promo{margin-top:18px!important;padding:18px!important}
+}
