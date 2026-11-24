@@ -19,8 +19,16 @@
     client.from("site_visits").insert({
       visitor_id: visitorId,
       page_path: location.pathname + location.search
-    }).then(({ error }) => {
-      if (error) console.warn("Visitor tracking could not be saved:", error.message);
+    }).then(async ({ error }) => {
+      if (error) {
+        console.warn("Visitor tracking could not be saved:", error.message);
+        return;
+      }
+      // Send at most one WhatsApp alert per anonymous browser per UTC day.
+      const { error: alertError } = await client.functions.invoke("whatsapp-visit-alert", {
+        body: { visitor_id: visitorId, page_path: location.pathname }
+      });
+      if (alertError) console.warn("WhatsApp visitor alert not sent:", alertError.message);
     });
   } catch (error) {
     console.warn("Visitor tracking unavailable in this browser session.", error);
