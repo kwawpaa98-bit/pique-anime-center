@@ -27,23 +27,19 @@ const genreFor=a=>(a.genres||[]).map(g=>g.name).join(' · ')||a.genre||'Anime';
 function render(){const q=search.value.trim().toLowerCase();const list=items.filter(a=>(!q||a.title.toLowerCase().includes(q))&&(active==='all'||(a.genres||[]).some(g=>g.name.toLowerCase().includes(active))||String(a.genre||'').toLowerCase().includes(active)));grid.innerHTML='';if(!list.length){grid.innerHTML='<div class="status">No titles match that search. Try another title.</div>';return;}list.forEach((a,i)=>{const card=document.createElement('article');card.className='anime-card';const wrap=document.createElement('div');wrap.className='poster-wrap';const fallbackArt=document.createElement('div');fallbackArt.className='poster-fallback';const label=document.createElement('strong');label.textContent=a.title;fallbackArt.append(label);wrap.append(fallbackArt);if(a.image){const img=document.createElement('img');img.alt=a.title+' poster';img.loading='lazy';img.src=a.image;img.onerror=()=>img.remove();wrap.append(img);}const info=document.createElement('div');info.className='anime-info';const h=document.createElement('h3');h.textContent=a.title;const p=document.createElement('p');p.textContent=genreFor(a);const link=document.createElement('a');link.className='watch';link.href='https://www.crunchyroll.com/search?q='+encodeURIComponent(a.title);link.target='_blank';link.rel='noopener noreferrer';link.textContent='Find where to watch ↗';info.append(h,p,link);card.append(wrap,info);grid.append(card);});}
 async function load(){
  items=fallback;render();
- const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),14000);
+ async function getJSON(url,options={}){const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),7500);try{const response=await fetch(url,{...options,signal:controller.signal,cache:'no-store'});if(!response.ok)throw new Error('Poster service unavailable');return await response.json();}finally{clearTimeout(timer);}}
  try{
   const query='query { Page(page: 1, perPage: 30) { media(type: ANIME, sort: POPULARITY_DESC, isAdult: false) { title { english romaji } coverImage { extraLarge large } genres } } }';
-  const response=await fetch('https://graphql.anilist.co',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({query}),signal:controller.signal,cache:'no-store'});
-  if(!response.ok)throw new Error('AniList unavailable');
-  const payload=await response.json();
+  const payload=await getJSON('https://graphql.anilist.co',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({query})});
   const live=(payload.data?.Page?.media||[]).filter(a=>a.coverImage?.large||a.coverImage?.extraLarge).map(a=>({title:a.title.english||a.title.romaji,image:a.coverImage.extraLarge||a.coverImage.large,genres:(a.genres||[]).map(name=>({name}))}));
   if(live.length>=20){items=live.slice(0,30);render();return;}
  }catch(error){}
  try{
-  const response=await fetch('https://api.jikan.moe/v4/top/anime?limit=30&page=1&sfw=true',{signal:controller.signal,cache:'no-store'});
-  if(!response.ok)throw new Error('Jikan unavailable');
-  const payload=await response.json();
+  const payload=await getJSON('https://api.jikan.moe/v4/top/anime?limit=30&page=1&sfw=true');
   const live=(payload.data||[]).filter(a=>a.title&&a.images?.jpg?.large_image_url).slice(0,30).map(a=>({title:a.title, image:a.images.jpg.large_image_url,genres:a.genres||[]}));
   if(live.length>=10){items=live;render();}
  }catch(error){/* Keep the 30 local title cards visible if both poster services are unavailable. */}
- finally{clearTimeout(timer);}
+
 }
 search.addEventListener('input',render);document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));button.classList.add('active');active=button.dataset.filter;render();}));load();
 </script></body></html>
