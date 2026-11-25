@@ -1,247 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PIQUE ANIMES 🔥 | Anime & Movies</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#050505;color:#fff;font-family:'Segoe UI',Arial,sans-serif;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;position:sticky;top:0;z-index:100;background:rgba(5,5,5,.85);backdrop-filter:blur(12px);border-bottom:1px solid #222}
-.logo{font-size:22px;font-weight:900;letter-spacing:1px}.logo span{color:#ff0033;text-shadow:0 0 20px #ff0033}
-.live{background:#ff0033;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:900;animation:pulse 1.5s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-nav{display:flex;gap:8px;padding:12px 14px;overflow-x:auto;position:sticky;top:53px;z-index:99;background:#050505;scrollbar-width:thin}
-nav button{flex:0 0 auto;white-space:nowrap;background:#1a1a1a;color:#fff;border:1px solid #2a2a2a;padding:11px 20px;border-radius:30px;font-weight:700;cursor:pointer;font-size:13px}
-nav button.active{background:#ff0033;border-color:#ff0033;box-shadow:0 0 20px rgba(255,0,51,.5)}
-nav button.green.active{background:#00e676;color:#000}
-.page{display:none;animation:fade .5s}.page.show{display:block}
-@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
-.wrap{max-width:1150px;margin:0 auto;padding:0 16px 50px}
-.hero{position:relative;border-radius:28px;overflow:hidden;padding:50px 22px 40px;text-align:center;margin:16px 0;background:radial-gradient(circle at 30% 20%, #ff0033 0%, #5a0000 35%, #080808 70%),linear-gradient(135deg,#1a001a,#000);border:1px solid #333}
-.hero h1{font-size:42px;line-height:1.1;font-weight:900;margin-top:18px}
-.hero h1 span{background:linear-gradient(90deg,#ff0033,#ffcc00,#ff0033);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:shine 3s linear infinite}
-@keyframes shine{to{background-position:200%}}
-.hero p{color:#ddd;margin:16px auto;max-width:650px;line-height:1.8;font-size:15px}
-.badge{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:7px 14px;border-radius:30px;font-size:12px;margin:4px}
-.stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
-.stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:14px 18px;border-radius:18px;min-width:110px}
-.stat b{font-size:24px;color:#ffcc00;display:block}.stat span{font-size:11px;color:#ccc}
-.btn-main{display:inline-block;background:#fff;color:#000;padding:15px 30px;border-radius:30px;font-weight:900;margin:8px 4px}
-.btn-red{display:inline-block;background:#ff0033;color:#fff;padding:15px 30px;border-radius:30px;font-weight:900;margin:8px 4px}
-.sec-title{font-size:24px;margin:28px 0 14px;display:flex;align-items:center;gap:10px}
-.sec-title:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,#333,transparent)}
-/* DESCRIPTION & PURPOSE - NEW */
-.desc-box{background:linear-gradient(180deg,#161616,#0d0d0d);border:1px solid #2a2a2a;border-radius:24px;padding:26px;margin:18px 0;line-height:1.8}
-.desc-box h2{font-size:24px;margin-bottom:12px}
-.desc-box h2 span{color:#ff0033}
-.desc-box p{color:#ccc;font-size:15px;margin-bottom:12px}
-.desc-box b{color:#fff}
-.purpose-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:16px}
-.purpose-card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:18px;padding:18px;text-align:left}
-.purpose-card h4{font-size:16px;margin-bottom:8px}
-.purpose-card p{font-size:13px;color:#aaa;line-height:1.6}
-.mission{background:linear-gradient(135deg,#ff0033,#8b0000);border-radius:22px;padding:24px;text-align:center;margin:16px 0}
-.mission h3{font-size:21px;margin-bottom:10px}
-.mission p{line-height:1.8;color:#ffe5e5;font-size:15px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-.card{background:linear-gradient(180deg,#171717,#0f0f0f);border:1px solid #262626;border-radius:22px;padding:22px;text-align:center}
-.card h3{font-size:19px;margin:12px 0 8px}
-.card p{color:#999;font-size:14px;line-height:1.6}
-.tag{display:inline-block;font-size:11px;font-weight:900;padding:6px 12px;border-radius:20px}
-.anime{background:#8b2bff}.movies{background:#00e676;color:#000}.blog{background:#ff0033}.idea{background:#ffcc00;color:#000}
-.btn{display:block;text-align:center;background:#fff;color:#000;padding:12px;border-radius:12px;margin-top:14px;font-weight:800}
-.channel{display:block;text-align:center;background:#ff0033;color:#fff;padding:12px;border-radius:12px;margin-top:8px;font-weight:800}
-.channel.green{background:#00e676;color:#000}
-.post-box{background:#121212;border:1px solid #2a2a2a;border-radius:22px;padding:20px;margin:16px auto;max-width:900px}
-.post-box input,.post-box textarea,.post-box select{width:100%;background:#1e1e1e;border:1px solid #333;color:#fff;padding:13px;border-radius:14px;margin-bottom:10px;outline:none}
-.post-box textarea{min-height:90px}
-.post-box button{width:100%;background:#ff0033;color:#fff;border:none;padding:14px;border-radius:14px;font-weight:900;cursor:pointer}
-.post-box.green button{background:#00e676;color:#000}
-.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:14px 0}
-.filters button{background:#1a1a1a;color:#fff;border:1px solid #333;padding:9px 16px;border-radius:20px;cursor:pointer}
-.filters button.active{background:#ff0033}
-.feed{max-width:900px;margin:0 auto}
-.pcard{background:#131313;border:1px solid #262626;border-radius:20px;padding:18px;margin-bottom:14px}
-.pcard h4{margin:10px 0 6px;font-size:18px}.pcard p{color:#bbb;font-size:14px;line-height:1.7}
-.actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
-.actions button{background:#1f1f1f;color:#fff;border:1px solid #333;padding:8px 14px;border-radius:20px;cursor:pointer}
-.comments{margin-top:12px;border-top:1px solid #262626;padding-top:10px;display:none}.comments.show{display:block}
-.comment{background:#1f1f1f;padding:10px;border-radius:12px;margin-bottom:8px;font-size:13px}.comment b{color:#ff6b81}
-.comment-input{display:flex;gap:8px;margin-top:10px}.comment-input input{flex:1;background:#1f1f1f;border:1px solid #333;color:#fff;padding:10px;border-radius:20px;outline:none}.comment-input button{background:#fff;color:#000;border:none;padding:10px 16px;border-radius:20px;font-weight:800;cursor:pointer}
-.yt-box{background:linear-gradient(135deg,#ff0033,#5a0000);border-radius:24px;padding:28px;text-align:center;margin:20px 0}
-.yt-box.green{background:linear-gradient(135deg,#00e676,#004d1f)}
-footer{text-align:center;color:#666;padding:24px;border-top:1px solid #222;font-size:13px;line-height:1.7}
-
-/* PIQUE ANIMES 2026 VISUAL REFRESH */
-:root{--ink:#090b18;--panel:#141a2e;--line:#293451;--violet:#9b5cff;--cyan:#29d9ff;--pink:#ff4f9a;--gold:#ffc857}
-body{background:radial-gradient(ellipse at 15% 0%,#20204a 0%,transparent 38%),radial-gradient(ellipse at 90% 28%,#102f45 0%,transparent 34%),#080b17;color:#f7f7ff}
-.topbar{background:rgba(8,11,23,.9);border-color:#27304a}
-.logo span{color:var(--cyan);text-shadow:0 0 18px #29d9ff}
-.live{background:linear-gradient(90deg,#8c42ff,#ff4f9a);color:white}
-nav{background:rgba(8,11,23,.96);border-bottom:1px solid #222c46}
-nav button{background:#171e34;border-color:#303b5b;color:#e9edff}
-nav button.active{background:linear-gradient(100deg,#8148ff,#d64dca);border-color:transparent;box-shadow:0 0 22px #874bff66}
-.page{animation:fade .35s ease}
-.hero{background:radial-gradient(circle at 15% 20%,#773cff 0%,transparent 35%),radial-gradient(circle at 85% 15%,#007eaa 0%,transparent 35%),linear-gradient(135deg,#171b3d,#101528 55%,#25112f);border:1px solid #59618d;box-shadow:0 18px 55px #0007}
-.hero h1 span{background:linear-gradient(90deg,#29d9ff,#b68cff,#ff75b5,#ffc857);-webkit-background-clip:text;background-clip:text}
-.badge{background:#ffffff12;border-color:#ffffff2a;color:#f4f2ff}
-.stat{background:linear-gradient(145deg,#ffffff14,#ffffff06);border-color:#ffffff25}
-.stat b{color:var(--gold)}
-.btn-main{background:linear-gradient(100deg,#29d9ff,#9d8aff);color:#09101d}
-.btn-red{background:linear-gradient(100deg,#ff4f9a,#9b5cff)}
-.sec-title{color:#e7eaff}.sec-title:after{background:linear-gradient(90deg,#5b5c9b,transparent)}
-.desc-box{background:linear-gradient(145deg,#151c35,#101525);border-color:#303d62;box-shadow:0 12px 30px #0003}
-.desc-box h2 span{color:var(--cyan)}
-.desc-box p{color:#c8cce0}
-.purpose-card{background:linear-gradient(145deg,#202849,#171d34);border-color:#36456d}
-.purpose-card h4{color:#d9c8ff}
-.purpose-card p{color:#b8c1dc}
-.mission{background:linear-gradient(120deg,#7041df,#167da7 55%,#b43b88)}
-.card{background:linear-gradient(150deg,#1b2440,#12182a);border-color:#344263;box-shadow:0 12px 28px #0003}
-.card h3{color:#f5f2ff}.card p{color:#bbc5df}
-.anime{background:#7c4dff;color:#fff}.movies{background:#18bfe5;color:#06131a}.blog{background:#e34eaa;color:#fff}.idea{background:#ffc857;color:#1c1607}
-.btn{background:linear-gradient(100deg,#29d9ff,#a88aff);color:#08111d}
-.channel{background:linear-gradient(100deg,#ff4f9a,#9b5cff)}
-.post-box,.pcard{background:linear-gradient(145deg,#17203a,#111728);border-color:#303e60}
-.post-box input,.post-box textarea,.post-box select,.comment-input input{background:#0e1528;border-color:#354466;color:#fff}
-.post-box button{background:linear-gradient(100deg,#9b5cff,#e34eaa)}
-.filters button,.actions button{background:#1c2743;border-color:#394b70;color:#edf0ff}
-.filters button.active{background:linear-gradient(100deg,#8148ff,#d64dca)}
-.comment{background:#202b49}.comment b{color:#6be3ff}
-.comment-input button{background:#29d9ff;color:#07111c}
-.yt-box{background:linear-gradient(120deg,#7041df,#167da7 60%,#b43b88)}
-footer{border-color:#26304b;color:#929bb8}
-@media(max-width:600px){.topbar{padding:12px 14px}.logo{font-size:19px}.hero{padding:38px 17px 30px;border-radius:22px}.hero h1{font-size:clamp(30px,9vw,42px)}.hero p{font-size:14px}.wrap{padding-left:13px;padding-right:13px}.grid{grid-template-columns:1fr}.desc-box{padding:20px}.sec-title{font-size:21px}nav{top:49px}}
-
-
-/* VISUAL ANIME ARTWORK */
-.anime-feature{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;align-items:center;margin:22px 0;background:linear-gradient(130deg,#171d39,#15162a);border:1px solid #39466d;border-radius:24px;overflow:hidden}
-.anime-feature img{width:100%;height:260px;object-fit:cover;display:block}
-.anime-feature-copy{padding:22px}.anime-feature-copy h2{font-size:25px;margin-bottom:10px;color:#e9ddff}.anime-feature-copy p{color:#c3cce5;line-height:1.7;font-size:14px}
-.poster-mini{width:100%;height:180px;object-fit:cover;border-radius:14px;margin:0 0 12px;display:block}
-@media(max-width:650px){.anime-feature{grid-template-columns:1fr}.anime-feature img{height:210px}.anime-feature-copy{padding:18px}}
-</style>
-</head>
-<body>
-
-<div class="topbar"><div class="logo">PIQUE <span>ANIMES</span></div><div class="live">● LIVE • 100 VIDEOS</div></div>
-
-<nav>
-<button onclick="showPage('home',this)" class="active">🏠 Home</button>
-<button onclick="showPage('shorts',this)">⚡ Anime Shorts</button>
-<button onclick="showPage('movies',this)">🎬 Movies</button>
-<button onclick="showPage('blog',this)">💬 Community</button>
-<button onclick="window.open('https://www.youtube.com/@Pique-anime','_blank')">▶️ YouTube</button>
-</nav>
-
-<!-- HOME -->
-<div id="home" class="page show"><div class="wrap">
-<div class="hero">
-<div><span class="badge">🔥 Anime & Movie Community in Ghana</span> <span class="badge">✨ 100+ Videos</span></div>
-<h1>WHERE ANIME<br><span>COMES ALIVE</span></h1>
-<p><b>Pique Animes</b> no be just channel. Na <b>family</b>. Anime stories, unforgettable movies, reviews and community conversations — all in one place.</p>
-<div><a class="btn-main" href="https://www.youtube.com/@Pique-anime" target="_blank">▶️ Watch Now</a><a class="btn-red" href="https://www.youtube.com/@Pique-anime?sub_confirmation=1" target="_blank">🔔 Subscribe</a></div>
-<div class="stats"><div class="stat"><b>100+</b><span>Videos & Shorts</span></div><div class="stat"><b>3</b><span>Worlds: Anime • Movies • Community</span></div><div class="stat"><b>∞</b><span>Family Vibes</span></div></div>
-</div>
-
-<!-- ===== DESCRIPTION - NEW ===== -->
-<div class="desc-box">
-<h2>📖 WHAT IS <span>PIQUE ANIMES?</span></h2>
-<p><b>Pique Animes</b> na the official home of the Pique Animes YouTube Channel. We be a community for people wey love <b>Anime, Movies, and community conversations</b>.</p>
-<p>We started with one simple idea: <b>Make one place where anime and movie fans fit discover content and enjoy everything together.</b> No need to go different places. Everything dey here.</p>
-<p>From <b>Naruto, One Piece, Bleach, Solo Leveling, Jujutsu Kaisen</b> to anime movie recommendations, reviews and community discussions - Pique Animes dey bring entertainment together. For school, work, bus, or house.</p>
-<p>We don post <b>100+ videos</b> already, and we still dey post more. This website na where you go find our anime videos, shorts, movie recommendations, blog posts, and community discussions.</p>
-</div>
-
-<!-- ===== PURPOSE - NEW ===== -->
-<div class="desc-box">
-<h2>🎯 OUR <span>PURPOSE</span></h2>
-<p>Our purpose simple, but e deep:</p>
-<div class="purpose-grid">
-<div class="purpose-card"><h4>🔥 1. ENTERTAIN YOU</h4><p>Bring you memorable anime moments, movie discoveries and entertaining stories.</p></div>
-<div class="purpose-card"><h4>❤️ 2. BUILD FAMILY</h4><p>No be only fans. We dey build family where everybody fit talk, share ideas, and feel belong. Your voice matter here.</p></div>
-<div class="purpose-card"><h4>📚 3. INSPIRE & TEACH</h4><p>Anime and movies can inspire courage, empathy, imagination and never give up. We dey use am inspire you.</p></div>
-<div class="purpose-card"><h4>🌍 4. PUT GHANA ON MAP</h4><p>Show the world say Ghana get real anime and movie lovers too. We dey represent Ghana to the world.</p></div>
-</div>
-</div>
-
-<div class="mission">
-<h3>💎 OUR MISSION</h3>
-<p>"To make Pique Animes a leading anime and movie community in Africa - where fans discover stories, share ideas and feel at home."</p>
-</div>
-
-<div class="desc-box">
-<h2>👀 OUR <span>VISION</span></h2>
-<p>We see a future where <b>Pique Animes</b> no be just YouTube channel, but a <b>movement</b>. A place where young people for Ghana and around the world fit come together, share their love for anime and movies, grow together, and create something bigger than all of us.</p>
-<p><b>If you love anime, movies, or real talk - you don already belong. Welcome to the family. 🔥</b></p>
-</div>
-
-
-<div class="sec-title">⚔️ Anime Spotlight</div>
-<section class="anime-feature">
-<img src="https://img.ixbt.site/live/topics/preview/00/09/21/87/aae938a9df.webp" alt="Cinematic dark fantasy anime warrior artwork" loading="lazy">
-<div class="anime-feature-copy"><span class="badge">ANIME WORLD</span><h2>Enter the Anime Universe</h2><p>Discover action, fantasy, emotional stories and unforgettable characters. Explore anime shorts and watch supported videos right here, or continue on YouTube.</p><a class="btn-red" href="./shorts.html">Explore Anime Shorts →</a></div>
-</section>
-<div class="sec-title">🌍 Explore Pique</div>
-<div class="grid">
-<div class="card"><img class="poster-mini" src="https://img.ixbt.site/live/topics/preview/00/09/21/87/aae938a9df.webp" alt="Fantasy anime warrior artwork" loading="lazy"><span class="tag anime">🔥 ANIME WORLD</span><h3>Anime That Hits Different</h3><p>Naruto, One Piece, Bleach, Solo Leveling, JJK - top moments, fights, aura.</p><button class="btn" onclick="showPage('shorts',document.querySelectorAll('nav button')[1])">Enter Anime World →</button></div>
-<div class="card"><span class="tag anime">🎬 MOVIE WORLD</span><h3>Movies Worth Watching</h3><p>Discover anime films, animated adventures, trailers and movie discussions.</p><button class="btn" onclick="showPage('movies',document.querySelectorAll('nav button')[2])">Explore Movies →</button></div>
-<div class="card"><span class="tag blog">💬 BLOG WORLD</span><h3>Blog Where Everybody Talks</h3><p>No be only Pique dey talk. You fit post, comment, share idea.</p><button class="btn" onclick="showPage('blog',document.querySelectorAll('nav button')[3])">Join The Talk →</button></div>
-</div>
-
-<div class="yt-box"><h3>🔔 JOIN THE PIQUE FAMILY TODAY</h3><p>100 videos already. More dey come. Don't miss.</p><a class="btn-main" href="https://www.youtube.com/@Pique-anime?sub_confirmation=1" target="_blank">🔔 SUBSCRIBE NOW</a></div>
-</div></div>
-
-<!-- SHORTS -->
-<div id="shorts" class="page"><div class="wrap">
-<div class="hero"><h1>⚡ SHORTS <span>THAT SLAP</span></h1><p>Short, sweet, funny. Tap any one to watch for YouTube.</p></div>
-<div class="grid">
-<div class="card"><h3>😂 Naruto Funny Moment</h3><p>Episode wey break everybody.</p><a class="channel" href="https://www.youtube.com/@Pique-anime" target="_blank">Watch ▶</a></div>
-<div class="card"><h3>🔥 One Piece Top Moment</h3><p>Luffy aura too much.</p><a class="channel" href="https://www.youtube.com/@Pique-anime" target="_blank">Watch ▶</a></div>
-
-<div class="card"><h3>✨ Solo Leveling Aura</h3><p>Sung Jinwoo no be human.</p><a class="channel" href="https://www.youtube.com/@Pique-anime" target="_blank">Watch ▶</a></div>
-<div class="card"><h3>⚔️ Bleach Fight</h3><p>Ichigo vs everybody.</p><a class="channel" href="https://www.youtube.com/@Pique-anime" target="_blank">Watch ▶</a></div>
-<div class="card"><h3>😎 Gojo - The Strongest</h3><p>JJK - Gojo Satoru.</p><a class="channel" href="https://www.youtube.com/@Pique-anime" target="_blank">Watch ▶</a></div>
-</div>
-<div class="yt-box"><h3>Want All 100?</h3><a class="btn-main" href="https://www.youtube.com/@Pique-anime" target="_blank">Visit my YouTube channel for 100 of these 🔥</a></div>
-</div></div>
-
-<!-- BLOG -->
-<div id="blog" class="page"><div class="wrap">
-<div class="hero"><h1>💬 BLOG <span>= COMMUNITY</span></h1><p>Here na our blog. Everybody fit post, comment, like, share idea.</p></div>
-<div class="post-box"><h3>💡 Share Idea / Write Blog</h3><input id="b-name" placeholder="Your Name"><select id="b-cat"><option>🔥 ANIME</option><option>🎬 MOVIES</option><option>📝 BLOG</option><option>💡 IDEA</option></select><input id="b-title" placeholder="Title"><textarea id="b-text" placeholder="Write your blog, idea, question..."></textarea><button onclick="addBlog()">Post To Blog 🚀</button></div>
-<div class="filters"><button class="active" onclick="filterBlog('ALL',this)">All</button><button onclick="filterBlog('ANIME',this)">🔥 Anime</button><button onclick="filterBlog('MOVIES',this)">🎬 Movies</button><button onclick="filterBlog('BLOG',this)">📝 Blog</button><button onclick="filterBlog('IDEA',this)">💡 Ideas</button></div>
-<div class="feed" id="blog-feed"></div>
-</div></div>
-
-<!-- MOVIES -->
-<div id="movies" class="page"><div class="wrap">
-<div class="hero"><h1>🎬 ANIME & MOVIES <span>DISCOVERY</span></h1><p>Find your next favourite story. Explore anime films, animated adventures, trailers and movie conversations with the Pique family.</p></div>
-<div class="sec-title">🍿 Anime Movie Picks</div>
-<div class="grid">
-<div class="card"><span class="tag anime">ANIME FILM</span><h3>Your Name</h3><p>A heartfelt, visually stunning story about two lives connected by a mysterious phenomenon.</p><a class="channel" href="https://www.youtube.com/results?search_query=Your+Name+official+movie+trailer" target="_blank" rel="noopener">Find official trailer ▶</a></div>
-<div class="card"><span class="tag anime">ANIME FILM</span><h3>A Silent Voice</h3><p>An emotional story about friendship, regret, kindness and second chances.</p><a class="channel" href="https://www.youtube.com/results?search_query=A+Silent+Voice+official+movie+trailer" target="_blank" rel="noopener">Find official trailer ▶</a></div>
-<div class="card"><span class="tag anime">ANIME FILM</span><h3>Suzume</h3><p>A spectacular adventure that blends fantasy, mystery and heartfelt moments.</p><a class="channel" href="https://www.youtube.com/results?search_query=Suzume+official+movie+trailer" target="_blank" rel="noopener">Find official trailer ▶</a></div>
-<div class="card"><span class="tag anime">ANIME FILM</span><h3>Spirited Away</h3><p>A timeless fantasy adventure filled with unforgettable characters and worlds.</p><a class="channel" href="https://www.youtube.com/results?search_query=Spirited+Away+official+movie+trailer" target="_blank" rel="noopener">Find official trailer ▶</a></div>
-</div>
-<div class="yt-box"><h3>🎥 More Anime & Movie Content</h3><p>Watch Pique Animes and join the conversation.</p><a class="btn-main" href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener">Visit Pique Animes on YouTube</a></div>
-</div></div>
-
-<footer>© 2026 PIQUE ANIMES - THE MASTERPIECE 🔥<br>Home • Anime Shorts • Movies • Community • <a href="https://www.youtube.com/@Pique-anime" style="color:#ff0033;font-weight:bold">Visit my YouTube channel for 100 of these 🔥</a></footer>
-
-<script>
-function showPage(id,btn){document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));document.getElementById(id).classList.add('show');document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
-let blogFilter='ALL';
-let blogPosts=JSON.parse(localStorage.getItem('pique_blog')||'null')||[{name:"Pique",cat:"🔥 ANIME",title:"Naruto vs Luffy: Who Be The Real King?",text:"Naruto get heart, Luffy get freedom. Who you pick?",likes:24,comments:[{n:"AnimeQueen",t:"Luffy all day! 🔥"}]},{name:"Pique",cat:"💡 IDEA",title:"What Should Pique Cover Next?",text:"Which anime or movie should we feature next? Share your pick and tell us why!",likes:31,comments:[{n:"Sarah",t:"Number 1 🙏"}]}];
-function renderBlog(){let f=document.getElementById('blog-feed');f.innerHTML='';blogPosts.forEach((p,i)=>{if(blogFilter!=='ALL'&&!p.cat.includes(blogFilter))return;let cls=p.cat.includes('ANIME')?'anime':p.cat.includes('MOVIES')?'anime':p.cat.includes('IDEA')?'idea':'blog';let ch=p.comments.map(c=>`<div class="comment"><b>${c.n}:</b> ${c.t}</div>`).join('');f.innerHTML+=`<div class="pcard"><b>${p.name}</b> <span class="tag ${cls}">${p.cat}</span><h4>${p.title}</h4><p>${p.text}</p><div class="actions"><button onclick="likeBlog(${i})">❤️ ${p.likes}</button><button onclick="toggleC('b',${i})">💬 ${p.comments.length}</button></div><div class="comments" id="b-c-${i}">${ch}<div class="comment-input"><input id="b-ci-${i}" placeholder="Reply..."><button onclick="addBlogComment(${i})">Reply</button></div></div></div>`;});}
-function addBlog(){let n=document.getElementById('b-name').value.trim()||'Anonymous';let c=document.getElementById('b-cat').value;let t=document.getElementById('b-title').value.trim();let tx=document.getElementById('b-text').value.trim();if(!t||!tx){alert('Write Title and idea first!');return;}blogPosts.unshift({name:n,cat:c,title:t,text:tx,likes:0,comments:[]});localStorage.setItem('pique_blog',JSON.stringify(blogPosts));renderBlog();document.getElementById('b-title').value='';document.getElementById('b-text').value='';alert('Post don go live! 🔥');}
-function likeBlog(i){blogPosts[i].likes++;localStorage.setItem('pique_blog',JSON.stringify(blogPosts));renderBlog();}
-function addBlogComment(i){let inp=document.getElementById('b-ci-'+i);let v=inp.value.trim();if(!v)return;let n=document.getElementById('b-name').value.trim()||'Guest';blogPosts[i].comments.push({n:n,t:v});localStorage.setItem('pique_blog',JSON.stringify(blogPosts));renderBlog();setTimeout(()=>{document.getElementById('b-c-'+i).classList.add('show')},100);}
-function filterBlog(f,btn){blogFilter=f;document.querySelectorAll('#blog .filters button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderBlog();}
-function toggleC(t,i){document.getElementById(t+'-c-'+i).classList.toggle('show');}
-renderBlog();
-</script>
-</body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pique Animes | Anime & Movies</title><style>
+:root{--red:#e50914;--bg:#080808;--panel:#181818;--muted:#aaa;--line:#292929}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#fff;font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}
+.nav{height:70px;position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:linear-gradient(180deg,#050505 0%,rgba(8,8,8,.96) 100%);border-bottom:1px solid #242424}
+.brand{font-size:25px;font-weight:1000;letter-spacing:1.5px;color:#fff}.brand span{color:var(--red);margin-left:5px}.navlinks{display:flex;gap:25px;align-items:center}.navlinks a{font-size:14px;color:#ddd;transition:.2s}.navlinks a:hover,.navlinks a.active{color:#fff}
+.wrap{max-width:1400px;margin:auto;padding:0 4% 60px}.eyebrow{font-size:11px;font-weight:800;letter-spacing:2px;color:#ff6970;text-transform:uppercase}
+.hero{min-height:510px;position:relative;display:flex;align-items:end;padding:65px 6%;margin:0 -4.4% 34px;background-size:cover;background-position:center 35%;isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#080808 0%,rgba(8,8,8,.82) 32%,rgba(8,8,8,.18) 100%),linear-gradient(0deg,#080808 0%,transparent 60%)}
+.hero-copy{max-width:600px}.hero h1{font-size:clamp(40px,6vw,76px);line-height:.98;margin:14px 0;font-weight:950;letter-spacing:-2px}.hero p{max-width:540px;color:#ddd;line-height:1.7;font-size:16px}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 22px;border-radius:5px;font-weight:800;margin:12px 8px 0 0;background:#fff;color:#111}.btn.red{background:var(--red);color:white}.btn.dark{background:#555d;color:white}
+.section{margin:35px 0}.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:15px}.section h2{font-size:22px;margin:0;font-weight:800}.section-head small{color:#aaa}
+.rowcards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}.poster-card{position:relative;overflow:hidden;border-radius:5px;background:#171717;transition:transform .22s,box-shadow .22s}.poster-card:hover{transform:scale(1.035);z-index:2;box-shadow:0 15px 35px #000b}.poster-card img{width:100%;height:245px;object-fit:cover;display:block}.poster-card .meta{padding:12px}.poster-card h3{font-size:15px;margin:0 0 5px}.poster-card p{font-size:12px;color:#aaa;line-height:1.5;margin:0}.tile{background:linear-gradient(140deg,#252525,#111);border:1px solid #333;padding:24px;border-radius:6px;min-height:150px}.tile h3{margin:0 0 8px}.tile p{color:#aaa;font-size:13px;line-height:1.6}.tile a{color:#fff;font-weight:bold;font-size:13px}
+footer{border-top:1px solid #242424;text-align:center;padding:25px;color:#777;font-size:12px}
+@media(max-width:900px){.rowcards{grid-template-columns:repeat(3,minmax(0,1fr))}.poster-card img{height:220px}.hero{min-height:450px}}
+@media(max-width:600px){.nav{height:auto;min-height:64px;padding:13px 4%;align-items:flex-start;gap:12px;flex-direction:column}.brand{font-size:22px}.navlinks{gap:17px;overflow-x:auto;width:100%;padding-bottom:3px}.navlinks a{white-space:nowrap;font-size:13px}.hero{min-height:430px;padding:45px 5%;background-position:58% center}.hero h1{font-size:43px}.hero p{font-size:14px}.rowcards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.poster-card img{height:190px}.section h2{font-size:19px}.wrap{padding-left:4%;padding-right:4%}}
+</style></head><body><nav class="nav"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="navlinks"><a href="./index.html">Home</a><a href="./anime.html">Anime</a><a href="./movies.html">Movies</a><a href="./blog.html">Community</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener">YouTube ↗</a></div></nav>
+<main class="wrap">
+<section class="hero" style="background-image:url('https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1800&q=90')"><div class="hero-copy"><span class="eyebrow">Your world. Your stories.</span><h1>THE ANIME<br>UNIVERSE.</h1><p>Step into unforgettable anime worlds, discover cinematic movies and find your next obsession. Welcome to Pique Animes.</p><a class="btn red" href="./anime.html">▶ Explore Anime</a><a class="btn dark" href="./movies.html">＋ Browse Movies</a></div></section>
+<section class="section"><div class="section-head"><h2>Anime worlds to explore</h2><small>Discover your next favourite</small></div><div class="rowcards">
+<a class="poster-card" href="./anime.html"><img src="https://img.ixbt.site/live/topics/preview/00/09/21/87/aae938a9df.webp" alt="Anime fantasy artwork"><div class="meta"><h3>Action & Fantasy</h3><p>Powerful heroes. Epic battles.</p></div></a>
+<a class="poster-card" href="./anime.html"><img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=700&q=85" alt="Anime-inspired illustration"><div class="meta"><h3>Anime Discoveries</h3><p>Find a new world to love.</p></div></a>
+<a class="poster-card" href="./movies.html"><img src="https://cdn.posteritati.com/posters/000/000/049/033/your-name-md-web.jpg" alt="Your Name poster"><div class="meta"><h3>Emotional Stories</h3><p>Stories that stay with you.</p></div></a>
+<a class="poster-card" href="./movies.html"><img src="https://ilarge.lisimg.com/image/14334019/740full-a-silent-voice-%282016%29-poster.jpg" alt="A Silent Voice poster"><div class="meta"><h3>Anime Films</h3><p>Big-screen adventures.</p></div></a>
+<a class="poster-card" href="./movies.html"><img src="https://www.blogo.it/app/uploads/sites/3/2022/07/suzume-nuovo-trailer-poster-e-anticipazioni-del-nuovo-anime-di-makoto-shinkai.jpg" alt="Suzume poster"><div class="meta"><h3>Movie Spotlight</h3><p>Choose what to watch next.</p></div></a>
+</div></section>
+<section class="section"><div class="section-head"><h2>Featured movies</h2><a href="./movies.html" style="color:#ff646b;font-size:13px">View all →</a></div><div class="rowcards">
+<a class="poster-card" href="./movies.html"><img src="https://cdn.posteritati.com/posters/000/000/049/033/your-name-md-web.jpg" alt="Your Name"><div class="meta"><h3>Your Name</h3><p>Fantasy · Romance</p></div></a>
+<a class="poster-card" href="./movies.html"><img src="https://ilarge.lisimg.com/image/14334019/740full-a-silent-voice-%282016%29-poster.jpg" alt="A Silent Voice"><div class="meta"><h3>A Silent Voice</h3><p>Drama · Coming of age</p></div></a>
+<a class="poster-card" href="./movies.html"><img src="https://www.blogo.it/app/uploads/sites/3/2022/07/suzume-nuovo-trailer-poster-e-anticipazioni-del-nuovo-anime-di-makoto-shinkai.jpg" alt="Suzume"><div class="meta"><h3>Suzume</h3><p>Adventure · Fantasy</p></div></a>
+<a class="poster-card" href="./movies.html"><img src="https://www.tohokingdom.com/images/poster/spirited_away_jp03.jpg" alt="Spirited Away"><div class="meta"><h3>Spirited Away</h3><p>Fantasy · Adventure</p></div></a>
+<div class="tile"><span class="eyebrow">More to discover</span><h3>Your next movie night starts here.</h3><p>Explore the Pique Animes movie collection.</p><a href="./movies.html">Browse movies →</a></div>
+</div></section>
+<section class="section"><div class="section-head"><h2>Welcome to the Pique family</h2></div><div class="tile"><h3>Anime is better together.</h3><p>Share your opinions, recommend a series, discuss your favourite characters and connect with other fans in our community.</p><a href="./blog.html">Join the community →</a></div></section>
+</main><footer>© 2026 Pique Animes · Made for anime & movie fans · <a href="https://www.youtube.com/@Pique-anime">YouTube</a></footer></body></html>
