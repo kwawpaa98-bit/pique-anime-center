@@ -29,7 +29,7 @@ const CLOUDINARY_UPLOAD_PRESET='pique_animes';
 const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
 const $=id=>document.getElementById(id);
 const status=t=>$('status').textContent=t;
-function syncType(){const anime=$('type').value==='anime';$('seasonField').hidden=!anime;$('episodeField').hidden=!anime}
+function syncType(){const anime=$('type').value==='anime';$('seasonField').hidden=!anime;$('episodeField').hidden=!anime;$('season').required=anime;$('episode').required=anime}
 $('type').addEventListener('change',syncType);syncType();
 async function checkSession(){const {data:{session}}=await db.auth.getSession();if(!session){$('loginBox').hidden=false;$('studio').hidden=true;return}const {data:admin,error}=await db.from('admin_users').select('user_id').eq('user_id',session.user.id).maybeSingle();if(error||!admin){await db.auth.signOut();$('loginBox').hidden=false;$('studio').hidden=true;alert('This account has not been approved as a Pique Animes administrator yet.');return}$('loginBox').hidden=true;$('studio').hidden=false;$('who').textContent='Signed in as '+session.user.email;loadItems()}
 $('loginBtn').onclick=async()=>{const {error}=await db.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});if(error){alert(error.message);return}await checkSession()};
