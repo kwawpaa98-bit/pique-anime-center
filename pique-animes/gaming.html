@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1"><title>Games - Pique Animehall</title>
+<style>
+body{background:#0f0f1a;color:white;font-family:Arial;text-align:center;margin:0}
+nav{background:#ff2e63;padding:15px}nav a{color:white;text-decoration:none;margin:0 8px;font-weight:bold;font-size:14px}
+.card{background:#1a1a2e;padding:20px;margin:15px;border-radius:15px}
+button{background:#ff2e63;color:white;border:none;padding:10px 20px;border-radius:30px;font-weight:bold;margin:5px}
+input{padding:10px;border-radius:20px;border:none;width:70%}
+</style>
+</head>
+<body>
+<nav><a href="index.html">HOME</a><a href="short.html">SHORTS</a><a href="games.html">GAMES</a><a href="blog.html">BLOG</a><a href="gallery.html">GALLERY</a></nav>
+<h1>🎮 7 ANIME GAMES</h1>
+
+<!-- GAME 1 -->
+<div class="card"><h2>1. Who Is The Hokage?</h2><p id="r1"></p>
+<button onclick="document.getElementById('r1').innerHTML='✅ CORRECT! Naruto!'">Naruto</button>
+<button onclick="document.getElementById('r1').innerHTML='❌ Wrong!'">Sasuke</button>
+<button onclick="document.getElementById('r1').innerHTML='❌ Wrong!'">Luffy</button></div>
+
+<!-- GAME 2 -->
+<div class="card"><h2>2. Guess The Anime: 🏴‍☠️🍖👒</h2><p id="r2"></p>
+<button onclick="document.getElementById('r2').innerHTML='✅ YES! One Piece!'">One Piece</button>
+<button onclick="document.getElementById('r2').innerHTML='❌ Wrong!'">Naruto</button></div>
+
+<!-- GAME 3 -->
+<div class="card"><h2>3. Guess The Character: ⚔️🔥 Demon Slayer</h2><p id="r3"></p>
+<button onclick="document.getElementById('r3').innerHTML='✅ CORRECT! Tanjiro!'">Tanjiro</button>
+<button onclick="document.getElementById('r3').innerHTML='❌ Wrong!'">Goku</button></div>
+
+<!-- GAME 4 -->
+<div class="card"><h2>4. True or False: Goku is from Dragon Ball?</h2><p id="r4"></p>
+<button onclick="document.getElementById('r4').innerHTML='✅ TRUE! You know!'">TRUE</button>
+<button onclick="document.getElementById('r4').innerHTML='❌ Wrong! Goku IS Dragon Ball!'">FALSE</button></div>
+
+<!-- GAME 5 -->
+<div class="card"><h2>5. Which Anime Has Gojo?</h2><p id="r5"></p>
+<button onclick="document.getElementById('r5').innerHTML='✅ CORRECT! Jujutsu Kaisen!'">Jujutsu Kaisen</button>
+<button onclick="document.getElementById('r5').innerHTML='❌ Wrong!'">Attack on Titan</button></div>
+
+<!-- GAME 6 -->
+<div class="card"><h2>6. Type Your Favorite Anime</h2>
+<input id="fav" placeholder="Type e.g Naruto"><br><br>
+<button onclick="myFav()">Submit</button><p id="r6"></p>
+<script>function myFav(){let v=document.getElementById('fav').value;document.getElementById('r6').innerHTML='🔥 '+v+' is a GREAT choice! You be real Otaku!'}</script></div>
+
+<!-- GAME 7 -->
+<div class="card"><h2>7. Luck Game - Tap To See Your Anime Power</h2>
+<button onclick="luck()">TAP FOR POWER</button><p id="r7" style="font-size:20px"></p>
+<script>function luck(){let p=Math.floor(Math.random()*100)+1;let t='';if(p>80)t='🔥 LEGEND - You be Hokage Level!';else if(p>50)t='⚡ STRONG - You be Jonin Level!';else t='💪 GENIN - Keep Watching Anime!';document.getElementById('r7').innerHTML='Your Power: '+p+'% <br>'+t}</script></div>
+
+<a href="index.html" style="color:white">← Back Home</a>
+</body>
+</html>
