@@ -115,6 +115,13 @@ nav button.active{background:linear-gradient(100deg,#8148ff,#d64dca);border-colo
 footer{border-color:#26304b;color:#929bb8}
 @media(max-width:600px){.topbar{padding:12px 14px}.logo{font-size:19px}.hero{padding:38px 17px 30px;border-radius:22px}.hero h1{font-size:clamp(30px,9vw,42px)}.hero p{font-size:14px}.wrap{padding-left:13px;padding-right:13px}.grid{grid-template-columns:1fr}.desc-box{padding:20px}.sec-title{font-size:21px}nav{top:49px}}
 
+
+/* VISUAL ANIME ARTWORK */
+.anime-feature{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;align-items:center;margin:22px 0;background:linear-gradient(130deg,#171d39,#15162a);border:1px solid #39466d;border-radius:24px;overflow:hidden}
+.anime-feature img{width:100%;height:260px;object-fit:cover;display:block}
+.anime-feature-copy{padding:22px}.anime-feature-copy h2{font-size:25px;margin-bottom:10px;color:#e9ddff}.anime-feature-copy p{color:#c3cce5;line-height:1.7;font-size:14px}
+.poster-mini{width:100%;height:180px;object-fit:cover;border-radius:14px;margin:0 0 12px;display:block}
+@media(max-width:650px){.anime-feature{grid-template-columns:1fr}.anime-feature img{height:210px}.anime-feature-copy{padding:18px}}
 </style>
 </head>
 <body>
@@ -171,9 +178,15 @@ footer{border-color:#26304b;color:#929bb8}
 <p><b>If you love anime, movies, or real talk - you don already belong. Welcome to the family. 🔥</b></p>
 </div>
 
+
+<div class="sec-title">⚔️ Anime Spotlight</div>
+<section class="anime-feature">
+<img src="https://img.ixbt.site/live/topics/preview/00/09/21/87/aae938a9df.webp" alt="Cinematic dark fantasy anime warrior artwork" loading="lazy">
+<div class="anime-feature-copy"><span class="badge">ANIME WORLD</span><h2>Enter the Anime Universe</h2><p>Discover action, fantasy, emotional stories and unforgettable characters. Explore anime shorts and watch supported videos right here, or continue on YouTube.</p><a class="btn-red" href="./shorts.html">Explore Anime Shorts →</a></div>
+</section>
 <div class="sec-title">🌍 Explore Pique</div>
 <div class="grid">
-<div class="card"><span class="tag anime">🔥 ANIME WORLD</span><h3>Anime That Hits Different</h3><p>Naruto, One Piece, Bleach, Solo Leveling, JJK - top moments, fights, aura.</p><button class="btn" onclick="showPage('shorts',document.querySelectorAll('nav button')[1])">Enter Anime World →</button></div>
+<div class="card"><img class="poster-mini" src="https://img.ixbt.site/live/topics/preview/00/09/21/87/aae938a9df.webp" alt="Fantasy anime warrior artwork" loading="lazy"><span class="tag anime">🔥 ANIME WORLD</span><h3>Anime That Hits Different</h3><p>Naruto, One Piece, Bleach, Solo Leveling, JJK - top moments, fights, aura.</p><button class="btn" onclick="showPage('shorts',document.querySelectorAll('nav button')[1])">Enter Anime World →</button></div>
 <div class="card"><span class="tag anime">🎬 MOVIE WORLD</span><h3>Movies Worth Watching</h3><p>Discover anime films, animated adventures, trailers and movie discussions.</p><button class="btn" onclick="showPage('movies',document.querySelectorAll('nav button')[2])">Explore Movies →</button></div>
 <div class="card"><span class="tag blog">💬 BLOG WORLD</span><h3>Blog Where Everybody Talks</h3><p>No be only Pique dey talk. You fit post, comment, share idea.</p><button class="btn" onclick="showPage('blog',document.querySelectorAll('nav button')[3])">Join The Talk →</button></div>
 </div>
