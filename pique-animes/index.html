@@ -114,7 +114,7 @@ footer{text-align:center;color:#666;padding:24px;border-top:1px solid #222;font-
 <div class="purpose-card"><h4>🔥 1. ENTERTAIN YOU</h4><p>Bring you memorable anime moments, movie discoveries and entertaining stories.</p></div>
 <div class="purpose-card"><h4>❤️ 2. BUILD FAMILY</h4><p>No be only fans. We dey build family where everybody fit talk, share ideas, and feel belong. Your voice matter here.</p></div>
 <div class="purpose-card"><h4>📚 3. INSPIRE & TEACH</h4><p>Anime and movies can inspire courage, empathy, imagination and never give up. We dey use am inspire you.</p></div>
-<div class="purpose-card"><h4>🌍 4. PUT GHANA ON MAP</h4><p>Show the world say Ghana get real anime and gaming lovers too. We dey represent Ghana to the world.</p></div>
+<div class="purpose-card"><h4>🌍 4. PUT GHANA ON MAP</h4><p>Show the world say Ghana get real anime and movie lovers too. We dey represent Ghana to the world.</p></div>
 </div>
 </div>
 
@@ -126,10 +126,10 @@ footer{text-align:center;color:#666;padding:24px;border-top:1px solid #222;font-
 <div class="desc-box">
 <h2>👀 OUR <span>VISION</span></h2>
 <p>We see a future where <b>Pique Animes</b> no be just YouTube channel, but a <b>movement</b>. A place where young people for Ghana and around the world fit come together, share their love for anime and movies, grow together, and create something bigger than all of us.</p>
-<p><b>If you love anime, gaming, or real talk - you don already belong. Welcome to the family. 🔥</b></p>
+<p><b>If you love anime, movies, or real talk - you don already belong. Welcome to the family. 🔥</b></p>
 </div>
 
-<div class="sec-title">🌍 Explore The Worlds</div>
+<div class="sec-title">🌍 Explore Pique</div>
 <div class="grid">
 <div class="card"><span class="tag anime">🔥 ANIME WORLD</span><h3>Anime That Hits Different</h3><p>Naruto, One Piece, Bleach, Solo Leveling, JJK - top moments, fights, aura.</p><button class="btn" onclick="showPage('shorts',document.querySelectorAll('nav button')[1])">Enter Anime World →</button></div>
 <div class="card"><span class="tag anime">🎬 MOVIE WORLD</span><h3>Movies Worth Watching</h3><p>Discover anime films, animated adventures, trailers and movie discussions.</p><button class="btn" onclick="showPage('movies',document.querySelectorAll('nav button')[2])">Explore Movies →</button></div>
@@ -186,9 +186,6 @@ function likeBlog(i){blogPosts[i].likes++;localStorage.setItem('pique_blog',JSON
 function addBlogComment(i){let inp=document.getElementById('b-ci-'+i);let v=inp.value.trim();if(!v)return;let n=document.getElementById('b-name').value.trim()||'Guest';blogPosts[i].comments.push({n:n,t:v});localStorage.setItem('pique_blog',JSON.stringify(blogPosts));renderBlog();setTimeout(()=>{document.getElementById('b-c-'+i).classList.add('show')},100);}
 function filterBlog(f,btn){blogFilter=f;document.querySelectorAll('#blog .filters button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderBlog();}
 function toggleC(t,i){document.getElementById(t+'-c-'+i).classList.toggle('show');}
-document.getElementById('g-title').value='';document.getElementById('g-text').value='';alert('Movies post don go live! 🎬');}
-function likeGaming(i){gamingPosts[i].likes++;localStorage.setItem('pique_gaming',JSON.stringify(gamingPosts));renderGaming();}
-function addGamingComment(i){let inp=document.getElementById('g-ci-'+i);let v=inp.value.trim();if(!v)return;let n=document.getElementById('g-name').value.trim()||'Guest';gamingPosts[i].comments.push({n:n,t:v});localStorage.setItem('pique_gaming',JSON.stringify(gamingPosts));renderGaming();setTimeout(()=>{document.getElementById('g-c-'+i).classList.add('show')},100);}
 renderBlog();
 </script>
 </body>
