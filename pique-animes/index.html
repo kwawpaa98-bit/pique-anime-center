@@ -73,6 +73,48 @@ nav button.green.active{background:#00e676;color:#000}
 .yt-box{background:linear-gradient(135deg,#ff0033,#5a0000);border-radius:24px;padding:28px;text-align:center;margin:20px 0}
 .yt-box.green{background:linear-gradient(135deg,#00e676,#004d1f)}
 footer{text-align:center;color:#666;padding:24px;border-top:1px solid #222;font-size:13px;line-height:1.7}
+
+/* PIQUE ANIMES 2026 VISUAL REFRESH */
+:root{--ink:#090b18;--panel:#141a2e;--line:#293451;--violet:#9b5cff;--cyan:#29d9ff;--pink:#ff4f9a;--gold:#ffc857}
+body{background:radial-gradient(ellipse at 15% 0%,#20204a 0%,transparent 38%),radial-gradient(ellipse at 90% 28%,#102f45 0%,transparent 34%),#080b17;color:#f7f7ff}
+.topbar{background:rgba(8,11,23,.9);border-color:#27304a}
+.logo span{color:var(--cyan);text-shadow:0 0 18px #29d9ff}
+.live{background:linear-gradient(90deg,#8c42ff,#ff4f9a);color:white}
+nav{background:rgba(8,11,23,.96);border-bottom:1px solid #222c46}
+nav button{background:#171e34;border-color:#303b5b;color:#e9edff}
+nav button.active{background:linear-gradient(100deg,#8148ff,#d64dca);border-color:transparent;box-shadow:0 0 22px #874bff66}
+.page{animation:fade .35s ease}
+.hero{background:radial-gradient(circle at 15% 20%,#773cff 0%,transparent 35%),radial-gradient(circle at 85% 15%,#007eaa 0%,transparent 35%),linear-gradient(135deg,#171b3d,#101528 55%,#25112f);border:1px solid #59618d;box-shadow:0 18px 55px #0007}
+.hero h1 span{background:linear-gradient(90deg,#29d9ff,#b68cff,#ff75b5,#ffc857);-webkit-background-clip:text;background-clip:text}
+.badge{background:#ffffff12;border-color:#ffffff2a;color:#f4f2ff}
+.stat{background:linear-gradient(145deg,#ffffff14,#ffffff06);border-color:#ffffff25}
+.stat b{color:var(--gold)}
+.btn-main{background:linear-gradient(100deg,#29d9ff,#9d8aff);color:#09101d}
+.btn-red{background:linear-gradient(100deg,#ff4f9a,#9b5cff)}
+.sec-title{color:#e7eaff}.sec-title:after{background:linear-gradient(90deg,#5b5c9b,transparent)}
+.desc-box{background:linear-gradient(145deg,#151c35,#101525);border-color:#303d62;box-shadow:0 12px 30px #0003}
+.desc-box h2 span{color:var(--cyan)}
+.desc-box p{color:#c8cce0}
+.purpose-card{background:linear-gradient(145deg,#202849,#171d34);border-color:#36456d}
+.purpose-card h4{color:#d9c8ff}
+.purpose-card p{color:#b8c1dc}
+.mission{background:linear-gradient(120deg,#7041df,#167da7 55%,#b43b88)}
+.card{background:linear-gradient(150deg,#1b2440,#12182a);border-color:#344263;box-shadow:0 12px 28px #0003}
+.card h3{color:#f5f2ff}.card p{color:#bbc5df}
+.anime{background:#7c4dff;color:#fff}.movies{background:#18bfe5;color:#06131a}.blog{background:#e34eaa;color:#fff}.idea{background:#ffc857;color:#1c1607}
+.btn{background:linear-gradient(100deg,#29d9ff,#a88aff);color:#08111d}
+.channel{background:linear-gradient(100deg,#ff4f9a,#9b5cff)}
+.post-box,.pcard{background:linear-gradient(145deg,#17203a,#111728);border-color:#303e60}
+.post-box input,.post-box textarea,.post-box select,.comment-input input{background:#0e1528;border-color:#354466;color:#fff}
+.post-box button{background:linear-gradient(100deg,#9b5cff,#e34eaa)}
+.filters button,.actions button{background:#1c2743;border-color:#394b70;color:#edf0ff}
+.filters button.active{background:linear-gradient(100deg,#8148ff,#d64dca)}
+.comment{background:#202b49}.comment b{color:#6be3ff}
+.comment-input button{background:#29d9ff;color:#07111c}
+.yt-box{background:linear-gradient(120deg,#7041df,#167da7 60%,#b43b88)}
+footer{border-color:#26304b;color:#929bb8}
+@media(max-width:600px){.topbar{padding:12px 14px}.logo{font-size:19px}.hero{padding:38px 17px 30px;border-radius:22px}.hero h1{font-size:clamp(30px,9vw,42px)}.hero p{font-size:14px}.wrap{padding-left:13px;padding-right:13px}.grid{grid-template-columns:1fr}.desc-box{padding:20px}.sec-title{font-size:21px}nav{top:49px}}
+
 </style>
 </head>
 <body>
@@ -133,7 +175,7 @@ footer{text-align:center;color:#666;padding:24px;border-top:1px solid #222;font-
 <div class="grid">
 <div class="card"><span class="tag anime">🔥 ANIME WORLD</span><h3>Anime That Hits Different</h3><p>Naruto, One Piece, Bleach, Solo Leveling, JJK - top moments, fights, aura.</p><button class="btn" onclick="showPage('shorts',document.querySelectorAll('nav button')[1])">Enter Anime World →</button></div>
 <div class="card"><span class="tag anime">🎬 MOVIE WORLD</span><h3>Movies Worth Watching</h3><p>Discover anime films, animated adventures, trailers and movie discussions.</p><button class="btn" onclick="showPage('movies',document.querySelectorAll('nav button')[2])">Explore Movies →</button></div>
-<div class="card"><span class="tag blog">💬 BLOG WORLD</span><h3>Blog Where Everybody Talks</h3><p>No be only Pique dey talk. You fit post, comment, share idea.</p><button class="btn" onclick="showPage('blog',document.querySelectorAll('nav button')[2])">Join The Talk →</button></div>
+<div class="card"><span class="tag blog">💬 BLOG WORLD</span><h3>Blog Where Everybody Talks</h3><p>No be only Pique dey talk. You fit post, comment, share idea.</p><button class="btn" onclick="showPage('blog',document.querySelectorAll('nav button')[3])">Join The Talk →</button></div>
 </div>
 
 <div class="yt-box"><h3>🔔 JOIN THE PIQUE FAMILY TODAY</h3><p>100 videos already. More dey come. Don't miss.</p><a class="btn-main" href="https://www.youtube.com/@Pique-anime?sub_confirmation=1" target="_blank">🔔 SUBSCRIBE NOW</a></div>
