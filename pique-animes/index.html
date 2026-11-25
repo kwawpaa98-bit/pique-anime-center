@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PIQUE ANIMES 🔥 | The Masterpiece - Anime, Gaming, Blog, Community</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#050505;color:#fff;font-family:'Segoe UI',Arial,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;position:sticky;top:0;z-index:100;background:rgba(5,5,5,.85);backdrop-filter:blur(12px);border-bottom:1px solid #222}
+.logo{font-size:22px;font-weight:900;letter-spacing:1px}.logo span{color:#ff0033;text-shadow:0 0 20px #ff0033}
+.live{background:#ff0033;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:900;animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+nav{display:flex;gap:8px;padding:12px 14px;overflow-x:auto;position:sticky;top:53px;z-index:99;background:#050505}
+nav button{white-space:nowrap;background:#1a1a1a;color:#fff;border:1px solid #2a2a2a;padding:11px 20px;border-radius:30px;font-weight:700;cursor:pointer;font-size:13px}
+nav button.active{background:#ff0033;border-color:#ff0033;box-shadow:0 0 20px rgba(255,0,51,.5)}
+nav button.green.active{background:#00e676;color:#000}
+.page{display:none;animation:fade .5s}.page.show{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+.wrap{max-width:1150px;margin:0 auto;padding:0 16px 50px}
+.hero{position:relative;border-radius:28px;overflow:hidden;padding:50px 22px 40px;text-align:center;margin:16px 0;background:radial-gradient(circle at 30% 20%, #ff0033 0%, #5a0000 35%, #080808 70%),linear-gradient(135deg,#1a001a,#000);border:1px solid #333}
+.hero h1{font-size:42px;line-height:1.1;font-weight:900;margin-top:18px}
+.hero h1 span{background:linear-gradient(90deg,#ff0033,#ffcc00,#ff0033);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:shine 3s linear infinite}
+@keyframes shine{to{background-position:200%}}
+.hero p{color:#ddd;margin:16px auto;max-width:650px;line-height:1.8;font-size:15px}
+.badge{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:7px 14px;border-radius:30px;font-size:12px;margin:4px}
+.stats{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+.stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:14px 18px;border-radius:18px;min-width:110px}
+.stat b{font-size:24px;color:#ffcc00;display:block}.stat span{font-size:11px;color:#ccc}
+.btn-main{display:inline-block;background:#fff;color:#000;padding:15px 30px;border-radius:30px;font-weight:900;margin:8px 4px}
+.btn-red{display:inline-block;background:#ff0033;color:#fff;padding:15px 30px;border-radius:30px;font-weight:900;margin:8px 4px}
+.sec-title{font-size:24px;margin:28px 0 14px;display:flex;align-items:center;gap:10px}
+.sec-title:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,#333,transparent)}
+/* DESCRIPTION & PURPOSE - NEW */
+.desc-box{background:linear-gradient(180deg,#161616,#0d0d0d);border:1px solid #2a2a2a;border-radius:24px;padding:26px;margin:18px 0;line-height:1.8}
+.desc-box h2{font-size:24px;margin-bottom:12px}
+.desc-box h2 span{color:#ff0033}
+.desc-box p{color:#ccc;font-size:15px;margin-bottom:12px}
+.desc-box b{color:#fff}
+.purpose-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;margin-top:16px}
+.purpose-card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:18px;padding:18px;text-align:left}
+.purpose-card h4{font-size:16px;margin-bottom:8px}
+.purpose-card p{font-size:13px;color:#aaa;line-height:1.6}
+.mission{background:linear-gradient(135deg,#ff0033,#8b0000);border-radius:22px;padding:24px;text-align:center;margin:16px 0}
+.mission h3{font-size:21px;margin-bottom:10px}
+.mission p{line-height:1.8;color:#ffe5e5;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.card{background:linear-gradient(180deg,#171717,#0f0f0f);border:1px solid #262626;border-radius:22px;padding:22px;text-align:center}
+.card h3{font-size:19px;margin:12px 0 8px}
+.card p{color:#999;font-size:14px;line-height:1.6}
+.tag{display:inline-block;font-size:11px;font-weight:900;padding:6px 12px;border-radius:20px}
+.anime{background:#8b2bff}.gaming{background:#00e676;color:#000}.blog{background:#ff0033}.idea{background:#ffcc00;color:#000}
+.btn{display:block;text-align:center;background:#fff;color:#000;padding:12px;border-radius:12px;margin-top:14px;font-weight:800}
+.channel{display:block;text-align:center;background:#ff0033;color:#fff;padding:12px;border-radius:12px;margin-top:8px;font-weight:800}
+.channel.green{background:#00e676;color:#000}
+.post-box{background:#121212;border:1px solid #2a2a2a;border-radius:22px;padding:20px;margin:16px auto;max-width:900px}
+.post-box input,.post-box textarea,.post-box select{width:100%;background:#1e1e1e;border:1px solid #333;color:#fff;padding:13px;border-radius:14px;margin-bottom:10px;outline:none}
+.post-box textarea{min-height:90px}
+.post-box button{width:100%;background:#ff0033;color:#fff;border:none;padding:14px;border-radius:14px;font-weight:900;cursor:pointer}
+.post-box.green button{background:#00e676;color:#000}
+.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:14px 0}
+.filters button{background:#1a1a1a;color:#fff;border:1px solid #333;padding:9px 16px;border-radius:20px;cursor:pointer}
+.filters button.active{background:#ff0033}
+.feed{max-width:900px;margin:0 auto}
+.pcard{background:#131313;border:1px solid #262626;border-radius:20px;padding:18px;margin-bottom:14px}
+.pcard h4{margin:10px 0 6px;font-size:18px}.pcard p{color:#bbb;font-size:14px;line-height:1.7}
+.actions{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.actions button{background:#1f1f1f;color:#fff;border:1px solid #333;padding:8px 14px;border-radius:20px;cursor:pointer}
+.comments{margin-top:12px;border-top:1px solid #262626;padding-top:10px;display:none}.comments.show{display:block}
+.comment{background:#1f1f1f;padding:10px;border-radius:12px;margin-bottom:8px;font-size:13px}.comment b{color:#ff6b81}
+.comment-input{display:flex;gap:8px;margin-top:10px}.comment-input input{flex:1;background:#1f1f1f;border:1px solid #333;color:#fff;padding:10px;border-radius:20px;outline:none}.comment-input button{background:#fff;color:#000;border:none;padding:10px 16px;border-radius:20px;font-weight:800;cursor:pointer}
+.yt-box{background:linear-gradient(135deg,#ff0033,#5a0000);border-radius:24px;padding:28px;text-align:center;margin:20px 0}
+.yt-box.green{background:linear-gradient(135deg,#00e676,#004d1f)}
+footer{text-align:center;color:#666;padding:24px;border-top:1px solid #222;font-size:13px;line-height:1.7}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="logo">PIQUE <span>ANIMES</span></div><div class="live">● LIVE • 100 VIDEOS</div></div>
+
+<nav>
+<button onclick="showPage('home',this)" class="active">🏠 Home</button>
+<button onclick="showPage('shorts',this)">⚡ Shorts</button>
+<button onclick="showPage('blog',this)">💬 Blog / Community</button>
+<button onclick="showPage('gaming',this)" class="green">🎮 Gaming</button>
+<button onclick="window.open('https://www.youtube.com/@Pique-anime','_blank')">▶️ YouTube</button>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="page show"><div class="wrap">
+<div class="hero">
+<div><span class="badge">🔥 #1 Anime & Gaming Community in Ghana</span> <span class="badge">✨ 100+ Videos</span></div>
+<h1>WHERE ANIME<br><span>COMES ALIVE</span></h1>
+<p><b>Pique Animes</b> no be just channel. Na <b>family</b>. Anime wey go make you shout, gaming wey go make you laugh, blog wey go make you think. All in one masterpiece.</p>
+<div><a class="btn-main" href="https://www.youtube.com/@Pique-anime" target="_blank">▶️ Watch Now</a><a class="btn-red" href="https://www.youtube.com/@Pique-anime?sub_confirmation=1" target="_blank">🔔 Subscribe</a></div>
+<div class="stats"><div class="stat"><b>100+</b><span>Videos & Shorts</span></div><div class="stat"><b>3</b><span>Worlds: Anime • Gaming • Blog</span></div><div class="stat"><b>∞</b><span>Family Vibes</span></div></div>
+</div>
+
+<!-- ===== DESCRIPTION - NEW ===== -->
+<div class="desc-box">
+<h2>📖 WHAT IS <span>PIQUE ANIMES?</span></h2>
+<p><b>Pique Animes</b> na the official home of the Pique Animes YouTube Channel. We be a community for people wey love <b>Anime, Gaming, and Real Talk Blog</b>.</p>
+<p>We started with one simple idea: <b>Make one place where anime fans, gamers, and blog lovers fit enjoy everything together.</b> No need to go different places. Everything dey here.</p>
+<p>From <b>Naruto, One Piece, Bleach, Solo Leveling, Jujutsu Kaisen</b> to trending games and real life gist - Pique Animes dey give you short, sweet, and entertaining content wey you fit watch anytime, anywhere. For school, work, bus, or house.</p>
+<p>We don post <b>100+ videos</b> already, and we still dey post more. This website na where you go find all our videos, shorts, blog posts, gaming tips, and community discussions first.</p>
+</div>
+
+<!-- ===== PURPOSE - NEW ===== -->
+<div class="desc-box">
+<h2>🎯 OUR <span>PURPOSE</span></h2>
+<p>Our purpose simple, but e deep:</p>
+<div class="purpose-grid">
+<div class="purpose-card"><h4>🔥 1. ENTERTAIN YOU</h4><p>Make you laugh, make you shout, make your day better with anime and gaming content wey no dey bore.</p></div>
+<div class="purpose-card"><h4>❤️ 2. BUILD FAMILY</h4><p>No be only fans. We dey build family where everybody fit talk, share ideas, and feel belong. Your voice matter here.</p></div>
+<div class="purpose-card"><h4>📚 3. INSPIRE & TEACH</h4><p>Anime and gaming no be just play. E dey teach courage, teamwork, patience, and never give up. We dey use am inspire you.</p></div>
+<div class="purpose-card"><h4>🌍 4. PUT GHANA ON MAP</h4><p>Show the world say Ghana get real anime and gaming lovers too. We dey represent Ghana to the world.</p></div>
+</div>
+</div>
+
+<div class="mission">
+<h3>💎 OUR MISSION</h3>
+<p>"To make Pique Animes the biggest anime, gaming & blog family in Africa - where everybody fit laugh, learn, connect, and feel at home."</p>
+</div>
+
+<div class="desc-box">
+<h2>👀 OUR <span>VISION</span></h2>
+<p>We see a future where <b>Pique Animes</b> no be just YouTube channel, but a <b>movement</b>. A place where young people for Ghana and around the world fit come together, share their love for anime and gaming, grow together, and create something bigger than all of us.</p>
+<p><b>If you love anime, gaming, or real talk - you don already belong. Welcome to the family. 🔥</b></p>
+</div>
+
+<div class="sec-title">🌍 Explore The Worlds</div>
+<div class="grid">
+<div class="card"><span class="tag anime">🔥 ANIME WORLD</span><h3>Anime That Hits Different</h3><p>Naruto, One Piece, Bleach, Solo Leveling, JJK - top moments, fights, aura.</p><button class="btn" onclick="showPage('shorts',document.querySelectorAll('nav button')[1])">Enter Anime World →</button></div>
+<div class="card"><span class="tag gaming">🎮 GAMING WORLD</span><h3>Gaming That Never Sleeps</h3><p>Gameplay, tips, funny fails, reviews. For every real gamer.</p><button class="btn" onclick="showPage('gaming',document.querySelectorAll('nav button')[3])">Enter Gaming World →</button></div>
+<div class="card"><span class="tag blog">💬 BLOG WORLD</span><h3>Blog Where Everybody Talks</h3><p>No be only Pique dey talk. You fit post, comment, share idea.</p><button class="btn" onclick="showPage('blog',document.querySelectorAll('nav button')[2])">Join The Talk →</button></div>
+</div>
+
+<div class="yt-box"><h3>🔔 JOIN THE PIQUE FAMILY TODAY</h3><p>100 videos already. More dey come. Don't miss.</p><a class="btn-main" href="https://www.youtube.com/@Pique-anime?sub_confirmation=1" target="_blank">🔔 SUBSCRIBE NOW</a></div>
+</div></div>
+
+<!-- SHORTS -->
+<div id="shorts" class="page"><div class="wrap">
+<div class="hero"><h1>⚡ SHORTS <span>THAT SLAP</span></h1><p>Short, sweet, funny. Tap any one to watch for YouTube.</p></div>
+<div class="grid">
+<div class="card"><h3>😂 Naruto Funny Moment</h3><p>Episode wey break everybody.</p><a class="channel" href="https://www.youtube.com/@Pique-anime" target="_blank">Watch ▶</a></div>
+<div class="card"><h3>🔥 One Piece Top Moment</h3><p>Luffy aura too much.</p><a class="channel" href="https://www.youtube.com/@Pique-anime" target="_blank">Watch ▶</a></div>
+<div class="card"><h3>🎮 Gaming Funny Fail</h3><p>Fail wey everybody dey talk.</p><a class="channel" href="https://www.youtube.com/@Pique-anime" target="_blank">Watch ▶</a></div>
+<div class="card"><h3>✨ Solo Leveling Aura</h3><p>Sung Jinwoo no be human.</p><a class="channel" href="https://www.youtube.com/@Pique-anime" target="_blank">Watch ▶</a></div>
+<div class="card"><h3>⚔️ Bleach Fight</h3><p>Ichigo vs everybody.</p><a class="channel" href="https://www.youtube.com/@Pique-anime" target="_blank">Watch ▶</a></div>
+<div class="card"><h3>😎 Gojo - The Strongest</h3><p>JJK - Gojo Satoru.</p><a class="channel" href="https://www.youtube.com/@Pique-anime" target="_blank">Watch ▶</a></div>
+</div>
+<div class="yt-box"><h3>Want All 100?</h3><a class="btn-main" href="https://www.youtube.com/@Pique-anime" target="_blank">Visit my YouTube channel for 100 of these 🔥</a></div>
+</div></div>
+
+<!-- BLOG -->
+<div id="blog" class="page"><div class="wrap">
+<div class="hero"><h1>💬 BLOG <span>= COMMUNITY</span></h1><p>Here na our blog. Everybody fit post, comment, like, share idea.</p></div>
+<div class="post-box"><h3>💡 Share Idea / Write Blog</h3><input id="b-name" placeholder="Your Name"><select id="b-cat"><option>🔥 ANIME</option><option>🎮 GAMING</option><option>📝 BLOG</option><option>💡 IDEA</option></select><input id="b-title" placeholder="Title"><textarea id="b-text" placeholder="Write your blog, idea, question..."></textarea><button onclick="addBlog()">Post To Blog 🚀</button></div>
+<div class="filters"><button class="active" onclick="filterBlog('ALL',this)">All</button><button onclick="filterBlog('ANIME',this)">🔥 Anime</button><button onclick="filterBlog('GAMING',this)">🎮 Gaming</button><button onclick="filterBlog('BLOG',this)">📝 Blog</button><button onclick="filterBlog('IDEA',this)">💡 Ideas</button></div>
+<div class="feed" id="blog-feed"></div>
+</div></div>
+
+<!-- GAMING -->
+<div id="gaming" class="page"><div class="wrap">
+<div class="hero" style="background:radial-gradient(circle at 30% 20%, #00e676 0%, #004d1f 40%, #080808 75%)"><h1>🎮 GAMING <span style="background:linear-gradient(90deg,#00e676,#ffcc00);-webkit-background-clip:text;-webkit-text-fill-color:transparent">WORLD</span></h1><p>Gaming page on its own. Gameplay, tips, reviews, plus gaming community.</p></div>
+<div class="grid">
+<div class="card"><span class="tag gaming">GAMEPLAY</span><h3>Funny Gaming Moments 😂</h3><p>Best fails and wins.</p><a class="channel green" href="https://www.youtube.com/@Pique-anime" target="_blank">Watch ▶</a></div>
+<div class="card"><span class="tag gaming">TIPS</span><h3>5 Tips To Win Every Game</h3><p>Pro secrets.</p><a class="channel green" href="https://www.youtube.com/@Pique-anime" target="_blank">Watch ▶</a></div>
+<div class="card"><span class="tag gaming">REVIEW</span><h3>Top 5 Games Before 2027</h3><p>You dey miss if you never play!</p><a class="channel green" href="https://www.youtube.com/@Pique-anime" target="_blank">Watch ▶</a></div>
+</div>
+<div class="post-box green"><h3>🎮 Share Gaming Tip</h3><input id="g-name" placeholder="Your Gamer Name"><input id="g-title" placeholder="Title"><textarea id="g-text" placeholder="Share tip or question..."></textarea><button onclick="addGaming()">Post To Gaming 🚀</button></div>
+<div class="feed" id="gaming-feed"></div>
+<div class="yt-box green"><h3>🎮 More Gaming Videos</h3><a class="btn-main" href="https://www.youtube.com/@Pique-anime" target="_blank">Visit my YouTube channel for 100 of these 🔥</a></div>
+</div></div>
+
+<footer>© 2026 PIQUE ANIMES - THE MASTERPIECE 🔥<br>Home • Shorts • Blog/Community • Gaming • <a href="https://www.youtube.com/@Pique-anime" style="color:#ff0033;font-weight:bold">Visit my YouTube channel for 100 of these 🔥</a></footer>
+
+<script>
+function showPage(id,btn){document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));document.getElementById(id).classList.add('show');document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+let blogFilter='ALL';
+let blogPosts=JSON.parse(localStorage.getItem('pique_blog')||'null')||[{name:"Pique",cat:"🔥 ANIME",title:"Naruto vs Luffy: Who Be The Real King?",text:"Naruto get heart, Luffy get freedom. Who you pick?",likes:24,comments:[{n:"AnimeQueen",t:"Luffy all day! 🔥"}]},{name:"Pique",cat:"💡 IDEA",title:"What Video You Want Next?",text:"1) Top 5 Fights 2) Gaming Funny 3) Real Talk? Comment number!",likes:31,comments:[{n:"Sarah",t:"Number 1 🙏"}]}];
+function renderBlog(){let f=document.getElementById('blog-feed');f.innerHTML='';blogPosts.forEach((p,i)=>{if(blogFilter!=='ALL'&&!p.cat.includes(blogFilter))return;let cls=p.cat.includes('ANIME')?'anime':p.cat.includes('GAMING')?'gaming':p.cat.includes('IDEA')?'idea':'blog';let ch=p.comments.map(c=>`<div class="comment"><b>${c.n}:</b> ${c.t}</div>`).join('');f.innerHTML+=`<div class="pcard"><b>${p.name}</b> <span class="tag ${cls}">${p.cat}</span><h4>${p.title}</h4><p>${p.text}</p><div class="actions"><button onclick="likeBlog(${i})">❤️ ${p.likes}</button><button onclick="toggleC('b',${i})">💬 ${p.comments.length}</button></div><div class="comments" id="b-c-${i}">${ch}<div class="comment-input"><input id="b-ci-${i}" placeholder="Reply..."><button onclick="addBlogComment(${i})">Reply</button></div></div></div>`;});}
+function addBlog(){let n=document.getElementById('b-name').value.trim()||'Anonymous';let c=document.getElementById('b-cat').value;let t=document.getElementById('b-title').value.trim();let tx=document.getElementById('b-text').value.trim();if(!t||!tx){alert('Write Title and idea first!');return;}blogPosts.unshift({name:n,cat:c,title:t,text:tx,likes:0,comments:[]});localStorage.setItem('pique_blog',JSON.stringify(blogPosts));renderBlog();document.getElementById('b-title').value='';document.getElementById('b-text').value='';alert('Post don go live! 🔥');}
+function likeBlog(i){blogPosts[i].likes++;localStorage.setItem('pique_blog',JSON.stringify(blogPosts));renderBlog();}
+function addBlogComment(i){let inp=document.getElementById('b-ci-'+i);let v=inp.value.trim();if(!v)return;let n=document.getElementById('b-name').value.trim()||'Guest';blogPosts[i].comments.push({n:n,t:v});localStorage.setItem('pique_blog',JSON.stringify(blogPosts));renderBlog();setTimeout(()=>{document.getElementById('b-c-'+i).classList.add('show')},100);}
+function filterBlog(f,btn){blogFilter=f;document.querySelectorAll('#blog .filters button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');renderBlog();}
+function toggleC(t,i){document.getElementById(t+'-c-'+i).classList.toggle('show');}
+let gamingPosts=JSON.parse(localStorage.getItem('pique_gaming')||'null')||[{name:"Pique",title:"What Game You Dey Play?",text:"Free Fire, GTA, PES, COD? Drop am.",likes:22,comments:[{n:"GamerBoy",t:"Free Fire 🔥"}]}];
+function renderGaming(){let f=document.getElementById('gaming-feed');f.innerHTML='';gamingPosts.forEach((p,i)=>{let ch=p.comments.map(c=>`<div class="comment"><b>${c.n}:</b> ${c.t}</div>`).join('');f.innerHTML+=`<div class="pcard"><b>🎮 ${p.name}</b><h4>${p.title}</h4><p>${p.text}</p><div class="actions"><button onclick="likeGaming(${i})">❤️ ${p.likes}</button><button onclick="toggleC('g',${i})">💬 ${p.comments.length}</button></div><div class="comments" id="g-c-${i}">${ch}<div class="comment-input"><input id="g-ci-${i}" placeholder="Reply..."><button onclick="addGamingComment(${i})">Reply</button></div></div></div>`;});}
+function addGaming(){let n=document.getElementById('g-name').value.trim()||'Anonymous';let t=document.getElementById('g-title').value.trim();let tx=document.getElementById('g-text').value.trim();if(!t||!tx){alert('Write Title and tip first!');return;}gamingPosts.unshift({name:n,title:t,text:tx,likes:0,comments:[]});localStorage.setItem('pique_gaming',JSON.stringify(gamingPosts));renderGaming();document.getElementById('g-title').value='';document.getElementById('g-text').value='';alert('Gaming post don go live! 🎮');}
+function likeGaming(i){gamingPosts[i].likes++;localStorage.setItem('pique_gaming',JSON.stringify(gamingPosts));renderGaming();}
+function addGamingComment(i){let inp=document.getElementById('g-ci-'+i);let v=inp.value.trim();if(!v)return;let n=document.getElementById('g-name').value.trim()||'Guest';gamingPosts[i].comments.push({n:n,t:v});localStorage.setItem('pique_gaming',JSON.stringify(gamingPosts));renderGaming();setTimeout(()=>{document.getElementById('g-c-'+i).classList.add('show')},100);}
+renderBlog();renderGaming();
+</script>
+</body>
+</html>
