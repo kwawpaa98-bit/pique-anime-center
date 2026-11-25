@@ -18,3 +18,18 @@ if(grid){document.querySelectorAll("[data-filter]").forEach(b=>{b.classList.togg
 if(featured)featured.innerHTML=[GAMES[0],GAMES[3],GAMES[6]].map(card).join("");
 document.getElementById("year")?.replaceChildren(String(new Date().getFullYear()));
 document.getElementById("menuToggle")?.addEventListener("click",()=>document.getElementById("nav")?.classList.toggle("open"));
+
+
+// Load games published from the secure admin dashboard. Keep the built-in games
+// as a fallback so the library remains usable if the database is unavailable.
+(async () => {
+  if (!window.piqueSupabase) return;
+  try {
+    const { data, error } = await window.piqueSupabase.from("games").select("id,slug,title,category,description,image_url,game_url").eq("published", true).order("created_at", { ascending: false });
+    if (error || !data?.length) return;
+    const remoteGames = data.map(g => ({id:g.slug,title:g.title,category:g.category,tag:g.category.toUpperCase()+" GAME",desc:g.description,image:g.image_url,game_url:g.game_url}));
+    GAMES.splice(0, GAMES.length, ...remoteGames);
+    render();
+    if (featured) featured.innerHTML = GAMES.slice(0,3).map(card).join("");
+  } catch (error) { console.warn("Shared game library unavailable:", error); }
+})();
