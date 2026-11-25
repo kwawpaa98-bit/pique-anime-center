@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pique Blog & Community - Talk, Share Ideas, Connect</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#080808;color:#fff;font-family:Arial,Helvetica,sans-serif}
+header{text-align:center;padding:30px 16px 10px}
+header h1{font-size:32px} header h1 span{color:#ff0033}
+header p{color:#aaa;margin-top:8px}
+nav{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:14px}
+nav a{color:#fff;text-decoration:none;background:#1a1a1a;padding:9px 18px;border-radius:20px;font-size:13px;border:1px solid #333}
+nav a.active{background:#ff0033;border-color:#ff0033}
+.wrap{max-width:900px;margin:0 auto;padding:0 16px 40px}
+.hero{text-align:center;padding:18px 0}
+.hero h2{font-size:27px;line-height:1.3}.hero h2 span{color:#ff0033}
+.hero p{color:#bbb;margin-top:10px;line-height:1.7}
+.rules{background:#141414;border:1px solid #262626;border-radius:16px;padding:16px;margin:10px 0;font-size:14px;line-height:1.7;color:#bbb}
+.rules b{color:#fff}
+.post-box{background:#141414;border:1px solid #333;border-radius:18px;padding:18px;margin:18px 0}
+.post-box h3{color:#ff0033;margin-bottom:12px}
+.post-box input,.post-box textarea,.post-box select{width:100%;background:#1f1f1f;border:1px solid #333;color:#fff;padding:12px;border-radius:12px;margin-bottom:10px;font-size:14px;outline:none}
+.post-box textarea{min-height:90px;resize:vertical}
+.post-box button{background:#ff0033;color:#fff;border:none;padding:13px;border-radius:12px;font-weight:900;width:100%;cursor:pointer;font-size:15px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:14px 0}
+.filters button{background:#1a1a1a;color:#fff;border:1px solid #333;padding:9px 16px;border-radius:20px;cursor:pointer}
+.filters button.active{background:#ff0033}
+.card{background:#141414;border:1px solid #262626;border-radius:18px;padding:18px;margin-bottom:16px}
+.top{display:flex;justify-content:space-between;align-items:center}
+.avatar{width:40px;height:40px;border-radius:50%;background:#ff0033;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px}
+.user{display:flex;gap:10px;align-items:center}
+.user b{font-size:15px}.user span{font-size:12px;color:#888;display:block}
+.tag{font-size:11px;font-weight:800;padding:5px 10px;border-radius:20px}
+.anime{background:#7b2ff7}.gaming{background:#00c853}.blog{background:#ff0033}.idea{background:#ff9800;color:#000}
+.card h4{margin:12px 0 6px;font-size:18px;line-height:1.4}
+.card p{color:#bbb;font-size:14px;line-height:1.7}
+.actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+.actions button{background:#1f1f1f;color:#fff;border:1px solid #333;padding:8px 14px;border-radius:20px;cursor:pointer;font-size:13px}
+.comments{margin-top:14px;border-top:1px solid #262626;padding-top:12px;display:none}
+.comments.show{display:block}
+.comment{background:#1f1f1f;padding:10px 12px;border-radius:12px;margin-bottom:8px;font-size:13px;line-height:1.5}
+.comment b{color:#ff6b81}
+.comment-input{display:flex;gap:8px;margin-top:10px}
+.comment-input input{flex:1;background:#1f1f1f;border:1px solid #333;color:#fff;padding:10px;border-radius:20px;outline:none}
+.comment-input button{background:#fff;color:#000;border:none;padding:10px 16px;border-radius:20px;font-weight:800;cursor:pointer}
+.yt-box{background:linear-gradient(135deg,#ff0033,#8b0000);border-radius:20px;padding:24px;text-align:center;margin-top:20px}
+.yt-btn{display:inline-block;background:#fff;color:#ff0033;text-decoration:none;padding:13px 26px;border-radius:30px;font-weight:900;margin-top:10px}
+footer{text-align:center;color:#666;padding:20px;border-top:1px solid #222;font-size:13px}
+</style>
+</head>
+<body>
+<header><h1>PIQUE <span>BLOG</span> 💬</h1><p>Blog • Community • Talk • Share Ideas - This Na Our Family</p></header>
+<nav>
+<a href="./index.html">Home</a>
+<a href="./shorts.html">Shorts</a>
+<a href="./blog.html" class="active">Blog / Community</a>
+<a href="https://www.youtube.com/@Pique-anime" target="_blank">YouTube</a>
+</nav>
+
+<div class="wrap">
+<div class="hero">
+<h2>Welcome To <span>Pique Blog</span></h2>
+<p>Here na <b>our Blog + Community</b> together. No be only Pique dey talk. <b>Na everybody dey talk.</b><br>Share your anime idea, gaming tip, blog story, or ask question. Other fans go reply you.</p>
+</div>
+
+<div class="rules">
+<b>📜 BLOG / COMMUNITY RULES:</b><br>
+✅ Respect everybody - No insult<br>
+✅ Share ideas, no spam<br>
+✅ Anime, Gaming & Blog talk only
+</div>
+
+<div class="post-box">
+<h3>💡 Share Your Idea / Write Blog Post</h3>
+<input id="nameInput" placeholder="Your Name (e.g. Kwame, AnimeQueen)">
+<select id="catInput">
+<option value="🔥 ANIME">🔥 Anime</option>
+<option value="🎮 GAMING">🎮 Gaming</option>
+<option value="📝 BLOG">📝 Blog / Real Talk</option>
+<option value="💡 IDEA">💡 New Idea</option>
+</select>
+<input id="titleInput" placeholder="Title - e.g. Who is the best anime villain?">
+<textarea id="textInput" placeholder="Write your blog, idea, question, or gist here... Make everybody talk!"></textarea>
+<button onclick="addPost()">Post To Blog 🚀</button>
+</div>
+
+<div class="filters">
+<button class="active" onclick="filterPosts('ALL',this)">All</button>
+<button onclick="filterPosts('ANIME',this)">🔥 Anime</button>
+<button onclick="filterPosts('GAMING',this)">🎮 Gaming</button>
+<button onclick="filterPosts('BLOG',this)">📝 Blog</button>
+<button onclick="filterPosts('IDEA',this)">💡 Ideas</button>
+</div>
+
+<div id="feed"></div>
+
+<div class="yt-box">
+<h3>🔥 Join Pique Family On YouTube Too!</h3>
+<p>We don post 100 videos already. Subscribe make you no miss any gist.</p>
+<a class="yt-btn" href="https://www.youtube.com/@Pique-anime" target="_blank">Visit my YouTube channel for 100 of these 🔥</a>
+</div>
+</div>
+
+<footer>© 2026 Pique Animes Blog | Blog • Gaming • Anime • Community</footer>
+
+<script>
+let defaultPosts = [
+{name:"Pique", cat:"🔥 ANIME", title:"Naruto vs Luffy: Who Be The Real King?", text:"Two legends. Naruto get heart, Luffy get freedom. Who you go pick? Drop your reason for comment make we argue small 😂", likes:24, comments:[{n:"AnimeQueen",t:"Luffy all day! Freedom na everything 🔥"},{n:"Kwame",t:"Naruto teach me never give up. Na my GOAT"}]},
+{name:"Pique", cat:"🎮 GAMING", title:"Why Gaming No Be Waste Of Time", text:"People dey say gaming na waste of time, but na lie. Gaming dey teach strategy, teamwork and patience. What game teach you something for real life?", likes:18, comments:[{n:"GamerBoy",t:"Free Fire teach me teamwork fr"}]},
+{name:"Pique", cat:"💡 IDEA", title:"What Video You Want Make I Post Next?", text:"Family, help me decide! You want: 1) Top 5 Anime Fights 2) Gaming Funny Moments 3) Real Talk Story? Comment your number!", likes:31, comments:[{n:"Sarah",t:"Number 1! Top 5 fights please 🙏"}]},
+{name:"Pique", cat:"📝 BLOG", title:"How To Stay Consistent Even When Nobody Dey Watch", text:"Everybody see the 100 videos, nobody see days wey I no get views. Consistency na secret. Who else dey try to grow something? Share your story.", likes:27, comments:[]}
+];
+let posts = JSON.parse(localStorage.getItem('pique_posts') || 'null') || defaultPosts;
+let currentFilter = 'ALL';
+function save(){ localStorage.setItem('pique_posts', JSON.stringify(posts)); }
+function render(){
+  let feed = document.getElementById('feed');
+  feed.innerHTML = '';
+  posts.forEach((p, i) => {
+    if(currentFilter !== 'ALL' && !p.cat.includes(currentFilter)) return;
+    let tagClass = p.cat.includes('ANIME') ? 'anime' : p.cat.includes('GAMING') ? 'gaming' : p.cat.includes('IDEA') ? 'idea' : 'blog';
+    let commentsHtml = p.comments.map(c=>`<div class="comment"><b>${c.n}:</b> ${c.t}</div>`).join('');
+    feed.innerHTML += `<div class="card">
+      <div class="top"><div class="user"><div class="avatar">${p.name.charAt(0).toUpperCase()}</div><div><b>${p.name}</b><span>Just now • Pique Family</span></div></div><span class="tag ${tagClass}">${p.cat}</span></div>
+      <h4>${p.title}</h4><p>${p.text}</p>
+      <div class="actions">
+        <button onclick="likePost(${i},this)">❤️ ${p.likes} Like</button>
+        <button onclick="toggleComments(${i})">💬 ${p.comments.length} Comments</button>
+        <button onclick="sharePost('${p.title}')">↗️ Share</button>
+      </div>
+      <div class="comments" id="c-${i}">${commentsHtml}
+        <div class="comment-input"><input id="ci-${i}" placeholder="Write a reply..."><button onclick="addComment(${i})">Reply</button></div>
+      </div>
+    </div>`;
+  });
+}
+function addPost(){
+  let name = document.getElementById('nameInput').value.trim() || 'Anonymous';
+  let cat = document.getElementById('catInput').value;
+  let title = document.getElementById('titleInput').value.trim();
+  let text = document.getElementById('textInput').value.trim();
+  if(!title || !text){ alert('Abeg write Title and your idea first!'); return; }
+  posts.unshift({name, cat, title, text, likes:0, comments:[]});
+  save(); render();
+  document.getElementById('titleInput').value=''; document.getElementById('textInput').value='';
+  alert('Your post don go live! 🔥');
+}
+function likePost(i,btn){ posts[i].likes++; save(); render(); }
+function toggleComments(i){ document.getElementById('c-'+i).classList.toggle('show'); }
+function addComment(i){
+  let input = document.getElementById('ci-'+i);
+  let val = input.value.trim(); if(!val) return;
+  let name = document.getElementById('nameInput').value.trim() || 'Guest';
+  posts[i].comments.push({n:name, t:val}); save(); render();
+  setTimeout(()=>{ document.getElementById('c-'+i).classList.add('show'); },100);
+}
+function sharePost(t){ if(navigator.share){ navigator.share({title:t, text:t, url:location.href}); } else { alert('Copy link: '+location.href); } }
+function filterPosts(f,btn){ currentFilter=f; document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); render(); }
+render();
+</script>
+</body>
+</html>
