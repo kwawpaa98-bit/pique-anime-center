@@ -7,6 +7,46 @@
 <link rel="stylesheet" href="style.css">
 <style>
 .admin-shell{max-width:1100px;padding:36px 0 70px}.admin-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:12px 0 26px}.admin-heading h1{margin:5px 0;font-size:clamp(30px,5vw,48px)}.admin-panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow);margin:18px 0}.admin-login{max-width:460px;margin:55px auto}.admin-panel h2{margin:0 0 14px}.admin-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.admin-stat{padding:18px;border-radius:14px;background:linear-gradient(135deg,#eef1ff,#e9fbff)}.admin-stat strong{display:block;font-size:28px}.admin-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.admin-form-grid label{display:grid;gap:6px;font-weight:800;font-size:13px}.admin-form-grid label.full{grid-column:1/-1}.admin-form-grid input,.admin-form-grid select,.admin-form-grid textarea{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}.admin-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.admin-game-row{display:grid;grid-template-columns:64px 1fr auto;gap:13px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.admin-game-row img{width:64px;height:48px;object-fit:cover;border-radius:8px;background:#eaf2ff}.admin-game-row small{display:block;color:var(--muted)}.admin-game-row button,.quiet-button{border:1px solid var(--line);border-radius:9px;background:#f4f7ff;padding:8px 11px;color:var(--blue);font-weight:800}.status-line{margin:12px 0;color:var(--muted);font-size:13px}.danger{color:#b42318!important}.hidden{display:none!important}@media(max-width:650px){.admin-stats{grid-template-columns:1fr}.admin-form-grid{grid-template-columns:1fr}.admin-form-grid label.full{grid-column:auto}.admin-heading{align-items:flex-start;flex-direction:column}.admin-game-row{grid-template-columns:54px 1fr}.admin-game-row img{width:54px}.admin-game-row>div:last-child{grid-column:2}}
+
+/* Clear, touch-friendly admin layout */
+.admin-shell{width:min(100% - 32px,1100px);padding:24px 0 56px}
+.admin-panel{padding:clamp(18px,3vw,28px);border-radius:20px}
+.admin-panel h2{font-size:clamp(22px,3vw,28px)}
+.admin-heading p,.admin-panel p{font-size:16px;line-height:1.6}
+.admin-form-grid{gap:18px}
+.admin-form-grid label{font-size:16px;line-height:1.4;gap:9px}
+.admin-form-grid input,.admin-form-grid select,.admin-form-grid textarea{font:inherit;font-size:16px;min-height:54px;padding:14px 15px;border-radius:12px}
+.admin-form-grid textarea{min-height:110px}
+.admin-actions{gap:12px}
+.admin-actions button,.admin-heading>button{min-height:50px;padding:13px 20px;font-size:15px;border-radius:12px}
+.admin-stat{padding:20px}
+.admin-stat span{font-size:15px}
+.admin-stat strong{font-size:32px;margin-top:6px}
+.admin-game-row{gap:16px;padding:16px 0;font-size:16px}
+.admin-game-row img{width:76px;height:60px}
+.admin-game-row small{font-size:14px;line-height:1.5;margin-top:4px}
+.admin-game-row button,.quiet-button{min-height:44px;padding:10px 14px;font-size:14px}
+.status-line{font-size:15px;line-height:1.5}
+@media(max-width:650px){
+ .admin-shell{width:calc(100% - 24px);padding:16px 0 36px}
+ .admin-login{margin:22px auto}
+ .admin-panel{margin:14px 0;padding:18px 16px}
+ .admin-heading{gap:12px;margin:8px 0 18px}
+ .admin-heading h1{font-size:clamp(28px,9vw,38px)}
+ .admin-stats{grid-template-columns:1fr 1fr;gap:10px}
+ .admin-stat{padding:15px}
+ .admin-stat:last-child{grid-column:1/-1}
+ .admin-form-grid{grid-template-columns:1fr;gap:16px}
+ .admin-form-grid label.full{grid-column:auto}
+ .admin-game-row{grid-template-columns:64px minmax(0,1fr);gap:12px}
+ .admin-game-row img{width:64px;height:56px}
+ .admin-game-row>div:last-child{grid-column:2;display:flex;gap:8px;flex-wrap:wrap}
+ .admin-game-row button{flex:1}
+ .admin-actions button{width:100%}
+ .admin-heading>button{width:100%}
+ .topbar nav{gap:10px;flex-wrap:wrap}
+}
+
 </style>
 </head>
 <body>
