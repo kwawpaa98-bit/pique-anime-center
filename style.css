@@ -232,3 +232,72 @@ html{scroll-behavior:auto!important}
 .category-card p{color:#f1f5f9!important;text-shadow:0 1px 5px #0008}
 .category-card b{margin-top:auto}
 @media(max-width:560px){.category-card{min-height:210px!important}}
+
+
+/* PREMIUM PIQUE ARCADE — refined contrast, colour and depth */
+:root{
+ --blue:#8b7cff;--cyan:#39d9ef;--ink:#f7f5ff;--muted:#c0bdd4;
+ --paper:#090b18;--line:#35304e;--shadow:0 20px 55px #0009;
+}
+body{
+ background:
+ radial-gradient(ellipse at 8% 5%,#3b1758 0,transparent 31%),
+ radial-gradient(ellipse at 94% 18%,#103d58 0,transparent 28%),
+ radial-gradient(ellipse at 55% 90%,#211744 0,transparent 35%),#090b18;
+ color:#f7f5ff;
+}
+.topbar{background:rgba(8,11,27,.94)!important;border-bottom:1px solid #37304f!important;backdrop-filter:blur(16px)}
+.brand-mark{border-radius:15px;background:linear-gradient(135deg,#ff4f9a,#845bff 55%,#23d9eb)!important;box-shadow:0 0 28px #a34cff66!important}
+nav a{border:1px solid transparent}
+nav a:hover,nav a.active{background:linear-gradient(110deg,#34204f,#18394a)!important;border-color:#57477b;color:#fff!important}
+main{position:relative}
+.hero-home{gap:clamp(24px,4vw,52px);padding-top:56px;padding-bottom:55px}
+.hero-copy>p{max-width:540px;color:#d0cce0;font-size:clamp(15px,1.5vw,18px)}
+.hero-home h1{font-size:clamp(46px,7vw,88px);line-height:.94}
+.hero-home h1 em{background:linear-gradient(100deg,#ff72b6,#b38aff 48%,#4de4ee)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
+.eyebrow{background:#211833!important;border-color:#55416e!important;color:#f2a9db!important}
+.btn{min-height:48px;border-radius:13px;letter-spacing:.45px}
+.btn-primary{background:linear-gradient(105deg,#ff4f9a,#925bff 56%,#18bfdc)!important;color:#fff!important;box-shadow:0 12px 30px #974fff50!important}
+.btn-outline{background:#17182c!important;color:#f4efff!important;border-color:#554a70!important}
+.hero-art{min-height:390px;border:1px solid #ffffff30;border-radius:27px;background-position:center!important;box-shadow:0 25px 70px #0008,0 0 0 7px #ffffff08!important}
+.section{padding-top:48px;padding-bottom:48px}
+.section-heading{margin-bottom:27px}
+.section-heading h2,.cta-band h2{font-size:clamp(28px,4vw,44px);letter-spacing:-1.5px}
+.category-grid,.game-grid{gap:22px}
+.category-card{min-height:265px!important;border-radius:20px!important;outline:1px solid #ffffff22;outline-offset:-1px}
+.category-card:before{background:linear-gradient(0deg,rgba(4,8,22,.96),rgba(4,8,22,.05) 82%)!important}
+.category-card h3{font-size:30px!important;letter-spacing:.4px}
+.category-card p{font-size:14px}
+.category-card b{color:#8deefa!important;letter-spacing:.7px}
+.game-card{border-radius:20px!important;background:linear-gradient(155deg,#1c1b35,#11182a)!important;border-color:#39334f!important;overflow:hidden}
+.game-image{aspect-ratio:16/10}
+.game-image img{filter:saturate(1.22) contrast(1.06)!important}
+.game-chip{background:linear-gradient(100deg,#fff,#e9faff)!important;color:#5838a4!important}
+.game-info{padding:19px}
+.game-info small{color:#8deefa!important}
+.game-info h3{font-size:21px;color:#fff}
+.game-info p{color:#c2bfd3}
+.play-link{color:#8cebf4!important;border-color:#39334f!important}
+.text-link{color:#8cebf4!important}
+.cta-band{padding:clamp(24px,4vw,38px)!important;border-radius:22px!important;border:1px solid #554474!important;background:radial-gradient(circle at 85% 0%,#1a5a6b,transparent 37%),linear-gradient(110deg,#351c50,#202044 60%,#103b4a)!important}
+.cta-band p{color:#d4cfe2}
+.youtube-promo{border-color:#76518f!important;box-shadow:0 22px 55px #0008!important}
+.youtube-button{min-height:48px}
+.library-hero h1,.contact-hero h1{color:#fff}
+.search-box{background:#15172b!important;border-color:#4a4265!important}
+.filter{border-radius:30px}
+.about-panel,.contact-card,.community-panel,.leader-panel{background:linear-gradient(145deg,#1c1b35,#111827)!important;border-color:#39334f!important}
+footer{background:#060711!important;border-top:1px solid #302844!important}
+@media(max-width:800px){
+ .hero-home{padding-top:38px;padding-bottom:35px}
+ .hero-art{min-height:300px}
+ .category-grid,.game-grid{gap:14px}
+}
+@media(max-width:560px){
+ .hero-home h1{font-size:clamp(43px,12vw,55px)}
+ .hero-art{min-height:245px;border-radius:20px}
+ .category-card{min-height:220px!important}
+ .category-card h3{font-size:26px!important}
+ .game-info{padding:15px}
+ .section{padding-top:35px;padding-bottom:35px}
+}
