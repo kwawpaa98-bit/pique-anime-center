@@ -324,7 +324,28 @@ a:focus-visible{outline:3px solid #f2d28c;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){
  .site-nav .nav-links a,.nav .navlinks a,.nav .links a{transition:none!important}
 }
-</style></head><body><nav class="site-nav" aria-label="Main navigation"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a href="./index.html" class="active" aria-current="page">Home</a><a href="./anime.html">Anime</a><a href="./movies.html">Movies</a><a href="./news.html">Anime News</a><a href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./gentei-shop.html">Anime Gear</a><a href="./earn.html">Earn with us</a><a href="./media-kit.html">Media Kit</a><a href="./outreach.html">Brand Outreach</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div></nav><main class="page">
+</style>
+<style id="pique-youtube-hub-styles">
+#pique-youtube-hub{position:relative;overflow:hidden;border:1px solid rgba(255,0,51,.34);border-radius:26px;padding:clamp(20px,4vw,38px);background:radial-gradient(circle at 88% 8%,rgba(255,0,51,.2),transparent 32%),linear-gradient(135deg,#171326 0%,#10182a 58%,#1d1020 100%);box-shadow:0 18px 48px rgba(0,0,0,.28)}
+#pique-youtube-hub .yt-hub-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:26px;align-items:center}
+#pique-youtube-hub .yt-hub-kicker{display:inline-flex;align-items:center;gap:8px;color:#ff7b91;font-weight:900;letter-spacing:.13em;text-transform:uppercase;font-size:11px}
+#pique-youtube-hub h2{margin:12px 0;font-size:clamp(27px,4vw,42px);line-height:1.08}
+#pique-youtube-hub p{max-width:620px;color:#d5d8e5}
+#pique-youtube-hub .yt-hub-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:20px}
+#pique-youtube-hub .yt-hub-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:12px 17px;border-radius:13px;text-decoration:none;font-weight:850}
+#pique-youtube-hub .yt-subscribe{background:#ff0033;color:white;box-shadow:0 9px 24px rgba(255,0,51,.25)}
+#pique-youtube-hub .yt-watch{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);color:#fff}
+#pique-youtube-hub .yt-hub-art{position:relative;min-height:220px;border-radius:20px;overflow:hidden;background:#171326}
+#pique-youtube-hub .yt-hub-art img{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;opacity:.72}
+#pique-youtube-hub .yt-hub-art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,8,17,.78),rgba(7,8,17,.05))}
+#pique-youtube-hub .yt-play{position:absolute;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);width:76px;height:54px;border-radius:16px;background:#ff0033;color:#fff;display:grid;place-items:center;font-size:27px;box-shadow:0 12px 32px #0008}
+#pique-youtube-hub .yt-art-caption{position:absolute;z-index:1;left:16px;bottom:14px;color:white;font-weight:900;letter-spacing:.12em;font-size:12px}
+#pique-youtube-hub .yt-quicklinks{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+#pique-youtube-hub .yt-quicklinks a{color:#ffdce3;text-decoration:none;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.055);border-radius:999px;padding:8px 13px;font-size:13px;font-weight:750}
+#pique-youtube-hub a:focus-visible{outline:3px solid #ffe36e;outline-offset:3px}
+@media(max-width:700px){#pique-youtube-hub .yt-hub-layout{grid-template-columns:1fr}#pique-youtube-hub .yt-hub-art{min-height:185px}#pique-youtube-hub .yt-hub-actions a{flex:1 1 100%}}
+</style>
+</head><body><nav class="site-nav" aria-label="Main navigation"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a href="./index.html" class="active" aria-current="page">Home</a><a href="./anime.html">Anime</a><a href="./movies.html">Movies</a><a href="./news.html">Anime News</a><a href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./gentei-shop.html">Anime Gear</a><a href="./earn.html">Earn with us</a><a href="./media-kit.html">Media Kit</a><a href="./outreach.html">Brand Outreach</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div></nav><main class="page">
 <section class="hero"><div class="hero-copy"><span class="eyebrow">✦ A world beyond the screen</span><h1>YOUR NEXT<br>OBSESSION<br>STARTS HERE.</h1><p>Discover unforgettable anime, explore cinematic movies and connect with fans who love the same worlds you do. Your next great story is waiting.</p><div class="hero-live" id="homeHeroSpotlight">Discovering today’s featured anime…</div><a class="btn" href="./anime.html">Explore anime →</a><a class="btn secondary" href="./movies.html">Discover movies</a></div></section>
 <nav class="home-quicklinks" aria-label="Quick discovery"><a href="./anime.html">✦ Anime library</a><a href="./movies.html">▣ Movie collection</a><a href="./news.html">◷ Episode schedule</a><a href="./blog.html">◎ Fan community</a><a href="./guide.html">↗ Discovery guide</a><a href="./gentei-shop.html">🛍 Anime Gear</a></nav>
 
@@ -366,6 +387,29 @@ a:focus-visible{outline:3px solid #f2d28c;outline-offset:3px}
   <a class="showcase-card" href="./movies.html"><img loading="eager" src="https://cdn.posteritati.com/posters/000/000/049/033/your-name-md-web.jpg" alt="Your Name anime movie poster"><div class="showcase-meta"><strong>Your Name</strong><span>Romance · Fantasy</span></div></a>
  </div>
 </section>
+
+<section class="section" id="pique-youtube-hub" aria-labelledby="pique-youtube-title">
+ <div class="yt-hub-layout">
+  <div>
+   <span class="yt-hub-kicker">▶ The Pique Anime channel</span>
+   <h2 id="pique-youtube-title">Your anime world, now on YouTube.</h2>
+   <p>Keep up with Pique Anime on YouTube. Open the channel to explore its videos, check out Shorts and subscribe so you can find new uploads when they arrive.</p>
+   <div class="yt-hub-actions">
+    <a class="yt-subscribe" href="https://www.youtube.com/@Pique-anime?sub_confirmation=1" target="_blank" rel="noopener noreferrer">▶ Subscribe to Pique Anime</a>
+    <a class="yt-watch" href="https://www.youtube.com/@Pique-anime/videos" target="_blank" rel="noopener noreferrer">Watch videos ↗</a>
+   </div>
+   <div class="yt-quicklinks" aria-label="Pique Anime YouTube links">
+    <a href="https://www.youtube.com/@Pique-anime/shorts" target="_blank" rel="noopener noreferrer">Explore Shorts</a>
+    <a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener noreferrer">Open channel</a>
+   </div>
+  </div>
+  <a class="yt-hub-art" href="https://www.youtube.com/@Pique-anime/videos" target="_blank" rel="noopener noreferrer" aria-label="Watch Pique Anime on YouTube">
+   <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1100&q=85" alt="Anime-inspired artwork introducing the Pique Anime YouTube channel" loading="lazy">
+   <span class="yt-play" aria-hidden="true">▶</span><span class="yt-art-caption">PIQUE ANIME · WATCH NOW</span>
+  </a>
+ </div>
+</section>
+
 <section class="section"><div class="section-head"><h2>More from Pique</h2><p>Stories, conversations and updates</p></div><div class="home-bottom-grid"><a class="home-feature-tile" href="./blog.html"><span class="tile-kicker">Community</span><strong>Find your people.</strong><span>Share your favourite anime moments and join the conversation.</span></a><a class="home-feature-tile" href="./news.html"><span class="tile-kicker">Episode tracker</span><strong>Stay in the loop.</strong><span>See upcoming episode dates and release times.</span></a><a class="home-feature-tile" href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener"><span class="tile-kicker">YouTube</span><strong>Watch Pique.</strong><span>Visit our channel for more anime content.</span></a></div></section>
 <section class="section"><div class="section-head"><h2>Explore the universe</h2><p>Curated corners of Pique Animes</p></div><div class="cards">
 <a class="poster-card" href="./anime.html"><img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=700&q=80" alt="Anime-inspired art"><div class="card-info"><h3>Anime Library</h3><p>Find your next series to fall into.</p></div></a>
