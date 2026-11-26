@@ -208,6 +208,14 @@ body{background-color:#080c19!important;background-image:radial-gradient(ellipse
 :where(input:focus,textarea:focus,select:focus){border-color:#59e5ff!important;box-shadow:0 0 0 3px rgba(89,229,255,.16)!important}
 :where(footer){background:linear-gradient(90deg,rgba(255,53,109,.07),rgba(169,139,255,.07));border-top-color:rgba(255,227,110,.25)!important}
 @media(prefers-reduced-motion:no-preference){:where(.card,.panel,.feature-panel,.section-card,.tile,.post,.movie-card,.anime-card,.showcase-card,.business-card,.content-card,.guide-card,.news-card,.faq-item,.box,.upload-card,.schedule-card):hover{transform:translateY(-3px)}}
+</style><style id="pique-movie-spotlight-upgrade">
+.movie-spotlight-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.movie-spotlight-card{border-color:rgba(255,212,119,.34);box-shadow:0 12px 30px rgba(0,0,0,.2)}
+.movie-spotlight-card img{height:275px;object-fit:cover;object-position:center 35%}
+.movie-spotlight-card:first-child{border-color:rgba(86,225,175,.6);box-shadow:0 0 25px rgba(53,210,150,.12)}
+.movie-spotlight-card:first-child .showcase-meta span{color:#8ff0c4}
+@media(max-width:1050px){.movie-spotlight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.movie-spotlight-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.movie-spotlight-card img{height:210px}.movie-spotlight-card .showcase-meta{padding:9px}.movie-spotlight-card .showcase-meta strong{font-size:12px}}
 </style></head><body><nav class="site-nav"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a class="active" href="./index.html">Home</a><a class="" href="./anime.html">Anime</a><a class="" href="./movies.html">Movies</a><a href="./news.html">Anime News</a><a class="" href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./earn.html">Earn with us</a><a href="./media-kit.html">Media Kit</a><a href="./outreach.html">Brand Outreach</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener">YouTube ↗</a></div></nav><main class="page">
 <section class="hero"><div class="hero-copy"><span class="eyebrow">✦ A world beyond the screen</span><h1>YOUR NEXT<br>OBSESSION<br>STARTS HERE.</h1><p>Discover unforgettable anime, explore cinematic movies and connect with fans who love the same worlds you do. Your next great story is waiting.</p><div class="hero-live" id="homeHeroSpotlight">Discovering today’s featured anime…</div><a class="btn" href="./anime.html">Explore anime →</a><a class="btn secondary" href="./movies.html">Discover movies</a></div></section>
 <nav class="home-quicklinks" aria-label="Quick discovery"><a href="./anime.html">✦ Anime library</a><a href="./movies.html">▣ Movie collection</a><a href="./news.html">◷ Episode schedule</a><a href="./blog.html">◎ Fan community</a><a href="./guide.html">↗ Discovery guide</a></nav>
@@ -218,13 +226,20 @@ body{background-color:#080c19!important;background-image:radial-gradient(ellipse
  <div class="showcase-grid" id="homeAnimeShowcase"><div class="showcase-loading">Loading anime highlights…</div></div>
 </section>
 <section class="section" id="featured-movies">
- <div class="section-head"><h2>Anime movies worth discovering</h2><a class="pill" href="./movies.html">Explore movies →</a></div>
- <p class="home-intro">From unforgettable adventures to beautiful stories, find your next movie night pick.</p>
+ <div class="section-head"><h2>Big-screen movie spotlight</h2><a class="pill" href="./movies.html">Explore movies →</a></div>
+ <p class="home-intro">From Marvel blockbusters to unforgettable anime films, explore movie worlds worth watching.</p>
+ <div class="showcase-grid movie-spotlight-grid" id="homeMovieSpotlight">
+  <a class="showcase-card movie-spotlight-card" href="https://movies.disney.com/avengers-doomsday" target="_blank" rel="noopener"><img loading="eager" src="https://lumiere-a.akamaihd.net/v1/images/g_movies_avengersdoomsday_final_poster_53e86aac.jpeg?region=0%2C0%2C1300%2C730" alt="Official Avengers: Doomsday poster showing Doctor Doom"><div class="showcase-meta"><strong>Avengers: Doomsday</strong><span>Marvel Studios · In theaters December 18, 2026</span></div></a>
+  <a class="showcase-card movie-spotlight-card" href="https://movies.disney.com/avengers-endgame" target="_blank" rel="noopener"><img loading="lazy" src="https://lumiere-a.akamaihd.net/v1/images/h_avengersendgame_19751_b8067b68.jpeg?region=0%2C0%2C2048%2C878&amp;width=1536" alt="Captain America in Avengers: Endgame"><div class="showcase-meta"><strong>Avengers: Endgame</strong><span>Marvel Studios · Superhero</span></div></a>
+  <a class="showcase-card movie-spotlight-card" href="https://movies.disney.com/avengers-infinity-war" target="_blank" rel="noopener"><img loading="lazy" src="https://lumiere-a.akamaihd.net/v1/images/pp_avengersinfinitywar_herobanner_19871_bd17a892.jpeg?region=0%2C0%2C2048%2C878&amp;width=1536" alt="Thanos in Avengers: Infinity War"><div class="showcase-meta"><strong>Avengers: Infinity War</strong><span>Marvel Studios · Superhero</span></div></a>
+  <a class="showcase-card movie-spotlight-card" href="https://movies.disney.com/the-fantastic-four-first-steps" target="_blank" rel="noopener"><img loading="lazy" src="https://lumiere-a.akamaihd.net/v1/images/pp_disneymovies_fantasticfourfirststeps_herobanner_41d922ec.jpeg?region=0%2C0%2C2048%2C878&amp;width=1536" alt="The Fantastic Four: First Steps team"><div class="showcase-meta"><strong>The Fantastic Four: First Steps</strong><span>Marvel Studios · Sci-fi adventure</span></div></a>
+ </div>
+</section>
+<section class="section" id="anime-movie-picks">
+ <div class="section-head"><h2>Anime movies worth discovering</h2><a class="pill" href="./movies.html">Explore anime movies →</a></div>
+ <p class="home-intro">Discover real anime movie posters refreshed from the catalogue.</p>
  <div class="showcase-grid" id="homeMovieShowcase">
   <a class="showcase-card" href="./movies.html"><img loading="eager" src="https://cdn.posteritati.com/posters/000/000/049/033/your-name-md-web.jpg" alt="Your Name anime movie poster"><div class="showcase-meta"><strong>Your Name</strong><span>Romance · Fantasy</span></div></a>
-  <a class="showcase-card" href="./movies.html"><img loading="lazy" src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=700&q=85" alt="Anime cinema artwork"><div class="showcase-meta"><strong>Anime Movie Spotlight</strong><span>Explore the movie collection</span></div></a>
-  <a class="showcase-card" href="./movies.html"><img loading="lazy" src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=700&q=85" alt="Fantasy adventure artwork"><div class="showcase-meta"><strong>Fantasy Adventures</strong><span>Explore the movie collection</span></div></a>
-  <a class="showcase-card" href="./movies.html"><img loading="lazy" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=85" alt="Cinematic fantasy landscape"><div class="showcase-meta"><strong>Beautiful Worlds</strong><span>Explore the movie collection</span></div></a>
  </div>
 </section>
 <section class="section"><div class="section-head"><h2>More from Pique</h2><p>Stories, conversations and updates</p></div><div class="home-bottom-grid"><a class="home-feature-tile" href="./blog.html"><span class="tile-kicker">Community</span><strong>Find your people.</strong><span>Share your favourite anime moments and join the conversation.</span></a><a class="home-feature-tile" href="./news.html"><span class="tile-kicker">Episode tracker</span><strong>Stay in the loop.</strong><span>See upcoming episode dates and release times.</span></a><a class="home-feature-tile" href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener"><span class="tile-kicker">YouTube</span><strong>Watch Pique.</strong><span>Visit our channel for more anime content.</span></a></div></section>
