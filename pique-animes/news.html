@@ -126,9 +126,29 @@ body{background-color:#080c19!important;background-image:radial-gradient(ellipse
 :where(input:focus,textarea:focus,select:focus){border-color:#59e5ff!important;box-shadow:0 0 0 3px rgba(89,229,255,.16)!important}
 :where(footer){background:linear-gradient(90deg,rgba(255,53,109,.07),rgba(169,139,255,.07));border-top-color:rgba(255,227,110,.25)!important}
 @media(prefers-reduced-motion:no-preference){:where(.card,.panel,.feature-panel,.section-card,.tile,.post,.movie-card,.anime-card,.showcase-card,.business-card,.content-card,.guide-card,.news-card,.faq-item,.box,.upload-card,.schedule-card):hover{transform:translateY(-3px)}}
+</style><style id="pique-clear-page-navigation">
+/* Clear, touch-friendly page navigation; all existing pages remain available. */
+.site-nav,.nav{height:auto!important;min-height:70px;flex-wrap:wrap;gap:12px 22px;padding-top:13px!important;padding-bottom:13px!important}
+.nav-links,.navlinks,.links{display:flex;align-items:center;justify-content:flex-end;flex:1 1 680px;flex-wrap:wrap;gap:8px!important;overflow:visible!important;width:auto!important}
+.site-nav .nav-links a,.nav .navlinks a,.nav .links a,.links a{
+ display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 13px;
+ border:1px solid rgba(255,255,255,.13);border-radius:999px;background:rgba(255,255,255,.055);
+ color:#e8eaf1!important;font-size:12px!important;font-weight:750!important;white-space:nowrap;
+ transition:background .18s,border-color .18s,transform .18s
+}
+.site-nav .nav-links a:hover,.nav .navlinks a:hover,.nav .links a:hover,.links a:hover{
+ background:linear-gradient(110deg,rgba(255,53,109,.24),rgba(154,104,255,.2));border-color:rgba(255,227,110,.55);transform:translateY(-1px)
+}
+.site-nav .nav-links a.active,.nav .navlinks a[aria-current="page"]{background:linear-gradient(110deg,#ff356d,#9a68ff);border-color:#ffffff55;color:#fff!important}
+.site-nav .nav-links a.active:after{display:none!important}
+@media(max-width:700px){
+ .site-nav,.nav{align-items:flex-start!important;flex-direction:column!important;gap:11px!important;padding-left:4%!important;padding-right:4%!important}
+ .nav-links,.navlinks,.links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px!important;width:100%!important;flex:1 1 auto!important}
+ .site-nav .nav-links a,.nav .navlinks a,.nav .links a,.links a{width:100%;min-height:43px;padding:9px 7px;font-size:11px!important;text-align:center;white-space:normal}
+}
 </style></head>
 <body>
-<nav class="site-nav"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a href="./index.html">Home</a><a href="./anime.html">Anime</a><a href="./movies.html">Movies</a><a class="active" href="./news.html">Anime News</a><a href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./earn.html">Earn with us</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener">YouTube ↗</a></div></nav>
+<nav class="site-nav"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a href="./index.html">Home</a><a href="./anime.html">Anime</a><a href="./movies.html">Movies</a><a class="active" href="./news.html">Anime News</a><a href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./gentei-shop.html">Anime Gear</a><a href="./earn.html">Earn with us</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener">YouTube ↗</a></div></nav>
 <main class="page">
 <section class="hero"><span class="eyebrow">Pique Anime News Desk</span><h1>Never miss the next episode.</h1><p>See upcoming anime episode release dates and times in your local timezone. Adult and explicit anime are excluded from this schedule. The schedule refreshes from AniList, so new listings can appear as release information is updated.</p><div class="hero-note">Upcoming releases · Live schedule · Local time</div></section>
 <section class="controls"><div class="tabs" aria-label="Schedule period"><button class="tab active" data-days="7">Next 7 days</button><button class="tab" data-days="14">Next 14 days</button></div><button class="refresh" id="refresh">↻ Refresh schedule</button></section>
