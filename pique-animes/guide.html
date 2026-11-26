@@ -85,7 +85,26 @@ img{max-width:100%}
 @media(max-width:700px){.site-nav,.nav{position:relative}.hero{border-radius:19px!important}h1{font-size:clamp(2rem,9vw,3.2rem)}.nav-links,.links{gap:7px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 </style>
-</head>
+<style id="pique-sitewide-pro-interface">
+:root{--pro-bg:#080b14;--pro-panel:#141a29;--pro-line:rgba(232,194,122,.2);--pro-gold:#f5d28b;--pro-red:#ef315e;--pro-violet:#9877ff;--pro-cyan:#59d7e9}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background-color:var(--pro-bg)!important;background-image:radial-gradient(ellipse at 4% 0%,rgba(239,49,94,.13),transparent 34%),radial-gradient(ellipse at 96% 8%,rgba(152,119,255,.12),transparent 30%),linear-gradient(180deg,#0b1020 0%,#080b14 62%,#0c101c 100%)!important;color:#f7f8fc}
+::selection{background:rgba(239,49,94,.45);color:white}
+:where(.site-nav,.nav,header){background:rgba(8,11,20,.9)!important;border-bottom:1px solid var(--pro-line)!important;backdrop-filter:blur(18px) saturate(145%);-webkit-backdrop-filter:blur(18px) saturate(145%);box-shadow:0 10px 34px rgba(0,0,0,.22)}
+:where(.site-nav,.nav) a{transition:color .2s,background .2s,border-color .2s,transform .2s}
+:where(.site-nav,.nav) a:hover{color:#ffe2a5!important}
+:where(h1,h2){text-wrap:balance;letter-spacing:-.025em}
+:where(.card,.panel,.feature-panel,.section-card,.tile,.post,.movie-card,.anime-card,.showcase-card,.business-card,.content-card,.guide-card,.news-card,.faq-item,.box,.upload-card,.schedule-card){border-color:var(--pro-line)!important;box-shadow:0 14px 38px rgba(0,0,0,.2);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+:where(.card,.panel,.feature-panel,.section-card,.tile,.post,.movie-card,.anime-card,.showcase-card,.business-card,.content-card,.guide-card,.news-card,.faq-item,.box,.upload-card,.schedule-card):hover{border-color:rgba(245,210,139,.46)!important;box-shadow:0 20px 46px rgba(0,0,0,.3),0 0 26px rgba(152,119,255,.07)}
+:where(button,.btn,.cta,a.button,input[type=submit]){border-radius:11px;font-weight:800;transition:transform .2s,filter .2s,box-shadow .2s}
+:where(button,.btn,.cta,a.button,input[type=submit]):hover{filter:brightness(1.1);transform:translateY(-2px)}
+:where(input,textarea,select){border-radius:10px}
+:where(input,textarea,select):focus{outline:2px solid rgba(89,215,233,.55);outline-offset:2px}
+:where(img){max-width:100%}
+:where(footer){border-top:1px solid var(--pro-line)!important;color:#aeb7c8}
+:where(footer a){color:var(--pro-gold)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+</style></head>
 <body>
 <header class="nav"><a class="brand" href="./index.html">PIQUE <span>ANIMES</span></a><nav class="links"><a href="./index.html">Home</a><a href="./anime.html">Anime</a><a href="./movies.html">Movies</a><a href="./news.html">Anime News</a><a href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./earn.html">Earn with us</a></nav></header>
 <main class="wrap">
