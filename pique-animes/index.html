@@ -199,8 +199,24 @@ img{max-width:100%}
      }).join('');
      return;
     }catch(retryError){}
+    // Independent fallback: Jikan/MyAnimeList, so movie posters still appear
+    // if AniList is blocked, rate-limited, or returns a GraphQL error.
+    try{
+     const fallback=await fetch('https://api.jikan.moe/v4/anime?type=movie&limit=8&order_by=score&sort=desc&sfw=true');
+     if(!fallback.ok) throw new Error('Backup movie catalogue unavailable');
+     const fallbackData=await fallback.json();
+     const movies=(fallbackData.data||[]).filter(item=>item.images?.webp?.large_image_url||item.images?.jpg?.large_image_url).slice(0,8);
+     if(!movies.length) throw new Error('No backup movie posters');
+     el.innerHTML=movies.map(item=>{
+      const title=String(item.title_english||item.title||'Anime movie').replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+      const image=item.images?.webp?.large_image_url||item.images?.jpg?.large_image_url;
+      const genres=(item.genres||[]).slice(0,2).map(g=>g.name).join(' · ');
+      return '<a class="showcase-card" href="./movies.html"><img loading="lazy" src="'+image+'" alt="'+title.replace(/"/g,'&quot;')+' movie poster"><div class="showcase-meta"><strong>'+title+'</strong><span>'+genres+'</span></div></a>';
+     }).join('');
+     return;
+    }catch(fallbackError){}
    }
-   el.innerHTML='<div class="showcase-loading">Movie posters are temporarily unavailable. Open the movie collection to explore titles.</div>';
+   el.innerHTML='<div class="showcase-loading">Movie posters could not load right now. Please open the movie collection to browse titles.</div>';
   }
  }
  await Promise.all([load(['TV','TV_SHORT','ONA'],'homeAnimeShowcase','./anime.html'),load(['MOVIE'],'homeMovieShowcase','./movies.html')]);
