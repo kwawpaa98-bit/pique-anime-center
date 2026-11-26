@@ -155,7 +155,72 @@ body{background-color:#080c19!important;background-image:radial-gradient(ellipse
 .movie-gear-copy{min-width:0;display:block;text-align:left}
 .movie-gear-copy strong{display:block;color:#ffe19a;font-size:11px;line-height:1.3}
 .movie-gear-copy small{display:inline-flex;margin-top:5px;padding:4px 8px;border-radius:20px;background:#e8c27a1c;color:#f4d99e;font-size:10px;font-weight:850}
-</style></head><body><nav class="site-nav"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a class="" href="./index.html">Home</a><a class="" href="./anime.html">Anime</a><a class="active" href="./movies.html">Movies</a><a href="./news.html">Anime News</a><a class="" href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./gentei-shop.html">Anime Gear</a><a href="./earn.html">Earn with us</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener">YouTube ↗</a></div></nav><section class="hero" style="margin:24px auto 0;max-width:1320px;width:90%"><div class="hero-copy"><span class="eyebrow">Stories made for the big screen</span><h1>MOVIE NIGHTS.<br>PURE CINEMA.</h1><p>Explore blockbuster hits, unforgettable stories, thrillers, adventures and award-winning films.</p><a class="btn" href="#films">Explore all movies ↓</a></div></section><main class="page"><div class="section-head"><h2>Featured movie picks</h2><p>Discover popular live-action films and watch their official trailers</p></div><div class="toolbar"><h2>30 live-action movie collection</h2><input id="movieSearch" class="search" type="search" placeholder="Search movies..." aria-label="Search movies"></div><div class="movie-grid" id="films" aria-live="polite"></div><section class="section feature-panel" id="pendatang-feature" style="margin-top:34px">
+</style><style id="pique-unified-navigation">
+/* One clear, consistent page menu across Pique Animes */
+.site-nav,.nav{
+ position:sticky!important;top:0!important;z-index:100!important;
+ display:flex!important;flex-direction:column!important;align-items:stretch!important;
+ gap:12px!important;width:100%!important;height:auto!important;min-height:0!important;
+ padding:13px max(4%,calc((100% - 1320px)/2)) 14px!important;
+ background:rgba(8,10,17,.96)!important;
+ border-bottom:1px solid rgba(232,194,122,.24)!important;
+ box-shadow:0 12px 32px rgba(0,0,0,.3)!important;
+ backdrop-filter:blur(18px) saturate(145%)!important;
+}
+.site-nav>.brand,.nav>.brand{
+ display:inline-flex!important;align-items:center!important;align-self:flex-start!important;
+ min-height:34px!important;margin:0!important;padding:0!important;
+ color:#fff!important;font-size:22px!important;font-weight:950!important;
+ letter-spacing:1.4px!important;white-space:nowrap!important;
+}
+.site-nav>.brand span,.nav>.brand span{
+ background:linear-gradient(90deg,#ff4770,#ffd477,#a98bff)!important;
+ -webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;
+}
+.site-nav .nav-links,.nav .navlinks,.nav .links,.site-nav .links{
+ display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr))!important;
+ gap:8px!important;width:100%!important;max-width:1320px!important;margin:0 auto!important;
+ padding:0!important;overflow:visible!important;align-items:stretch!important;
+}
+.site-nav .nav-links a,.nav .navlinks a,.nav .links a,.site-nav .links a{
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ min-width:0!important;min-height:42px!important;margin:0!important;padding:9px 10px!important;
+ border:1px solid rgba(180,190,215,.2)!important;border-radius:11px!important;
+ background:linear-gradient(145deg,#20283a,#121827)!important;
+ color:#e7eaf3!important;font-size:12px!important;font-weight:800!important;
+ line-height:1.25!important;text-align:center!important;text-decoration:none!important;
+ white-space:normal!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)!important;
+ transition:transform .18s ease,border-color .18s ease,background .18s ease,box-shadow .18s ease!important;
+}
+.site-nav .nav-links a:hover,.nav .navlinks a:hover,.nav .links a:hover,.site-nav .links a:hover{
+ transform:translateY(-2px)!important;border-color:rgba(255,212,119,.7)!important;
+ background:linear-gradient(120deg,rgba(255,40,88,.24),rgba(155,117,255,.2))!important;
+ color:#fff!important;box-shadow:0 8px 20px rgba(0,0,0,.24)!important;
+}
+.site-nav .nav-links a.active,.site-nav .nav-links a[aria-current="page"],
+.nav .navlinks a.active,.nav .navlinks a[aria-current="page"],
+.nav .links a.active,.nav .links a[aria-current="page"]{
+ border-color:rgba(255,212,119,.72)!important;
+ background:linear-gradient(115deg,#ff315f,#a33e9b 58%,#6853d5)!important;
+ color:#fff!important;box-shadow:0 7px 18px rgba(255,49,95,.2),inset 0 1px 0 rgba(255,255,255,.22)!important;
+}
+.site-nav .nav-links a.active:after{display:none!important}
+.site-nav a:focus-visible,.nav a:focus-visible{outline:3px solid #ffd477!important;outline-offset:3px!important}
+@media(max-width:900px){
+ .site-nav .nav-links,.nav .navlinks,.nav .links,.site-nav .links{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+}
+@media(max-width:620px){
+ .site-nav,.nav{position:relative!important;gap:10px!important;padding:12px 4% 13px!important}
+ .site-nav>.brand,.nav>.brand{font-size:20px!important}
+ .site-nav .nav-links,.nav .navlinks,.nav .links,.site-nav .links{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+ .site-nav .nav-links a,.nav .navlinks a,.nav .links a,.site-nav .links a{
+  min-height:46px!important;padding:9px 7px!important;font-size:11px!important;border-radius:10px!important;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ .site-nav .nav-links a,.nav .navlinks a,.nav .links a{transition:none!important}
+}
+</style></head><body><nav class="site-nav" aria-label="Main navigation"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a href="./index.html">Home</a><a href="./anime.html">Anime</a><a href="./movies.html" class="active" aria-current="page">Movies</a><a href="./news.html">Anime News</a><a href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./gentei-shop.html">Anime Gear</a><a href="./earn.html">Earn with us</a><a href="./media-kit.html">Media Kit</a><a href="./outreach.html">Brand Outreach</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div></nav><section class="hero" style="margin:24px auto 0;max-width:1320px;width:90%"><div class="hero-copy"><span class="eyebrow">Stories made for the big screen</span><h1>MOVIE NIGHTS.<br>PURE CINEMA.</h1><p>Explore blockbuster hits, unforgettable stories, thrillers, adventures and award-winning films.</p><a class="btn" href="#films">Explore all movies ↓</a></div></section><main class="page"><div class="section-head"><h2>Featured movie picks</h2><p>Discover popular live-action films and watch their official trailers</p></div><div class="toolbar"><h2>30 live-action movie collection</h2><input id="movieSearch" class="search" type="search" placeholder="Search movies..." aria-label="Search movies"></div><div class="movie-grid" id="films" aria-live="polite"></div><section class="section feature-panel" id="pendatang-feature" style="margin-top:34px">
 <span class="eyebrow">Featured full movie · 2023</span>
 <h2 style="margin:10px 0">PENDATANG</h2>
 <p>Watch the complete 98-minute Malaysian dystopian thriller, featuring a live-action cast. Presented from the official Kuman Pictures release. English subtitles are available through the YouTube player.</p>
