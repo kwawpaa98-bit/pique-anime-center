@@ -164,6 +164,33 @@ body{background-image:radial-gradient(ellipse at 8% 8%,rgba(255,40,88,.19),trans
 .home-feature-tile:nth-child(3n){border-color:rgba(155,117,255,.34);background:linear-gradient(0deg,rgba(6,8,13,.96),rgba(6,8,13,.12)),radial-gradient(circle at 80% 15%,rgba(155,117,255,.3),transparent 45%),linear-gradient(135deg,#30264b,#121722)}
 @media(max-width:1050px){#featured-movies .showcase-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:650px){#featured-movies{padding:17px}#featured-movies .showcase-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#featured-movies .showcase-card img{height:220px}#featured-movies .showcase-card:first-child{grid-column:span 2}#featured-movies .showcase-card:first-child img{height:270px}}
+</style><style id="pique-sitewide-pro-interface">
+:root{--pro-bg:#080b14;--pro-panel:#141a29;--pro-line:rgba(232,194,122,.2);--pro-gold:#f5d28b;--pro-red:#ef315e;--pro-violet:#9877ff;--pro-cyan:#59d7e9}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background-color:var(--pro-bg)!important;background-image:radial-gradient(ellipse at 4% 0%,rgba(239,49,94,.13),transparent 34%),radial-gradient(ellipse at 96% 8%,rgba(152,119,255,.12),transparent 30%),linear-gradient(180deg,#0b1020 0%,#080b14 62%,#0c101c 100%)!important;color:#f7f8fc}
+::selection{background:rgba(239,49,94,.45);color:white}
+:where(.site-nav,.nav,header){background:rgba(8,11,20,.9)!important;border-bottom:1px solid var(--pro-line)!important;backdrop-filter:blur(18px) saturate(145%);-webkit-backdrop-filter:blur(18px) saturate(145%);box-shadow:0 10px 34px rgba(0,0,0,.22)}
+:where(.site-nav,.nav) a{transition:color .2s,background .2s,border-color .2s,transform .2s}
+:where(.site-nav,.nav) a:hover{color:#ffe2a5!important}
+:where(h1,h2){text-wrap:balance;letter-spacing:-.025em}
+:where(.card,.panel,.feature-panel,.section-card,.tile,.post,.movie-card,.anime-card,.showcase-card,.business-card,.content-card,.guide-card,.news-card,.faq-item,.box,.upload-card,.schedule-card){border-color:var(--pro-line)!important;box-shadow:0 14px 38px rgba(0,0,0,.2);transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+:where(.card,.panel,.feature-panel,.section-card,.tile,.post,.movie-card,.anime-card,.showcase-card,.business-card,.content-card,.guide-card,.news-card,.faq-item,.box,.upload-card,.schedule-card):hover{border-color:rgba(245,210,139,.46)!important;box-shadow:0 20px 46px rgba(0,0,0,.3),0 0 26px rgba(152,119,255,.07)}
+:where(button,.btn,.cta,a.button,input[type=submit]){border-radius:11px;font-weight:800;transition:transform .2s,filter .2s,box-shadow .2s}
+:where(button,.btn,.cta,a.button,input[type=submit]):hover{filter:brightness(1.1);transform:translateY(-2px)}
+:where(input,textarea,select){border-radius:10px}
+:where(input,textarea,select):focus{outline:2px solid rgba(89,215,233,.55);outline-offset:2px}
+:where(img){max-width:100%}
+:where(footer){border-top:1px solid var(--pro-line)!important;color:#aeb7c8}
+:where(footer a){color:var(--pro-gold)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+</style><style id="pique-youtube-picture">
+.pique-youtube-card .pique-youtube-art{height:250px;position:relative;overflow:hidden;background:linear-gradient(135deg,#3c1631,#171d35)}
+.pique-youtube-card .pique-youtube-art img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s;filter:saturate(1.18)}
+.pique-youtube-card:hover .pique-youtube-art img{transform:scale(1.06)}
+.pique-youtube-card .pique-youtube-art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,6,12,.82),rgba(4,6,12,.03) 75%)}
+.pique-youtube-play{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:66px;height:48px;border-radius:15px;background:#ff0033;color:white;display:grid;place-items:center;font-size:25px;box-shadow:0 8px 28px #0009}
+.pique-youtube-label{position:absolute;z-index:2;left:13px;bottom:13px;font-size:10px;letter-spacing:2px;font-weight:900;color:#fff;text-shadow:0 2px 9px #000}
+@media(max-width:650px){.pique-youtube-card .pique-youtube-art{height:190px}}
 </style></head><body><nav class="site-nav"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a class="active" href="./index.html">Home</a><a class="" href="./anime.html">Anime</a><a class="" href="./movies.html">Movies</a><a href="./news.html">Anime News</a><a class="" href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./earn.html">Earn with us</a><a href="./media-kit.html">Media Kit</a><a href="./outreach.html">Brand Outreach</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener">YouTube ↗</a></div></nav><main class="page">
 <section class="hero"><div class="hero-copy"><span class="eyebrow">✦ A world beyond the screen</span><h1>YOUR NEXT<br>OBSESSION<br>STARTS HERE.</h1><p>Discover unforgettable anime, explore cinematic movies and connect with fans who love the same worlds you do. Your next great story is waiting.</p><div class="hero-live" id="homeHeroSpotlight">Discovering today’s featured anime…</div><a class="btn" href="./anime.html">Explore anime →</a><a class="btn secondary" href="./movies.html">Discover movies</a></div></section>
 <nav class="home-quicklinks" aria-label="Quick discovery"><a href="./anime.html">✦ Anime library</a><a href="./movies.html">▣ Movie collection</a><a href="./news.html">◷ Episode schedule</a><a href="./blog.html">◎ Fan community</a><a href="./guide.html">↗ Discovery guide</a></nav>
@@ -188,7 +215,7 @@ body{background-image:radial-gradient(ellipse at 8% 8%,rgba(255,40,88,.19),trans
 <a class="poster-card" href="./anime.html"><img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=700&q=80" alt="Anime-inspired art"><div class="card-info"><h3>Anime Library</h3><p>Find your next series to fall into.</p></div></a>
 <a class="poster-card" href="./movies.html"><img src="https://cdn.posteritati.com/posters/000/000/049/033/your-name-md-web.jpg" alt="Your Name movie poster"><div class="card-info"><h3>Anime Movies</h3><p>Big feelings. Beautiful stories.</p></div></a>
 <a class="poster-card" href="./blog.html"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=80" alt="Atmospheric fantasy landscape"><div class="card-info"><h3>Community</h3><p>Share your takes with the family.</p></div></a>
-<a class="poster-card" href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=700&q=80" alt="Creative video studio"><div class="card-info"><h3>Pique on YouTube</h3><p>Watch the latest channel content.</p></div></a>
+<a class="poster-card pique-youtube-card" href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener"><div class="pique-youtube-art"><img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=900&q=85" alt="Anime artwork for the Pique Animes YouTube channel"><span class="pique-youtube-play" aria-label="Watch on YouTube">▶</span><span class="pique-youtube-label">PIQUE ANIMES · YOUTUBE</span></div><div class="card-info"><h3>Watch Pique on YouTube</h3><p>Open our channel for anime videos and new content.</p></div></a>
 <a class="poster-card" href="./anime.html"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=80" alt="Fantasy world"><div class="card-info"><h3>Discover More</h3><p>Your next favourite is waiting.</p></div></a>
 </div></section>
 <section class="section feature-panel"><span class="eyebrow">The Pique experience</span><h2>One home for anime fans.</h2><p>Browse titles, find official viewing options, explore movie picks and join conversations. The library will keep growing as new features and authorized content are added.</p><a class="btn" href="./anime.html">Start exploring</a></section>
