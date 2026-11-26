@@ -184,7 +184,23 @@ img{max-width:100%}
     return '<a class="showcase-card" href="'+linkLabel+'"><img loading="lazy" src="'+image+'" alt="'+title.replace(/"/g,'&quot;')+' poster"><div class="showcase-meta"><strong>'+title+'</strong><span>'+genres+'</span></div></a>';
    }).join('');
   }catch(error){
-   el.innerHTML='<div class="showcase-loading">Highlights are temporarily unavailable. Visit the full catalogue to explore titles.</div>';
+   if(target==='homeMovieShowcase'){
+    try{
+     const movieQuery='query { Page(page:1,perPage:18) { media(type:ANIME,format_in:[MOVIE],isAdult:false,sort:TRENDING_DESC) { id title { english romaji } coverImage { large } genres } } }';
+     const retry=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({query:movieQuery})});
+     if(!retry.ok) throw new Error('Movie catalogue unavailable');
+     const retryData=await retry.json();
+     const movies=safe(retryData.data?.Page?.media||[]).slice(0,8);
+     if(!movies.length) throw new Error('No movie posters returned');
+     el.innerHTML=movies.map(item=>{
+      const title=(item.title?.english||item.title?.romaji||'Anime movie').replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+      const genres=(item.genres||[]).slice(0,2).join(' · ');
+      return '<a class="showcase-card" href="./movies.html"><img loading="lazy" src="'+(item.coverImage?.large||'')+'" alt="'+title.replace(/"/g,'&quot;')+' movie poster"><div class="showcase-meta"><strong>'+title+'</strong><span>'+genres+'</span></div></a>';
+     }).join('');
+     return;
+    }catch(retryError){}
+   }
+   el.innerHTML='<div class="showcase-loading">Movie posters are temporarily unavailable. Open the movie collection to explore titles.</div>';
   }
  }
  await Promise.all([load(['TV','TV_SHORT','ONA'],'homeAnimeShowcase','./anime.html'),load(['MOVIE'],'homeMovieShowcase','./movies.html')]);
