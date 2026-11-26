@@ -24,6 +24,19 @@
 <div class="field"><label for="leadValue">Proposed amount (GHS)</label><input id="leadValue" type="number" min="0" step="0.01" placeholder="0.00"></div>
 <div class="field"><label for="leadState">Status</label><select id="leadState"><option>New enquiry</option><option>Contacted</option><option>Negotiating</option><option>Won</option><option>Declined</option></select></div>
 </div><div class="actions"><button type="button" id="addLead">Save enquiry</button></div><div id="leadList"></div>
+<section class="panel" id="outreachPanel" style="margin:18px 0;padding:20px;border:1px solid #51412b">
+<div class="pill">ADMIN ONLY · BRAND OUTREACH</div><h2 style="margin:12px 0 5px">Brand Outreach Pipeline</h2>
+<p class="muted">Track businesses you contact about partnerships. Records are stored in this browser on this device only; they are not synced to Supabase.</p>
+<div class="grid">
+<div class="field"><label for="outBrand">Business / brand</label><input id="outBrand" maxlength="140" placeholder="Brand or shop name"></div>
+<div class="field"><label for="outContact">Contact person / email / handle</label><input id="outContact" maxlength="180" placeholder="Public business contact"></div>
+<div class="field"><label for="outChannel">Contact method</label><select id="outChannel"><option>Email</option><option>Instagram</option><option>WhatsApp Business</option><option>Website contact form</option><option>In person</option><option>Other</option></select></div>
+<div class="field"><label for="outStatus">Pipeline status</label><select id="outStatus"><option>To research</option><option>Ready to contact</option><option>Contacted</option><option>Follow-up due</option><option>In discussion</option><option>Proposal sent</option><option>Won</option><option>Not interested</option></select></div>
+<div class="field"><label for="outFollow">Follow-up date</label><input id="outFollow" type="date"></div>
+<div class="field full"><label for="outNotes">Personalised reason / notes</label><textarea id="outNotes" rows="2" maxlength="1000" placeholder="Why is this brand a good fit? What did you discuss?"></textarea></div>
+</div><div class="actions"><button type="button" id="addOutreach">Add to outreach pipeline</button><span id="outreachStatusMsg" class="muted" aria-live="polite"></span></div>
+<div id="outreachSummary" class="muted" style="margin:14px 0"></div><div id="outreachList"></div>
+</section>
 <div class="notice" style="margin-top:16px;padding:14px;background:#211c13;border:1px solid #715b32;border-radius:10px;color:#e8d9b8;font-size:12px;line-height:1.6"><strong>Before activating ads:</strong> apply directly with each provider and wait for approval. Never click your own ads, encourage visitors to click ads, or claim earnings before a provider confirms them. Only publish content you have rights to distribute.</div>
 </section>
 <h2>Add a video</h2><p class="muted">MP4, WebM or MKV · Maximum 500 MB per video in Creator Studio. Cloudinary account limits still apply. Free usage is limited, so monitor your Cloudinary credits and bandwidth. Uploaded anime is kept separate from external Crunchyroll links.</p>
@@ -62,6 +75,35 @@ function money(v){return 'GH₵'+Number(v||0).toFixed(2)}
 function renderMoney(){const s=monLoad();$('monRevenue').value=s.received||'';$('monPending').value=s.pending||'';$('receivedView').textContent=money(s.received);$('pendingView').textContent=money(s.pending);$('partnerList').innerHTML=PARTNERS.map(p=>'<div class="item"><div class="grow"><strong>'+p.name+'</strong><div class="muted">'+p.note+'</div></div><a href="'+p.url+'" target="_blank" rel="noopener">Apply / review ↗</a></div>').join('');const host=$('leadList');host.innerHTML='';if(!s.leads.length){host.textContent='No sponsorship enquiries recorded yet.';return}s.leads.forEach((lead,i)=>{const row=document.createElement('div');row.className='item';const body=document.createElement('div');body.className='grow';const title=document.createElement('strong');title.textContent=lead.name+' — '+lead.offer;const meta=document.createElement('div');meta.className='muted';meta.textContent=lead.status+' · '+money(lead.value)+' · '+lead.date;body.append(title,meta);const del=document.createElement('button');del.className='secondary';del.textContent='Remove';del.onclick=()=>{const x=monLoad();x.leads.splice(i,1);monSave(x);renderMoney()};row.append(body,del);host.append(row)})}
 $('saveMoney').onclick=()=>{const s=monLoad();s.received=Math.max(0,Number($('monRevenue').value)||0);s.pending=Math.max(0,Number($('monPending').value)||0);monSave(s);renderMoney();$('moneyStatus').textContent='Saved on this device.'};
 $('addLead').onclick=()=>{const name=$('leadName').value.trim(),offer=$('leadOffer').value.trim();if(!name||!offer){alert('Enter a brand/contact and campaign offer.');return}const s=monLoad();s.leads.unshift({name,offer,value:Math.max(0,Number($('leadValue').value)||0),status:$('leadState').value,date:new Date().toLocaleDateString()});monSave(s);$('leadName').value='';$('leadOffer').value='';$('leadValue').value='';renderMoney()};
+
+const OUTREACH_KEY='pique-animes-outreach-v1';
+const OUTREACH_STATES=['To research','Ready to contact','Contacted','Follow-up due','In discussion','Proposal sent','Won','Not interested'];
+function outreachLoad(){try{const v=JSON.parse(localStorage.getItem(OUTREACH_KEY)||'[]');return Array.isArray(v)?v:[]}catch(e){return[]}}
+function outreachSave(v){localStorage.setItem(OUTREACH_KEY,JSON.stringify(v))}
+function renderOutreach(){
+ const data=outreachLoad(),host=$('outreachList');host.innerHTML='';
+ const active=data.filter(x=>!['Won','Not interested'].includes(x.status)).length;
+ $('outreachSummary').textContent=data.length+' businesses tracked · '+active+' active conversations · '+data.filter(x=>x.status==='Won').length+' partnerships won';
+ if(!data.length){host.textContent='No prospects yet. Research a suitable business, then add it here.';return}
+ data.forEach((item,index)=>{
+  const row=document.createElement('div');row.className='item';
+  const body=document.createElement('div');body.className='grow';
+  const title=document.createElement('strong');title.textContent=item.brand;
+  const meta=document.createElement('div');meta.className='muted';meta.textContent=[item.contact,item.channel,item.follow?'Follow up: '+item.follow:'No follow-up date',item.notes].filter(Boolean).join(' · ');
+  const state=document.createElement('select');state.setAttribute('aria-label','Status for '+item.brand);OUTREACH_STATES.forEach(s=>{const o=document.createElement('option');o.value=s;o.textContent=s;state.append(o)});state.value=item.status||'To research';
+  state.onchange=()=>{const latest=outreachLoad();if(!latest[index])return;latest[index].status=state.value;outreachSave(latest);renderOutreach()};
+  body.append(title,meta,state);
+  const del=document.createElement('button');del.className='secondary';del.textContent='Remove';del.onclick=()=>{const latest=outreachLoad();latest.splice(index,1);outreachSave(latest);renderOutreach()};
+  row.append(body,del);host.append(row);
+ });
+}
+$('addOutreach').onclick=()=>{
+ const brand=$('outBrand').value.trim();if(!brand){alert('Enter a business or brand name first.');return}
+ const list=outreachLoad();list.unshift({brand,contact:$('outContact').value.trim(),channel:$('outChannel').value,status:$('outStatus').value,follow:$('outFollow').value,notes:$('outNotes').value.trim(),created:new Date().toISOString()});
+ outreachSave(list);['outBrand','outContact','outFollow','outNotes'].forEach(id=>$(id).value='');$('outStatus').value='To research';renderOutreach();$('outreachStatusMsg').textContent='Saved on this device.';
+};
+renderOutreach();
+
 renderMoney();
 checkSession();
 </script></body></html>
