@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7020823797965378" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="Follow upcoming anime episode release dates and times with the Pique Animes live airing schedule. Check what's airing soon.">
+<title>Anime News & Episode Schedule | Pique Animes</title>
+<style>
+:root{--bg:#08090d;--panel:#12151d;--panel2:#191d27;--line:#292e3b;--muted:#9ca3b2;--red:#e11d48;--gold:#e8c27a;--white:#f7f7fa}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 75% -10%,#202535 0,transparent 40%),var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit}
+.site-nav{min-height:76px;position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px max(5%,calc((100% - 1320px)/2));background:#090b10ed;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}
+.brand{font-size:23px;font-weight:950;letter-spacing:1.5px;white-space:nowrap}.brand span{color:var(--red)}.nav-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap}.nav-links a{font-size:12px;font-weight:650;color:#c3c6cf}.nav-links a:hover,.nav-links a.active{color:#fff}
+.page{max-width:1180px;margin:auto;padding:34px 5% 70px}.hero{padding:clamp(28px,6vw,55px);border:1px solid #ffffff15;border-radius:16px;background:linear-gradient(100deg,#10131c,#171d2b 65%,#391426)}.eyebrow{color:var(--gold);font-size:10px;letter-spacing:2.7px;font-weight:850;text-transform:uppercase}.hero h1{font-size:clamp(38px,7vw,66px);line-height:.98;letter-spacing:-2px;margin:13px 0}.hero p{max-width:720px;color:#c4c8d2;line-height:1.8}.hero-note{font-size:12px;color:#aeb5c3}
+.controls{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:27px 0 16px}.tabs{display:flex;gap:8px;flex-wrap:wrap}.tab,.refresh{border:1px solid #343b4b;background:#151a24;color:#cbd0da;border-radius:30px;padding:10px 15px;font-size:12px;font-weight:750;cursor:pointer}.tab.active,.refresh{background:var(--red);border-color:var(--red);color:white}.status{padding:20px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:#c2c8d3;line-height:1.7}.schedule{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.episode{display:flex;gap:14px;min-width:0;padding:13px;background:var(--panel);border:1px solid #ffffff14;border-radius:11px;transition:.2s}.episode:hover{border-color:#ffffff3d;transform:translateY(-2px)}.poster{width:88px;min-width:88px;height:124px;object-fit:cover;border-radius:7px;background:#202635}.details{min-width:0;display:flex;flex-direction:column;align-items:flex-start}.date{color:var(--gold);font-size:11px;font-weight:850;letter-spacing:.3px}.details h2{font-size:15px;line-height:1.35;margin:7px 0}.episode-no{font-size:12px;color:#c7ccd6}.air-time{font-size:12px;color:#aeb6c5;margin-top:5px}.anilist{font-size:11px;color:#f1bdcb;text-decoration:underline;text-underline-offset:3px;margin-top:auto;padding-top:9px}.footnote{margin-top:23px;padding:18px;background:#11151d;border:1px solid #292e3b;border-radius:10px;color:#aeb5c3;font-size:12px;line-height:1.7}.footnote a{color:#f0c0cd;text-decoration:underline}footer{border-top:1px solid #ffffff12;text-align:center;padding:25px;color:#7f8796;font-size:11px}
+@media(max-width:800px){.schedule{grid-template-columns:1fr}.site-nav{align-items:flex-start;flex-direction:column}.nav-links{gap:15px}}
+@media(max-width:480px){.page{padding:23px 4% 48px}.episode{gap:11px}.poster{width:76px;min-width:76px;height:110px}.details h2{font-size:14px}.hero h1{letter-spacing:-1px}}
+</style>
+</head>
+<body>
+<nav class="site-nav"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a href="./index.html">Home</a><a href="./anime.html">Anime</a><a href="./movies.html">Movies</a><a class="active" href="./news.html">Anime News</a><a href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./earn.html">Earn with us</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener">YouTube ↗</a></div></nav>
+<main class="page">
+<section class="hero"><span class="eyebrow">Pique Anime News Desk</span><h1>Never miss the next episode.</h1><p>See upcoming anime episode release dates and times in your local timezone. The schedule refreshes from AniList, so new listings can appear as release information is updated.</p><div class="hero-note">Upcoming releases · Live schedule · Local time</div></section>
+<section class="controls"><div class="tabs" aria-label="Schedule period"><button class="tab active" data-days="7">Next 7 days</button><button class="tab" data-days="14">Next 14 days</button></div><button class="refresh" id="refresh">↻ Refresh schedule</button></section>
+<div id="status" class="status" role="status" aria-live="polite">Loading upcoming episode releases…</div>
+<section id="schedule" class="schedule" aria-label="Upcoming anime episodes"></section>
+<section class="footnote"><strong>About this schedule:</strong> Episode times are supplied by AniList and may change if a broadcaster or distributor updates its schedule. Release time does not guarantee immediate availability on every streaming service or in every country. Always check the official provider for local availability. Pique Animes is an independent fan discovery site and is not affiliated with AniList or the anime rights holders. <a href="https://anilist.co/" target="_blank" rel="noopener">AniList</a> · <a href="https://docs.anilist.co/" target="_blank" rel="noopener">API information</a></section>
+</main>
+<footer><a href="./privacy.html">Privacy Policy</a> · © 2026 Pique Animes</footer>
+<script>
+(function(){
+const endpoint='https://graphql.anilist.co';
+const schedule=document.getElementById('schedule');
+const status=document.getElementById('status');
+const refresh=document.getElementById('refresh');
+const tabs=[...document.querySelectorAll('.tab')];
+let days=7,requestId=0;
+const query=`query ($page:Int,$perPage:Int,$airingAt_greater:Int,$airingAt_lesser:Int) {
+ Page(page:$page,perPage:$perPage) {
+  airingSchedules(airingAt_greater:$airingAt_greater,airingAt_lesser:$airingAt_lesser,sort:TIME) {
+   airingAt episode media {
+    id title { romaji english native }
+    coverImage { large }
+    siteUrl format seasonYear
+   }
+  }
+ }
+}`;
+function esc(value){return String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function titleOf(media){return media?.title?.english||media?.title?.romaji||media?.title?.native||'Untitled anime'}
+function dateParts(timestamp){
+ const d=new Date(timestamp*1000);
+ return {
+  date:new Intl.DateTimeFormat(undefined,{weekday:'short',day:'numeric',month:'short',year:'numeric'}).format(d),
+  time:new Intl.DateTimeFormat(undefined,{hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(d)
+ };
+}
+function render(items){
+ if(!items.length){status.textContent='No upcoming episodes were returned for this period. Try refreshing or checking again later.';return}
+ status.textContent='Showing '+items.length+' upcoming episode'+(items.length===1?'':'s')+'. Times are displayed in your device’s local timezone.';
+ schedule.innerHTML=items.map(item=>{
+  const media=item.media||{},when=dateParts(item.airingAt),title=titleOf(media);
+  const img=media.coverImage?.large||'';
+  return '<article class="episode">'+(img?'<img class="poster" src="'+esc(img)+'" alt="" loading="lazy">':'<div class="poster"></div>')+
+   '<div class="details"><span class="date">'+esc(when.date)+'</span><h2>'+esc(title)+'</h2><div class="episode-no">Episode '+esc(item.episode)+(media.format?' · '+esc(media.format.replaceAll('_',' ')):'')+'</div><div class="air-time">'+esc(when.time)+'</div><a class="anilist" href="'+esc(media.siteUrl||'https://anilist.co/')+'" target="_blank" rel="noopener">Anime details ↗</a></div></article>';
+ }).join('');
+}
+async function load(){
+ const id=++requestId;
+ schedule.innerHTML='';
+ status.textContent='Loading upcoming episode releases…';
+ refresh.disabled=true;refresh.textContent='Loading…';
+ const now=Math.floor(Date.now()/1000),end=now+days*86400;
+ try{
+  const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({query,variables:{page:1,perPage:50,airingAt_greater:now,airingAt_lesser:end}})});
+  if(!response.ok)throw new Error('Schedule service returned '+response.status);
+  const json=await response.json();
+  if(json.errors?.length)throw new Error(json.errors[0].message||'Schedule query failed');
+  if(id!==requestId)return;
+  const items=(json.data?.Page?.airingSchedules||[]).filter(x=>x.media).sort((a,b)=>a.airingAt-b.airingAt);
+  render(items);
+ }catch(error){
+  if(id!==requestId)return;
+  status.innerHTML='The live schedule could not be loaded right now. Please check your connection and try again. You can also visit <a href="https://anilist.co/" target="_blank" rel="noopener">AniList</a> for anime airing information.';
+  console.warn('Pique airing schedule:',error);
+ }finally{if(id===requestId){refresh.disabled=false;refresh.textContent='↻ Refresh schedule'}}
+}
+tabs.forEach(tab=>tab.addEventListener('click',()=>{days=Number(tab.dataset.days);tabs.forEach(t=>t.classList.toggle('active',t===tab));load()}));
+refresh.addEventListener('click',load);
+load();
+})();
+</script>
+</body>
+</html>
