@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080a10"><meta name="description" content="Contact Pique Animes about ethical brand sponsorships, creator partnerships and anime community campaigns."><title>Brand Outreach | Pique Animes</title>
+<style>
+:root{color-scheme:dark;--bg:#080a10;--panel:#151b28;--line:#303747;--muted:#aab2c1;--red:#e11d48;--gold:#e8c27a}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#302239,transparent 40%),var(--bg);color:#f7f7fa;font:15px/1.7 Inter,system-ui,Arial,sans-serif}a{color:inherit;text-decoration:none}.nav{padding:16px 5%;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;background:#090b10eF;border-bottom:1px solid #ffffff18}.brand{font-weight:950;font-size:20px}.brand span{color:var(--red)}.links{display:flex;gap:16px;flex-wrap:wrap}.links a{font-size:12px;color:#c4c9d3}.wrap{width:min(980px,90%);margin:35px auto 70px}.hero,.card{border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#191f2c,#10141d);padding:25px}.hero{padding:clamp(28px,6vw,58px);border-color:#e8c27a55;background:linear-gradient(120deg,#171c29,#2a1b2a 75%,#42152b)}.eyebrow{font-size:11px;color:var(--gold);font-weight:900;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(36px,7vw,62px);line-height:1.05;margin:12px 0}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin-top:18px}.card h2{font-size:19px;margin:0 0 8px}.card p{color:#b7bfcc;font-size:13px}.template{white-space:pre-wrap;background:#090d15;border:1px solid #ffffff1c;border-radius:12px;padding:15px;color:#e8eaf0;font-size:13px;min-height:170px}.btn{display:inline-block;border:0;border-radius:10px;padding:12px 17px;background:linear-gradient(120deg,#f02a56,#991138);color:white;font-weight:850;cursor:pointer;margin-top:10px}.btn.alt{background:#ffffff12;border:1px solid #ffffff30}.notice{border:1px solid #715b32;background:#211c13;color:#e8d9b8;padding:17px;border-radius:13px;font-size:13px;margin-top:22px}footer{text-align:center;border-top:1px solid #ffffff16;padding:22px;color:#8992a2;font-size:12px}@media(max-width:650px){.grid{grid-template-columns:1fr}}
+</style></head><body>
+<nav class="nav"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="links"><a href="./index.html">Home</a><a href="./earn.html">Partnerships</a><a href="./media-kit.html">Media Kit</a></div></nav>
+<main class="wrap"><section class="hero"><span class="eyebrow">Partnership outreach toolkit</span><h1>LET'S FIND THE RIGHT PARTNERS.</h1><p class="muted">A practical guide for approaching relevant brands professionally. Use the templates as a starting point, personalise every message, and only promise deliverables Pique Animes can actually provide.</p><a class="btn" href="./media-kit.html">View our media kit ↗</a></section>
+<section class="grid">
+<article class="card"><h2>Who to approach</h2><p>Start with businesses whose products genuinely fit anime fans: anime merchandise shops, comic and gaming stores, local conventions, cosplay photographers, independent artists, event organisers and entertainment retailers.</p></article>
+<article class="card"><h2>What to offer</h2><p>Discuss clearly labelled sponsored placements, original sponsored articles, creator interviews, event promotion or a tailored campaign. Confirm scope, dates, price and reporting before accepting payment.</p></article>
+<article class="card"><h2>First contact email</h2><div class="template" id="email">Subject: Partnership idea with Pique Animes
+
+Hello [Name],
+
+I'm reaching out from Pique Animes, an anime discovery and fan community platform. We are exploring a small number of relevant partnerships with brands and creators.
+
+I thought [Brand] could be a good fit because [personalised reason].
+
+We would be happy to discuss a clearly labelled sponsored feature or promotional placement, subject to availability and agreed campaign details.
+
+Our partnership overview is here:
+https://pique-animes.pages.dev/media-kit.html
+
+Would you be open to discussing a possible collaboration?
+
+Best,
+Pique Animes
+WhatsApp: +233 597 417 776</div><button class="btn" onclick="copyBlock('email')">Copy email template</button></article>
+<article class="card"><h2>Short social message</h2><div class="template" id="social">Hello! I'm contacting you from Pique Animes. We are exploring partnerships with anime, gaming and entertainment brands. I think there may be a good fit with [Brand] because [reason]. Would you be open to discussing a possible sponsored feature or promotional collaboration? Our media kit: https://pique-animes.pages.dev/media-kit.html</div><button class="btn" onclick="copyBlock('social')">Copy social message</button></article>
+<article class="card"><h2>Follow-up message</h2><div class="template" id="follow">Hello [Name], I wanted to follow up on my earlier message about a possible Pique Animes partnership. If this is relevant to your current marketing plans, I'd be glad to share more details. If not, no worries. Thank you for your time.</div><button class="btn" onclick="copyBlock('follow')">Copy follow-up</button></article>
+<article class="card"><h2>Before you contact a brand</h2><p>Check the business is real, use its official contact channel, identify one specific reason for the fit, include the media kit, and record when you contacted them. Avoid mass spam and never pay an alleged sponsor to unlock a deal.</p></article>
+</section>
+<section class="notice"><strong>Honest representation matters.</strong> Pique Animes is building its audience. Do not invent traffic figures, follower counts, engagement statistics, past clients or guaranteed sales. If a brand asks for analytics, share only current figures that can be verified. Label paid content clearly and use only images, logos and material you have permission to publish.</section>
+</main><footer>© 2026 Pique Animes · <a href="./privacy.html">Privacy Policy</a></footer>
+<script>function copyBlock(id){const text=document.getElementById(id).innerText;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(()=>alert('Template copied. Personalise it before sending.')).catch(()=>fallback(text))}else fallback(text)}function fallback(text){const el=document.createElement('textarea');el.value=text;document.body.appendChild(el);el.select();try{document.execCommand('copy');alert('Template copied. Personalise it before sending.')}catch(e){alert('Copy is unavailable. Please select and copy the text manually.')}el.remove()}</script></body></html>
