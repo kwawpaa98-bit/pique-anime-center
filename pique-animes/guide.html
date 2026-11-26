@@ -49,6 +49,42 @@
 button:disabled{opacity:.58;cursor:wait;transform:none!important;filter:none!important}
 @media(prefers-reduced-motion:reduce){:is(.btn,.cta,.tab,.refresh,.filter,.watch,button[type="submit"],button.primary),.nav-links a{transition:none} :is(.btn,.cta,.tab,.refresh,.filter,.watch,button[type="submit"],button.primary):hover,.nav-links a:hover{transform:none}}
 </style>
+<style id="pique-premium-polish">
+:root{color-scheme:dark;--pique-ink:#080a10;--pique-surface:rgba(19,23,34,.88);--pique-line:rgba(232,194,122,.19);--pique-glow:rgba(225,29,72,.16)}
+html{scroll-padding-top:92px}
+body{background-color:var(--pique-ink);background-image:radial-gradient(ellipse at 12% 0%,rgba(225,29,72,.12),transparent 34%),radial-gradient(ellipse at 92% 12%,rgba(232,194,122,.09),transparent 30%),linear-gradient(180deg,#0b0e16 0%,#080a10 55%,#0b0d14 100%);background-attachment:fixed}
+::selection{background:rgba(225,29,72,.42);color:#fff}
+a{transition:color .2s ease,opacity .2s ease}
+.site-nav,.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px) saturate(145%);-webkit-backdrop-filter:blur(18px) saturate(145%);background:rgba(8,10,16,.88)!important;border-bottom:1px solid rgba(232,194,122,.16)!important;box-shadow:0 10px 35px rgba(0,0,0,.22)}
+.site-nav .brand,.nav .brand{letter-spacing:.035em}
+.nav-links a,.links a{border-radius:999px;transition:background .2s ease,color .2s ease,transform .2s ease}
+.nav-links a:hover,.links a:hover{background:rgba(232,194,122,.1);color:#ffe2a8;transform:translateY(-1px)}
+.nav-links a.active,.links a.active{background:linear-gradient(120deg,rgba(225,29,72,.2),rgba(232,194,122,.1));color:#ffe1a0}
+main.page,main.wrap{isolation:isolate}
+.hero{position:relative;overflow:hidden;border:1px solid rgba(232,194,122,.2)!important;border-radius:26px!important;box-shadow:0 24px 70px rgba(0,0,0,.28),0 0 55px var(--pique-glow)}
+.hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.035),transparent 36%,rgba(232,194,122,.035));}
+.hero-copy,.hero-note{position:relative;z-index:1}
+h1,h2,h3{letter-spacing:-.025em;text-wrap:balance}
+h1{line-height:1.06}
+p{line-height:1.75}
+.eyebrow,.tag,.badge{letter-spacing:.12em;text-transform:uppercase}
+.card,.panel,.feature-panel,.rules,.composer,.youtube,.pique-uploads,.controls,.footnote,.schedule,.section-card{border-color:var(--pique-line)!important;box-shadow:0 14px 40px rgba(0,0,0,.18)}
+.card,.panel,.feature-panel,.rules,.composer,.youtube,.pique-uploads{border-radius:20px}
+.card,.panel,.feature-panel{background-image:linear-gradient(145deg,rgba(255,255,255,.035),transparent 55%)}
+.card,.panel,.feature-panel,.pique-uploads{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.card:hover,.panel:hover,.feature-panel:hover{border-color:rgba(232,194,122,.36)!important;box-shadow:0 20px 48px rgba(0,0,0,.28),0 0 28px rgba(225,29,72,.08)}
+button,.btn,a.btn,input[type=submit]{border-radius:13px;font-weight:750;letter-spacing:.01em;transition:transform .18s ease,filter .18s ease,box-shadow .18s ease}
+button:hover,.btn:hover,a.btn:hover,input[type=submit]:hover{filter:brightness(1.1);transform:translateY(-2px);box-shadow:0 10px 26px rgba(225,29,72,.18)}
+button:active,.btn:active,a.btn:active{transform:translateY(0) scale(.985)}
+input,textarea,select{border-radius:12px!important;border:1px solid rgba(255,255,255,.14)!important;background:rgba(7,10,17,.78)!important;color:#f7f7fa!important;transition:border-color .2s ease,box-shadow .2s ease}
+input:focus,textarea:focus,select:focus{outline:none;border-color:rgba(232,194,122,.65)!important;box-shadow:0 0 0 3px rgba(232,194,122,.12)!important}
+:focus-visible{outline:2px solid #f0cb82;outline-offset:3px}
+footer{border-top:1px solid rgba(232,194,122,.14);color:#aeb4c2}
+footer a{color:#f1ce91}
+img{max-width:100%}
+@media(max-width:700px){.site-nav,.nav{position:relative}.hero{border-radius:19px!important}h1{font-size:clamp(2rem,9vw,3.2rem)}.nav-links,.links{gap:7px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
 </head>
 <body>
 <header class="nav"><a class="brand" href="./index.html">PIQUE <span>ANIMES</span></a><nav class="links"><a href="./index.html">Home</a><a href="./anime.html">Anime</a><a href="./movies.html">Movies</a><a href="./news.html">Anime News</a><a href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./earn.html">Earn with us</a></nav></header>
