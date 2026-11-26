@@ -132,17 +132,38 @@ img{max-width:100%}
 .home-feature-tile span:last-child{font-size:12px;color:#c0c6d2;margin-top:5px}
 @media(max-width:700px){.hero{min-height:470px;padding:32px 6%;background-position:60% center}.hero:before{background:linear-gradient(90deg,rgba(5,7,12,.94),rgba(5,7,12,.58)),linear-gradient(0deg,rgba(5,7,12,.7),transparent)}.showcase-card img{height:225px}.home-bottom-grid{grid-template-columns:1fr}.home-quicklinks{margin-top:-8px}}
 </style><style id="pique-home-movie-beautify">
-#featured-movies{position:relative;padding:28px;border:1px solid rgba(232,194,122,.22);border-radius:22px;background:radial-gradient(ellipse at 90% 0%,rgba(225,29,72,.16),transparent 38%),linear-gradient(145deg,rgba(24,29,42,.94),rgba(10,13,21,.96));box-shadow:0 22px 65px rgba(0,0,0,.25)}
-#featured-movies .section-head{align-items:center}
-#featured-movies .section-head h2{font-size:clamp(23px,3vw,32px)}
-#featured-movies .showcase-card{position:relative;border-color:rgba(232,194,122,.28);box-shadow:0 12px 30px rgba(0,0,0,.28)}
-#featured-movies .showcase-card img{height:300px;object-fit:cover}
+/* Vivid Pique colour system */
+:root{--red:#ff2858;--gold:#ffd477;--violet:#9b75ff;--cyan:#54d9ee;--panel:#151a29}
+body{background-image:radial-gradient(ellipse at 8% 8%,rgba(255,40,88,.19),transparent 30%),radial-gradient(ellipse at 92% 22%,rgba(155,117,255,.16),transparent 29%),radial-gradient(ellipse at 50% 100%,rgba(84,217,238,.08),transparent 38%),linear-gradient(180deg,#0b0d17,#080a11 60%,#0c0c18)}
+.brand span{background:linear-gradient(90deg,#ff4770,#ffd477,#a98bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{color:#ffd477;text-shadow:0 0 18px rgba(255,212,119,.22)}
+.hero{border-color:rgba(255,212,119,.28);box-shadow:0 24px 75px rgba(0,0,0,.34),0 0 55px rgba(155,117,255,.12)}
+.btn{background:linear-gradient(120deg,#ff2858,#b51669 55%,#7654d8);box-shadow:0 8px 24px rgba(255,40,88,.22)}
+.btn.secondary{background:linear-gradient(120deg,#26304b,#20213a);border-color:rgba(84,217,238,.35);color:#baf6ff}
+.home-quicklinks a{border-color:rgba(155,117,255,.28);background:linear-gradient(120deg,rgba(39,35,68,.92),rgba(18,23,39,.94))}
+.home-quicklinks a:nth-child(3n+1){border-color:rgba(255,40,88,.4)}
+.home-quicklinks a:nth-child(3n+2){border-color:rgba(84,217,238,.36)}
+.section-head{border-image:linear-gradient(90deg,rgba(255,40,88,.55),rgba(155,117,255,.3),transparent) 1}
+.showcase-card{border-color:rgba(155,117,255,.22);background:linear-gradient(145deg,#1c2034,#101522)}
+.showcase-card:hover{border-color:rgba(84,217,238,.7);box-shadow:0 16px 40px rgba(84,217,238,.09),0 16px 35px #0008}
+#featured-movies{position:relative;padding:28px;border:1px solid rgba(255,212,119,.3);border-radius:24px;background:radial-gradient(ellipse at 8% 0%,rgba(255,40,88,.2),transparent 35%),radial-gradient(ellipse at 100% 35%,rgba(155,117,255,.2),transparent 38%),linear-gradient(145deg,rgba(25,29,48,.97),rgba(10,13,23,.98));box-shadow:0 22px 65px rgba(0,0,0,.3),0 0 45px rgba(155,117,255,.08)}
+#featured-movies:before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.045),transparent 35%,rgba(84,217,238,.035))}
+#featured-movies .section-head{align-items:center;position:relative}
+#featured-movies .section-head h2{font-size:clamp(23px,3vw,32px);background:linear-gradient(90deg,#fff,#ffd477 60%,#c4a9ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+#featured-movies .showcase-grid{grid-template-columns:repeat(6,minmax(0,1fr));position:relative}
+#featured-movies .showcase-card{position:relative;border-color:rgba(255,212,119,.25);box-shadow:0 12px 30px rgba(0,0,0,.3)}
+#featured-movies .showcase-card img{height:285px;object-fit:cover}
 #featured-movies .showcase-card:first-child{grid-column:span 2}
-#featured-movies .showcase-card:first-child img{height:360px}
-#featured-movies .showcase-meta{min-height:66px}
-#featured-movies .showcase-meta strong{font-size:14px}
+#featured-movies .showcase-card:first-child img{height:350px}
+#featured-movies .showcase-meta{min-height:66px;background:linear-gradient(130deg,#1c2034,#111827)}
+#featured-movies .showcase-meta strong{font-size:14px;color:#fff}
+#featured-movies .showcase-meta span{color:#ffd477}
 #featured-movies .showcase-card img{background:linear-gradient(135deg,#26364b,#551329)}
-@media(max-width:650px){#featured-movies{padding:17px}#featured-movies .showcase-card img{height:220px}#featured-movies .showcase-card:first-child{grid-column:span 2}#featured-movies .showcase-card:first-child img{height:270px}}
+.home-feature-tile:nth-child(3n+1){border-color:rgba(255,40,88,.34);background:linear-gradient(0deg,rgba(6,8,13,.96),rgba(6,8,13,.12)),radial-gradient(circle at 80% 15%,rgba(255,40,88,.35),transparent 45%),linear-gradient(135deg,#35223d,#121722)}
+.home-feature-tile:nth-child(3n+2){border-color:rgba(84,217,238,.3);background:linear-gradient(0deg,rgba(6,8,13,.96),rgba(6,8,13,.12)),radial-gradient(circle at 80% 15%,rgba(84,217,238,.25),transparent 45%),linear-gradient(135deg,#1d3a4a,#121722)}
+.home-feature-tile:nth-child(3n){border-color:rgba(155,117,255,.34);background:linear-gradient(0deg,rgba(6,8,13,.96),rgba(6,8,13,.12)),radial-gradient(circle at 80% 15%,rgba(155,117,255,.3),transparent 45%),linear-gradient(135deg,#30264b,#121722)}
+@media(max-width:1050px){#featured-movies .showcase-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:650px){#featured-movies{padding:17px}#featured-movies .showcase-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#featured-movies .showcase-card img{height:220px}#featured-movies .showcase-card:first-child{grid-column:span 2}#featured-movies .showcase-card:first-child img{height:270px}}
 </style></head><body><nav class="site-nav"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a class="active" href="./index.html">Home</a><a class="" href="./anime.html">Anime</a><a class="" href="./movies.html">Movies</a><a href="./news.html">Anime News</a><a class="" href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./earn.html">Earn with us</a><a href="./media-kit.html">Media Kit</a><a href="./outreach.html">Brand Outreach</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener">YouTube ↗</a></div></nav><main class="page">
 <section class="hero"><div class="hero-copy"><span class="eyebrow">✦ A world beyond the screen</span><h1>YOUR NEXT<br>OBSESSION<br>STARTS HERE.</h1><p>Discover unforgettable anime, explore cinematic movies and connect with fans who love the same worlds you do. Your next great story is waiting.</p><div class="hero-live" id="homeHeroSpotlight">Discovering today’s featured anime…</div><a class="btn" href="./anime.html">Explore anime →</a><a class="btn secondary" href="./movies.html">Discover movies</a></div></section>
 <nav class="home-quicklinks" aria-label="Quick discovery"><a href="./anime.html">✦ Anime library</a><a href="./movies.html">▣ Movie collection</a><a href="./news.html">◷ Episode schedule</a><a href="./blog.html">◎ Fan community</a><a href="./guide.html">↗ Discovery guide</a></nav>
@@ -203,11 +224,11 @@ img{max-width:100%}
   }catch(error){
    if(target==='homeMovieShowcase'){
     try{
-     const movieQuery='query { Page(page:1,perPage:18) { media(type:ANIME,format_in:[MOVIE],isAdult:false,sort:TRENDING_DESC) { id title { english romaji } coverImage { large } genres } } }';
+     const movieQuery='query { Page(page:1,perPage:30) { media(type:ANIME,format_in:[MOVIE],isAdult:false,sort:TRENDING_DESC) { id title { english romaji } coverImage { large } genres } } }';
      const retry=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({query:movieQuery})});
      if(!retry.ok) throw new Error('Movie catalogue unavailable');
      const retryData=await retry.json();
-     const movies=safe(retryData.data?.Page?.media||[]).slice(0,8);
+     const movies=safe(retryData.data?.Page?.media||[]).slice(0,12);
      if(!movies.length) throw new Error('No movie posters returned');
      el.innerHTML=movies.map(item=>{
       const title=(item.title?.english||item.title?.romaji||'Anime movie').replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
@@ -219,10 +240,10 @@ img{max-width:100%}
     // Independent fallback: Jikan/MyAnimeList, so movie posters still appear
     // if AniList is blocked, rate-limited, or returns a GraphQL error.
     try{
-     const fallback=await fetch('https://api.jikan.moe/v4/anime?type=movie&limit=8&order_by=score&sort=desc&sfw=true');
+     const fallback=await fetch('https://api.jikan.moe/v4/anime?type=movie&limit=12&order_by=score&sort=desc&sfw=true');
      if(!fallback.ok) throw new Error('Backup movie catalogue unavailable');
      const fallbackData=await fallback.json();
-     const movies=(fallbackData.data||[]).filter(item=>item.images?.webp?.large_image_url||item.images?.jpg?.large_image_url).slice(0,8);
+     const movies=(fallbackData.data||[]).filter(item=>item.images?.webp?.large_image_url||item.images?.jpg?.large_image_url).slice(0,12);
      if(!movies.length) throw new Error('No backup movie posters');
      el.innerHTML=movies.map(item=>{
       const title=String(item.title_english||item.title||'Anime movie').replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
