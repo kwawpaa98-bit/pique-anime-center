@@ -21,7 +21,7 @@
 <body>
 <nav class="site-nav"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a href="./index.html">Home</a><a href="./anime.html">Anime</a><a href="./movies.html">Movies</a><a class="active" href="./news.html">Anime News</a><a href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./earn.html">Earn with us</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener">YouTube ↗</a></div></nav>
 <main class="page">
-<section class="hero"><span class="eyebrow">Pique Anime News Desk</span><h1>Never miss the next episode.</h1><p>See upcoming anime episode release dates and times in your local timezone. The schedule refreshes from AniList, so new listings can appear as release information is updated.</p><div class="hero-note">Upcoming releases · Live schedule · Local time</div></section>
+<section class="hero"><span class="eyebrow">Pique Anime News Desk</span><h1>Never miss the next episode.</h1><p>See upcoming anime episode release dates and times in your local timezone. Adult and explicit anime are excluded from this schedule. The schedule refreshes from AniList, so new listings can appear as release information is updated.</p><div class="hero-note">Upcoming releases · Live schedule · Local time</div></section>
 <section class="controls"><div class="tabs" aria-label="Schedule period"><button class="tab active" data-days="7">Next 7 days</button><button class="tab" data-days="14">Next 14 days</button></div><button class="refresh" id="refresh">↻ Refresh schedule</button></section>
 <div id="status" class="status" role="status" aria-live="polite">Loading upcoming episode releases…</div>
 <section id="schedule" class="schedule" aria-label="Upcoming anime episodes"></section>
@@ -42,7 +42,7 @@ const query=`query ($page:Int,$perPage:Int,$airingAt_greater:Int,$airingAt_lesse
    airingAt episode media {
     id title { romaji english native }
     coverImage { large }
-    siteUrl format seasonYear
+    siteUrl format seasonYear isAdult genres
    }
   }
  }
@@ -58,7 +58,7 @@ function dateParts(timestamp){
 }
 function render(items){
  if(!items.length){status.textContent='No upcoming episodes were returned for this period. Try refreshing or checking again later.';return}
- status.textContent='Showing '+items.length+' upcoming episode'+(items.length===1?'':'s')+'. Times are displayed in your device’s local timezone.';
+ status.textContent='Showing '+items.length+' upcoming episode'+(items.length===1?'':'s')+'. Adult, hentai and ecchi listings are filtered out. Times are displayed in your device’s local timezone.';
  schedule.innerHTML=items.map(item=>{
   const media=item.media||{},when=dateParts(item.airingAt),title=titleOf(media);
   const img=media.coverImage?.large||'';
@@ -78,7 +78,7 @@ async function load(){
   const json=await response.json();
   if(json.errors?.length)throw new Error(json.errors[0].message||'Schedule query failed');
   if(id!==requestId)return;
-  const items=(json.data?.Page?.airingSchedules||[]).filter(x=>x.media).sort((a,b)=>a.airingAt-b.airingAt);
+  const items=(json.data?.Page?.airingSchedules||[]).filter(x=>{\n  const media=x.media;\n  if(!media || media.isAdult) return false;\n  const genres=(media.genres||[]).map(g=>String(g).toLowerCase());\n  return !genres.some(g=>['hentai','ecchi','erotica'].includes(g));\n }).sort((a,b)=>a.airingAt-b.airingAt);
   render(items);
  }catch(error){
   if(id!==requestId)return;
