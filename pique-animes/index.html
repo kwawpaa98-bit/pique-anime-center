@@ -104,8 +104,36 @@ img{max-width:100%}
 @media(max-width:700px){.site-nav,.nav{position:relative}.hero{border-radius:19px!important}h1{font-size:clamp(2rem,9vw,3.2rem)}.nav-links,.links{gap:7px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 </style>
-</head><body><nav class="site-nav"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a class="active" href="./index.html">Home</a><a class="" href="./anime.html">Anime</a><a class="" href="./movies.html">Movies</a><a href="./news.html">Anime News</a><a class="" href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./earn.html">Earn with us</a><a href="./media-kit.html">Media Kit</a><a href="./outreach.html">Brand Outreach</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener">YouTube ↗</a></div></nav><main class="page">
-<section class="hero"><div class="hero-copy"><span class="eyebrow">A world beyond the screen</span><h1>YOUR NEXT<br>OBSESSION<br>STARTS HERE.</h1><p>Discover unforgettable anime, explore cinematic movies and connect with fans who love the same worlds you do. This is Pique Animes.</p><a class="btn" href="./anime.html">Explore anime →</a><a class="btn secondary" href="./movies.html">Discover movies</a></div></section>
+<style id="pique-home-cinematic-upgrade">
+.hero{min-height:520px;border-radius:26px;background-position:center 30%;transition:background-image .5s ease}
+.hero:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(5,7,12,.98) 0%,rgba(5,7,12,.82) 38%,rgba(5,7,12,.12) 100%),linear-gradient(0deg,rgba(5,7,12,.72),transparent 62%);z-index:0}
+.hero-copy{position:relative;z-index:2}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(232,194,122,.36);border-radius:999px;background:rgba(7,9,15,.52);backdrop-filter:blur(10px)}
+.hero h1{text-shadow:0 5px 32px #000;max-width:650px}
+.hero p{color:#e0e3eb;text-shadow:0 2px 12px #000}
+.hero-live{display:flex;align-items:center;gap:10px;margin:22px 0 4px;color:#f4d99d;font-size:12px;font-weight:750;letter-spacing:.04em}
+.hero-live:before{content:"";width:7px;height:7px;border-radius:50%;background:#f04b70;box-shadow:0 0 13px #f04b70}
+.home-quicklinks{display:flex;flex-wrap:wrap;gap:10px;margin:-18px 0 35px}
+.home-quicklinks a{padding:10px 15px;border-radius:999px;border:1px solid rgba(232,194,122,.2);background:linear-gradient(135deg,rgba(30,36,51,.9),rgba(14,18,27,.9));color:#e6e8ef;font-size:12px;font-weight:750;transition:.2s}
+.home-quicklinks a:hover{border-color:#e8c27a;color:#ffe1a0;transform:translateY(-2px)}
+.section-head{padding-bottom:12px;border-bottom:1px solid rgba(232,194,122,.14)}
+.section-head h2{font-size:clamp(20px,2.3vw,27px);letter-spacing:-.7px}
+.showcase-card{position:relative;border-radius:14px}
+.showcase-card img{height:260px;transition:transform .35s}
+.showcase-card:hover img{transform:scale(1.045)}
+.showcase-meta{background:linear-gradient(180deg,rgba(19,23,34,.96),rgba(12,15,23,.98))}
+.showcase-meta strong{font-size:13px}
+.showcase-meta span{color:#e3c98e}
+.home-bottom-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.home-feature-tile{min-height:190px;display:flex;flex-direction:column;justify-content:end;position:relative;overflow:hidden;padding:22px;border:1px solid rgba(232,194,122,.18);border-radius:18px;background:linear-gradient(0deg,rgba(6,8,13,.96),rgba(6,8,13,.1)),radial-gradient(circle at 80% 15%,rgba(225,29,72,.3),transparent 40%),linear-gradient(135deg,#26364b,#121722);transition:.22s}
+.home-feature-tile:hover{transform:translateY(-4px);border-color:rgba(232,194,122,.48)}
+.home-feature-tile .tile-kicker{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#e8c27a;font-weight:850}
+.home-feature-tile strong{font-size:20px;margin-top:7px}
+.home-feature-tile span:last-child{font-size:12px;color:#c0c6d2;margin-top:5px}
+@media(max-width:700px){.hero{min-height:470px;padding:32px 6%;background-position:60% center}.hero:before{background:linear-gradient(90deg,rgba(5,7,12,.94),rgba(5,7,12,.58)),linear-gradient(0deg,rgba(5,7,12,.7),transparent)}.showcase-card img{height:225px}.home-bottom-grid{grid-template-columns:1fr}.home-quicklinks{margin-top:-8px}}
+</style></head><body><nav class="site-nav"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a class="active" href="./index.html">Home</a><a class="" href="./anime.html">Anime</a><a class="" href="./movies.html">Movies</a><a href="./news.html">Anime News</a><a class="" href="./blog.html">Community</a><a href="./guide.html">Discovery guide</a><a href="./earn.html">Earn with us</a><a href="./media-kit.html">Media Kit</a><a href="./outreach.html">Brand Outreach</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener">YouTube ↗</a></div></nav><main class="page">
+<section class="hero"><div class="hero-copy"><span class="eyebrow">✦ A world beyond the screen</span><h1>YOUR NEXT<br>OBSESSION<br>STARTS HERE.</h1><p>Discover unforgettable anime, explore cinematic movies and connect with fans who love the same worlds you do. Your next great story is waiting.</p><div class="hero-live" id="homeHeroSpotlight">Discovering today’s featured anime…</div><a class="btn" href="./anime.html">Explore anime →</a><a class="btn secondary" href="./movies.html">Discover movies</a></div></section>
+<nav class="home-quicklinks" aria-label="Quick discovery"><a href="./anime.html">✦ Anime library</a><a href="./movies.html">▣ Movie collection</a><a href="./news.html">◷ Episode schedule</a><a href="./blog.html">◎ Fan community</a><a href="./guide.html">↗ Discovery guide</a></nav>
 
 <section class="section" id="trending-anime">
  <div class="section-head"><h2>Trending anime right now</h2><a class="pill" href="./anime.html">Explore all anime →</a></div>
@@ -117,6 +145,7 @@ img{max-width:100%}
  <p class="home-intro">From unforgettable adventures to beautiful stories, find your next movie night pick.</p>
  <div class="showcase-grid" id="homeMovieShowcase"><div class="showcase-loading">Loading movie highlights…</div></div>
 </section>
+<section class="section"><div class="section-head"><h2>More from Pique</h2><p>Stories, conversations and updates</p></div><div class="home-bottom-grid"><a class="home-feature-tile" href="./blog.html"><span class="tile-kicker">Community</span><strong>Find your people.</strong><span>Share your favourite anime moments and join the conversation.</span></a><a class="home-feature-tile" href="./news.html"><span class="tile-kicker">Episode tracker</span><strong>Stay in the loop.</strong><span>See upcoming episode dates and release times.</span></a><a class="home-feature-tile" href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener"><span class="tile-kicker">YouTube</span><strong>Watch Pique.</strong><span>Visit our channel for more anime content.</span></a></div></section>
 <section class="section"><div class="section-head"><h2>Explore the universe</h2><p>Curated corners of Pique Animes</p></div><div class="cards">
 <a class="poster-card" href="./anime.html"><img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=700&q=80" alt="Anime-inspired art"><div class="card-info"><h3>Anime Library</h3><p>Find your next series to fall into.</p></div></a>
 <a class="poster-card" href="./movies.html"><img src="https://cdn.posteritati.com/posters/000/000/049/033/your-name-md-web.jpg" alt="Your Name movie poster"><div class="card-info"><h3>Anime Movies</h3><p>Big feelings. Beautiful stories.</p></div></a>
@@ -133,7 +162,7 @@ img{max-width:100%}
 (async function(){
  const endpoint='https://graphql.anilist.co';
  const safe=list=>list.filter(x=>x&&!x.isAdult&&!((x.genres||[]).some(g=>['hentai','ecchi','erotica'].includes(String(g).toLowerCase()))));
- const query='query ($format: [MediaFormat]) { Page(page: 1, perPage: 12) { media(type: ANIME, isAdult: false, format_in: $format, sort: TRENDING_DESC) { id title { english romaji } coverImage { large } genres averageScore } } }';
+ const query='query ($format: [MediaFormat]) { Page(page: 1, perPage: 12) { media(type: ANIME, isAdult: false, format_in: $format, sort: TRENDING_DESC) { id title { english romaji } coverImage { large } bannerImage genres averageScore } } }';
  async function load(format,target,linkLabel){
   const el=document.getElementById(target);
   try{
