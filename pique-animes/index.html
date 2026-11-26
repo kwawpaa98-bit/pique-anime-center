@@ -171,6 +171,12 @@ img{max-width:100%}
    const data=await response.json();
    const items=safe(data.data?.Page?.media||[]).slice(0,8);
    if(!items.length) throw new Error('No titles available');
+   if(target==='homeAnimeShowcase'){
+    const featured=items.find(item=>item.bannerImage)||items[0];
+    if(featured.bannerImage){const hero=document.querySelector('.hero');hero.style.backgroundImage='linear-gradient(90deg,rgba(5,7,12,.98) 0%,rgba(5,7,12,.78) 38%,rgba(5,7,12,.12) 100%),linear-gradient(0deg,rgba(5,7,12,.72),transparent 62%),url("'+featured.bannerImage.replace(/"/g,'%22')+'")';}
+    const spot=document.getElementById('homeHeroSpotlight');
+    if(spot)spot.textContent='FEATURED TODAY · '+(featured.title?.english||featured.title?.romaji||'Anime spotlight')+' · Explore the collection';
+   }
    el.innerHTML=items.map(item=>{
     const title=(item.title?.english||item.title?.romaji||'Anime title').replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
     const genres=(item.genres||[]).slice(0,2).join(' · ');
