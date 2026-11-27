@@ -528,7 +528,13 @@ body{margin:0}
  document.getElementById('paShopLater').addEventListener('click',e=>{e.preventDefault();close()});
  popup.addEventListener('click',e=>{if(e.target===popup)close()});
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&popup.classList.contains('is-open'))close()});
- window.setTimeout(()=>{show();window.setInterval(show,300000)},2600);
+ window.setTimeout(()=>{
+  try {
+   if(sessionStorage.getItem('piqueShopPopupShown')==='1') return;
+   sessionStorage.setItem('piqueShopPopupShown','1');
+  } catch(e) {}
+  show();
+ },2600);
 })();
 </script>
 <script id="pique-home-live-posters">
