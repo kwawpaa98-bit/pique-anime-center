@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin.html
+Disallow: /uploaded-anime.html
+
+Sitemap: https://pique-animes.pages.dev/sitemap.xml
