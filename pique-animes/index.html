@@ -347,6 +347,21 @@ a:focus-visible{outline:3px solid #f2d28c;outline-offset:3px}
 </style>
 <style id="pique-gentei-visual-banner">.pique-gentei-banner{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:flex-start;min-height:190px;margin:22px 0 8px;padding:25px 28px;overflow:hidden;border:1px solid rgba(255,225,154,.45);border-radius:18px;background:#10131d;background-position:center 38%;color:#fff;text-decoration:none;box-shadow:0 14px 34px #0005;transition:transform .2s,border-color .2s}.pique-gentei-banner-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;z-index:-2}.pique-gentei-banner:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,10,17,.96) 0%,rgba(8,10,17,.78) 43%,rgba(8,10,17,.12) 100%);z-index:-1}.pique-gentei-banner:hover{transform:translateY(-3px);border-color:#ffe19a}.pique-gentei-banner-copy{max-width:360px;position:relative;z-index:1}.pique-gentei-banner .eyebrow{color:#ffe19a}.pique-gentei-banner h3{font-size:clamp(21px,3vw,30px);line-height:1.1;margin:7px 0}.pique-gentei-banner p{font-size:12px;color:#f0e9dc;margin:0 0 13px}.pique-gentei-banner strong{display:inline-flex;padding:10px 15px;border-radius:9px;background:#e8b95c;color:#17120a;font-size:11px;letter-spacing:.4px}@media(max-width:600px){.pique-gentei-banner{min-height:165px;padding:18px;background-position:58% center}.pique-gentei-banner-copy{max-width:245px}.pique-gentei-banner p{max-width:210px}}</style><link rel="stylesheet" href="./site-upgrade.css">
 <link rel="stylesheet" href="./site-upgrade.css">
+<style id="pique-shop-popup-style">
+#piqueShopPopup{position:fixed;inset:0;z-index:9999;display:none;place-items:center;padding:20px;background:rgba(3,5,10,.78);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
+#piqueShopPopup.is-open{display:grid;animation:paPopupFade .25s ease}
+#piqueShopPopup .pa-popup-card{position:relative;width:min(460px,100%);overflow:hidden;border:1px solid rgba(244,202,121,.45);border-radius:22px;background:linear-gradient(145deg,#1a2030,#0d111b 75%);box-shadow:0 28px 90px #000b;text-align:center;padding:30px 25px 26px}
+#piqueShopPopup .pa-popup-art{height:142px;margin:-30px -25px 22px;background:radial-gradient(circle at 50% 45%,rgba(244,202,121,.3),transparent 54%),linear-gradient(120deg,#222a40,#111522);display:grid;place-items:center}
+#piqueShopPopup .pa-popup-art span{font-size:68px;filter:drop-shadow(0 10px 20px #0008)}
+#piqueShopPopup .pa-popup-kicker{font-size:10px;font-weight:900;letter-spacing:2.5px;color:#f4ca79}
+#piqueShopPopup h2{font-size:clamp(25px,6vw,34px);line-height:1.12;margin:10px 0}
+#piqueShopPopup p{color:#b9c2d2;line-height:1.65;margin:0 auto 20px;max-width:350px}
+#piqueShopPopup .pa-popup-cta{display:inline-flex;justify-content:center;align-items:center;width:100%;min-height:48px;padding:12px 18px;border-radius:12px;background:linear-gradient(100deg,#f4ca79,#ffe4a8);color:#17120a;font-weight:900;text-decoration:none}
+#piqueShopPopup .pa-popup-later{display:inline-block;margin-top:13px;padding:8px 12px;color:#c4ccda;font-size:13px;text-decoration:none}
+#piqueShopPopup .pa-popup-close{position:absolute;top:11px;right:12px;width:36px;height:36px;border:1px solid #ffffff30;border-radius:50%;background:#080b12cc;color:#fff;font-size:22px;line-height:1}
+@keyframes paPopupFade{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){#piqueShopPopup.is-open{animation:none}}
+</style>
 </head><body><nav class="site-nav" aria-label="Main navigation"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a href="./index.html">Home</a><a href="./anime.html">Anime</a><a href="./movies.html">Movies</a><a href="./news.html">Anime News</a><a href="./blog.html">Community</a><a href="./guide.html">Discovery Guide</a><a href="./anime-shopping.html">Shopping Hub</a><a href="./earn.html">Earn with Us</a><a href="./media-kit.html">Media Kit</a><a href="./outreach.html">Brand Partners</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div></nav><main class="page">
 <section class="hero"><div class="hero-copy"><span class="eyebrow">✦ A world beyond the screen</span><h1>YOUR NEXT<br>OBSESSION<br>STARTS HERE.</h1><p>Discover unforgettable anime, explore cinematic movies and connect with fans who love the same worlds you do. Your next great story is waiting.</p><div class="hero-live" id="homeHeroSpotlight">Discovering today’s featured anime…</div><a class="btn" href="./anime.html">Explore anime →</a><a class="btn secondary" href="./movies.html">Discover movies</a></div></section>
 <nav class="home-quicklinks" aria-label="Quick discovery"><a href="./anime.html">✦ Anime library</a><a href="./movies.html">▣ Movie collection</a><a href="./news.html">◷ Episode schedule</a><a href="./blog.html">◎ Fan community</a><a href="./guide.html">↗ Discovery guide</a><a href="./anime-shopping.html">🛍 Anime Shopping Hub</a></nav>
@@ -425,6 +440,30 @@ a:focus-visible{outline:3px solid #f2d28c;outline-offset:3px}
 <section class="section feature-panel"><span class="eyebrow">Partner with Pique</span><h2>Reach anime fans through a thoughtful collaboration.</h2><p>Explore sponsored placements, creator features and campaign opportunities. View our partnership media kit for details.</p><a class="btn" href="./media-kit.html">View partnership media kit →</a></section>
 <section class="section feature-panel"><span class="eyebrow">Pique Anime News</span><h2>When is the next episode dropping?</h2><p>Check upcoming anime episode dates and times, displayed in your local timezone. The schedule refreshes with updated listings.</p><a class="btn" href="./news.html">See upcoming episodes →</a></section>
 
+<div id="piqueShopPopup" aria-hidden="true">
+ <div class="pa-popup-card" role="dialog" aria-modal="true" aria-labelledby="paShopTitle" aria-describedby="paShopDesc">
+  <button class="pa-popup-close" type="button" aria-label="Close shopping invitation">×</button>
+  <div class="pa-popup-art" aria-hidden="true"><span>🛍️</span></div>
+  <div class="pa-popup-kicker">THE PIQUE ANIME SHOPPING HUB</div>
+  <h2 id="paShopTitle">Your next anime find is here.</h2>
+  <p id="paShopDesc">Explore anime figures, hoodies, T-shirts and collectibles from Gentei and Nippon Figures—all in one place.</p>
+  <a class="pa-popup-cta" href="./anime-shopping.html">Explore Anime Shopping Hub →</a>
+  <a class="pa-popup-later" href="#" id="paShopLater">Maybe later</a>
+ </div>
+</div>
+<script id="pique-shop-popup-script">
+(function(){
+ const popup=document.getElementById('piqueShopPopup');
+ if(!popup)return;
+ const close=()=>{popup.classList.remove('is-open');popup.setAttribute('aria-hidden','true');try{sessionStorage.setItem('piqueShopPopupDismissed','1')}catch(e){}};
+ popup.querySelector('.pa-popup-close').addEventListener('click',close);
+ document.getElementById('paShopLater').addEventListener('click',e=>{e.preventDefault();close()});
+ popup.addEventListener('click',e=>{if(e.target===popup)close()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&popup.classList.contains('is-open'))close()});
+ let dismissed=false;try{dismissed=sessionStorage.getItem('piqueShopPopupDismissed')==='1'}catch(e){}
+ if(!dismissed)window.setTimeout(()=>{popup.classList.add('is-open');popup.setAttribute('aria-hidden','false')},2600);
+})();
+</script>
 <script id="pique-home-live-posters">
 (async function(){
  const endpoint='https://graphql.anilist.co';
