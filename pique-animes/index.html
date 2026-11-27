@@ -351,8 +351,9 @@ a:focus-visible{outline:3px solid #f2d28c;outline-offset:3px}
 #piqueShopPopup{position:fixed;inset:0;z-index:9999;display:none;place-items:center;padding:20px;background:rgba(3,5,10,.78);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}
 #piqueShopPopup.is-open{display:grid;animation:paPopupFade .25s ease}
 #piqueShopPopup .pa-popup-card{position:relative;width:min(460px,100%);overflow:hidden;border:1px solid rgba(244,202,121,.45);border-radius:22px;background:linear-gradient(145deg,#1a2030,#0d111b 75%);box-shadow:0 28px 90px #000b;text-align:center;padding:30px 25px 26px}
-#piqueShopPopup .pa-popup-art{height:142px;margin:-30px -25px 22px;background:radial-gradient(circle at 50% 45%,rgba(244,202,121,.3),transparent 54%),linear-gradient(120deg,#222a40,#111522);display:grid;place-items:center}
-#piqueShopPopup .pa-popup-art span{font-size:68px;filter:drop-shadow(0 10px 20px #0008)}
+#piqueShopPopup .pa-popup-art{height:170px;margin:-30px -25px 22px;position:relative;overflow:hidden;background:#111522}
+#piqueShopPopup .pa-popup-art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(9,12,20,.72),rgba(9,12,20,.08) 70%)}
+#piqueShopPopup .pa-popup-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 38%}
 #piqueShopPopup .pa-popup-kicker{font-size:10px;font-weight:900;letter-spacing:2.5px;color:#f4ca79}
 #piqueShopPopup h2{font-size:clamp(25px,6vw,34px);line-height:1.12;margin:10px 0}
 #piqueShopPopup p{color:#b9c2d2;line-height:1.65;margin:0 auto 20px;max-width:350px}
@@ -443,7 +444,7 @@ a:focus-visible{outline:3px solid #f2d28c;outline-offset:3px}
 <div id="piqueShopPopup" aria-hidden="true">
  <div class="pa-popup-card" role="dialog" aria-modal="true" aria-labelledby="paShopTitle" aria-describedby="paShopDesc">
   <button class="pa-popup-close" type="button" aria-label="Close shopping invitation">×</button>
-  <div class="pa-popup-art" aria-hidden="true"><span>🛍️</span></div>
+  <div class="pa-popup-art" aria-hidden="true"><img src="https://gentei.store/cdn/shop/files/dragon-ball-z-goku-kamehameha-oversized-hoodie-40th-anniversary-premium-edition-9481379.jpg?v=1783696449&width=1600" alt="" loading="eager"></div>
   <div class="pa-popup-kicker">THE PIQUE ANIME SHOPPING HUB</div>
   <h2 id="paShopTitle">Your next anime find is here.</h2>
   <p id="paShopDesc">Explore anime figures, hoodies, T-shirts and collectibles from Gentei and Nippon Figures—all in one place.</p>
