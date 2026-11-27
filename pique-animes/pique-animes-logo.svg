@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 150" role="img" aria-labelledby="title desc">
+<title id="title">Pique Animes</title><desc id="desc">Pique Animes logo with a crowned purple P symbol and bold white and violet lettering.</desc>
+<defs>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0a6"/><stop offset=".48" stop-color="#f4bd45"/><stop offset="1" stop-color="#b87512"/></linearGradient>
+ <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f05cff"/><stop offset=".52" stop-color="#9a26ef"/><stop offset="1" stop-color="#5512a8"/></linearGradient>
+ <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g filter="url(#glow)">
+ <path d="M29 115 43 49 69 72 94 24 118 72 143 49 156 115" fill="none" stroke="url(#gold)" stroke-width="8" stroke-linejoin="round"/>
+ <path d="M34 119 Q86 139 150 119" fill="none" stroke="url(#gold)" stroke-width="5" stroke-linecap="round"/>
+ <path d="M52 114 69 43 Q104 20 129 43 Q154 66 126 88 Q107 103 78 91 L72 116Z" fill="url(#violet)" stroke="#f2d4ff" stroke-width="3"/>
+ <path d="M78 58 Q105 43 119 58 Q129 70 111 77 Q99 82 84 76" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+</g>
+<text x="174" y="88" font-family="Trebuchet MS,Arial,sans-serif" font-size="70" font-weight="900" letter-spacing="-3" fill="#fff">PIQUE</text>
+<text x="386" y="88" font-family="Trebuchet MS,Arial,sans-serif" font-size="65" font-weight="900" letter-spacing="-3" fill="url(#violet)">ANIMES</text>
+<path d="M178 101 Q350 130 572 101" fill="none" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
+<text x="182" y="135" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="4" fill="#e8d9ff">WATCH  •  SHOP  •  EXPLORE</text>
+</svg>
