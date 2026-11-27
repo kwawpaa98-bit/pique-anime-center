@@ -372,6 +372,63 @@ a:focus-visible{outline:3px solid #f2d28c;outline-offset:3px}
 .section-head>.pill{display:inline-flex;align-items:center;justify-content:center;min-height:29px;padding:6px 10px;border-color:rgba(232,194,122,.3);font-size:10px;font-weight:750;white-space:nowrap}
 @media(max-width:650px){.home-quicklinks{gap:6px;margin:-7px 0 25px}.home-quicklinks a{min-height:29px;padding:6px 9px;font-size:9px}.hero-copy>.btn{min-height:34px;padding:8px 11px;font-size:10px}.section-head>.pill{font-size:9px;padding:6px 8px}}
 </style>
+<style id="pique-home-layout-repair">
+/* Homepage-only layout repair: override conflicting legacy refresh rules */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+body{margin:0}
+.site-nav{
+ display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;
+ flex-wrap:nowrap!important;gap:14px!important;width:100%!important;min-height:56px!important;height:auto!important;
+ padding:8px max(3%,calc((100% - 1320px)/2))!important;overflow:hidden!important
+}
+.site-nav>.brand{flex:0 0 auto!important;align-self:center!important;font-size:18px!important;line-height:1!important}
+.site-nav>.nav-links{
+ display:flex!important;flex:1 1 auto!important;flex-direction:row!important;flex-wrap:nowrap!important;
+ align-items:center!important;justify-content:flex-start!important;gap:5px!important;min-width:0!important;
+ width:auto!important;max-width:none!important;margin:0!important;padding:2px 1px!important;
+ overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none!important;
+ -webkit-overflow-scrolling:touch!important
+}
+.site-nav>.nav-links::-webkit-scrollbar{display:none}
+.site-nav>.nav-links>a{
+ display:inline-flex!important;flex:0 0 auto!important;align-items:center!important;justify-content:center!important;
+ width:auto!important;min-width:max-content!important;min-height:30px!important;padding:6px 9px!important;
+ margin:0!important;border-radius:999px!important;font-size:10px!important;line-height:1.15!important;
+ white-space:nowrap!important
+}
+.page{width:100%;max-width:1320px;margin:0 auto;padding:30px 4% 64px;min-width:0}
+.hero{width:100%;min-width:0;min-height:430px;padding:clamp(28px,5vw,58px) clamp(20px,6vw,78px);border-radius:20px!important}
+.hero-copy{width:100%;max-width:620px;min-width:0}
+.hero h1{font-size:clamp(38px,6vw,72px);line-height:1.02;overflow-wrap:anywhere}
+.hero p{max-width:540px}
+.hero-copy>.btn{display:inline-flex;width:auto;min-height:38px;padding:9px 14px;margin:10px 8px 0 0;font-size:11px}
+.home-quicklinks{display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;justify-content:flex-start!important;gap:7px!important;margin:0 0 32px!important;padding:0!important}
+.home-quicklinks>a{display:inline-flex!important;flex:0 1 auto!important;width:auto!important;min-width:0!important;min-height:31px!important;padding:6px 11px!important;font-size:10px!important;white-space:nowrap!important}
+.section{min-width:0}
+.section-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.section-head h2{min-width:0}
+.showcase-grid{min-width:0}
+@media(max-width:760px){
+ .site-nav{gap:8px!important;padding:8px 3%!important;min-height:48px!important}
+ .site-nav>.brand{font-size:14px!important;letter-spacing:.4px!important}
+ .site-nav>.nav-links{gap:5px!important}
+ .site-nav>.nav-links>a{min-height:28px!important;padding:5px 8px!important;font-size:9px!important}
+ .page{padding:20px 4% 46px}
+ .hero{min-height:390px;padding:30px 5%;background-position:58% center}
+ .hero h1{font-size:clamp(34px,9vw,48px);letter-spacing:-1.4px}
+ .hero p{font-size:13px;line-height:1.65}
+ .hero-copy>.btn{min-height:35px;padding:8px 11px;font-size:10px}
+ .home-quicklinks{gap:6px!important;margin:0 0 26px!important}
+ .home-quicklinks>a{min-height:29px!important;padding:6px 9px!important;font-size:9px!important}
+}
+@media(max-width:390px){
+ .site-nav{gap:6px!important;padding-left:2.5%!important;padding-right:2.5%!important}
+ .site-nav>.brand{font-size:12px!important}
+ .site-nav>.nav-links>a{font-size:8px!important;padding:5px 7px!important}
+ .hero{min-height:360px}
+ .hero-copy>.btn{margin-right:4px}
+}
+</style>
 </head><body><nav class="site-nav" aria-label="Main navigation"><a class="brand" href="./index.html">PIQUE<span>ANIMES</span></a><div class="nav-links"><a href="./index.html">Home</a><a href="./anime.html">Anime</a><a href="./movies.html">Movies</a><a href="./news.html">Anime News</a><a href="./blog.html">Community</a><a href="./guide.html">Discovery Guide</a><a href="./anime-shopping.html">Shopping Hub</a><a href="./earn.html">Earn with Us</a><a href="./media-kit.html">Media Kit</a><a href="./outreach.html">Brand Partners</a><a href="https://www.youtube.com/@Pique-anime" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div></nav><main class="page">
 <section class="hero"><div class="hero-copy"><span class="eyebrow">✦ A world beyond the screen</span><h1>YOUR NEXT<br>OBSESSION<br>STARTS HERE.</h1><p>Discover unforgettable anime, explore cinematic movies and connect with fans who love the same worlds you do. Your next great story is waiting.</p><div class="hero-live" id="homeHeroSpotlight">Discovering today’s featured anime…</div><a class="btn" href="./anime.html">Explore anime →</a><a class="btn secondary" href="./movies.html">Discover movies</a></div></section>
 <nav class="home-quicklinks" aria-label="Quick discovery"><a href="./anime.html">✦ Anime library</a><a href="./movies.html">▣ Movie collection</a><a href="./news.html">◷ Episode schedule</a><a href="./blog.html">◎ Fan community</a><a href="./guide.html">↗ Discovery guide</a><a href="./anime-shopping.html">🛍 Anime Shopping Hub</a></nav>
