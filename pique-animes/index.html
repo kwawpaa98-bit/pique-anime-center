@@ -522,13 +522,13 @@ body{margin:0}
 (function(){
  const popup=document.getElementById('piqueShopPopup');
  if(!popup)return;
- const close=()=>{popup.classList.remove('is-open');popup.setAttribute('aria-hidden','true');try{sessionStorage.setItem('piqueShopPopupDismissed','1')}catch(e){}};
+ const show=()=>{popup.classList.add('is-open');popup.setAttribute('aria-hidden','false')};
+ const close=()=>{popup.classList.remove('is-open');popup.setAttribute('aria-hidden','true')};
  popup.querySelector('.pa-popup-close').addEventListener('click',close);
  document.getElementById('paShopLater').addEventListener('click',e=>{e.preventDefault();close()});
  popup.addEventListener('click',e=>{if(e.target===popup)close()});
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&popup.classList.contains('is-open'))close()});
- let dismissed=false;try{dismissed=sessionStorage.getItem('piqueShopPopupDismissed')==='1'}catch(e){}
- if(!dismissed)window.setTimeout(()=>{popup.classList.add('is-open');popup.setAttribute('aria-hidden','false')},2600);
+ window.setTimeout(()=>{show();window.setInterval(show,300000)},2600);
 })();
 </script>
 <script id="pique-home-live-posters">
